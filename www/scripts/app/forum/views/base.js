@@ -1,7 +1,17 @@
 define(['use!backbone', 'use!dust'], function (Backbone, dust) {
     var BaseView = Backbone.View.extend({
+
         renderTemplate: function () {
-            this.templateName;
+            this.template;
+            var compiled = dust.compile(this.template.source,
+                this.template.name);
+            dust.loadSource(compiled);
+
+            var rendered;
+            dust.render(this.template.name, this.model.toJSON(), function(err, out){
+                rendered = out;
+            });
+            return rendered;
         }
     });
     return BaseView;
