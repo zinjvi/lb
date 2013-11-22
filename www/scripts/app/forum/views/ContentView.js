@@ -1,5 +1,6 @@
-define(['scripts/app/forum/views/base', 'use!dust', 'text!templates/content.dust', 'scripts/app/forum/collections/PostCollection'],
-    function(BaseView, dust, templateSources, PostCollection){
+define(['scripts/app/forum/views/base', 'use!dust', 'text!templates/content.dust',
+    'scripts/app/forum/collections/PostCollection', 'scripts/app/forum/views/post'],
+    function(BaseView, dust, templateSources, PostCollection, PostView){
 
         var ContentView = BaseView.extend({
             class: 'post-view',
@@ -23,6 +24,9 @@ define(['scripts/app/forum/views/base', 'use!dust', 'text!templates/content.dust
             addPost: function(post){
                 console.log('add:');
                 console.log(post);
+                var postView = new PostView(post);
+                postView.render();
+                this.$el.find('.list').append(postView.el);
             }
         });
         return ContentView;

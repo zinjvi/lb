@@ -1,5 +1,5 @@
-define(['scripts/app/forum/views/base', 'use!dust', 'text!templates/temp.dust'],
-    function(BaseView, dust, templateSources){
+define(['scripts/app/forum/views/base', 'use!dust', 'text!templates/post.dust', 'scripts/app/forum/models/Post'],
+    function(BaseView, dust, templateSources, Post){
 
     var PostView = BaseView.extend({
         class: 'post-view',
@@ -7,6 +7,7 @@ define(['scripts/app/forum/views/base', 'use!dust', 'text!templates/temp.dust'],
             name: 'post.template',
             source: templateSources
         },
+        model: new Post(),
         initialize: function(){
 
         },
