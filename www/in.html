@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" da src="scripts/lib/require.js"></script>
+    <script type="text/javascript">
+        require.config({
+            paths: {
+                text: 'scripts/lib/text',
+                backbone: 'scripts/lib/backbone',
+                jquery: 'scripts/lib/jquery',
+                underscore: 'scripts/lib/underscore',
+                use: 'scripts/lib/use',
+                dust: 'scripts/lib/dust'
+            },
+            use: {
+                backbone: {
+                    deps: ["use!underscore", "jquery"],
+                    attach: "Backbone"
+                },
+                underscore: {
+                    attach: "_"
+                },
+                dust: {
+                    attach: "dust"
+                }
+            }
+        });
+
+        require(['scripts/app/forum/application.js'], function(application){
+            application.start();
+        });
+    </script>
+</head>
+<body>
+
+.
+
+</body>
+</html>
