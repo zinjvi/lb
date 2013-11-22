@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="29dc0a88-45ca-4002-a9aa-b4c487f061ed" name="Default" comment="" />
+    <ignored path="www.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1382861371052" ignored="false" />
+    <file path="/mainLayout.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1382808966791" ignored="false" />
+    <file path="/MainController.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384373456288" ignored="false" />
+    <file path="/home.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383487905725" ignored="false" />
+    <file path="/Bean.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1382870778712" ignored="false" />
+    <file path="/HeaderHelper.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1382873099285" ignored="false" />
+    <file path="/header.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384695686265" ignored="false" />
+    <file path="/style.css" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384695709626" ignored="false" />
+    <file path="/test.html" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1382891968164" ignored="false" />
+    <file path="/header.js" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1382997856510" ignored="false" />
+    <file path="/Constants.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383686679900" ignored="false" />
+    <file path="/dummy.sql" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384986745701" ignored="false" />
+    <file path="/a.sql" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384986745701" ignored="false" />
+    <file path="/test.article" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1382908848055" ignored="false" />
+    <file path="/Menu.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384989731250" ignored="false" />
+    <file path="/menu.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384989633709" ignored="false" />
+    <file path="/Category.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384712921068" ignored="false" />
+    <file path="/articlesOfGroup.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383256179584" ignored="false" />
+    <file path="/MyController.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383401625786" ignored="false" />
+    <file path="/articlesOfCategory.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384689205816" ignored="false" />
+    <file path="/article.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384693809362" ignored="false" />
+    <file path="/admin.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383418006672" ignored="false" />
+    <file path="/a.dummy" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383429444504" ignored="false" />
+    <file path="/AdminkaController.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384989917463" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ro/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ca/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ca/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/de/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ro/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/de/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ro/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/de/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ro/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ro/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ru/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/de/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/de/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/el/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ru/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/el/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ru/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/el/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ru/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ru/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/sk/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/el/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/el/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/es/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/sk/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/es/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/sk/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/es/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/sk/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/sk/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/sv/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/es/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/es/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/fi/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/sv/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/fi/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/sv/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/fi/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/sv/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/sv/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/uk/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/fi/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/fi/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/fr/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/uk/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/fr/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/uk/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/web/CWebApplication.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383686754331" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/fr/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/uk/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/uk/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/vi/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/fr/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/fr/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/web/CUrlManager.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383686754331" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/he/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/vi/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/he/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/vi/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/he/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/vi/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/vi/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/pt_br/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/he/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/he/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/hr/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/pt_br/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/hr/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/base/CModule.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/pt_br/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/hr/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/pt_br/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/pt_br/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/zh_cn/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/hr/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/hr/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/id/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/zh_cn/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/cli/views/webapp/protected/components/UserIdentity.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303695" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/id/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/zh_cn/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/id/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/zh_cn/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/zh_cn/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/zh_tw/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/id/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/id/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/it/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/zh_tw/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/it/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/cli/commands/shell/CrudCommand.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/zh_tw/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/cli/commands/shell/ModelCommand.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/cli/commands/shell/ControllerCommand.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/it/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/zh_tw/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/zh_tw/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/it/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/it/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ja/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/caching/CXCache.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ja/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ja/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ja/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ja/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ko/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ko/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ko/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ko/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ko/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/lt/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/logging/CLogRouter.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/lt/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/lt/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/lt/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/lt/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/lv/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/lv/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/lv/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/lv/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/lv/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/nl/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/nl/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/nl/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/nl/error503.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/vendors/TextHighlighter/Text/Highlighter/SQL.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/nl/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/nl/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/no/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ar/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/no/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ar/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/no/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ar/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/no/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/no/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/pl/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ar/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ar/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/cli/views/shell/crud/admin.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/bg/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/pl/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/bg/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/pl/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/pl/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/bg/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/pl/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/pt/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/bg/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/bg/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/pt/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ca/error500.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ca/error.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/pt/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/pt/error404.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/ca/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/views/pt/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
+    <file path="/CKEditor.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383426494782" ignored="false" />
+    <file path="/*.regexp" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384600654521" ignored="false" />
+    <file path="/create.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384607796608" ignored="false" />
+    <file path="/Article.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384598941769" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/utils/CPasswordHelper.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383686754331" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/web/CController.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383686754331" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/vendors/htmlpurifier/standalone/HTMLPurifier/Lexer/PH5P.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383686754331" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/web/js/source/jquery.js" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383686754331" ignored="false" />
+    <file path="$PROJECT_DIR$/framework/web/js/source/jquery.min.js" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383686754331" ignored="false" />
+    <file path="/index.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384610517203" ignored="false" />
+    <file path="/adminka.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384705620830" ignored="false" />
+    <file path="/styles.css" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384813082712" ignored="false" />
+    <file path="/update.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384208962169" ignored="false" />
+    <file path="/updateArticle.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384610179132" ignored="false" />
+    <file path="/chooseArticleForUpdate.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384806038448" ignored="false" />
+    <file path="/Constan.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384985328558" ignored="false" />
+    <file path="/createCategory.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384706426358" ignored="false" />
+    <file path="/chooseCategoryForUpdate.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384805837158" ignored="false" />
+    <file path="/updateCategory.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384710239725" ignored="false" />
+    <file path="/headerImage.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384988781103" ignored="false" />
+    <file path="/HeaderImage.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384986869270" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="www" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="headerImage.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/adminka/headerImage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="68" selection-start="1009" selection-end="1009" vertical-scroll-proportion="-15.038462">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainLayout.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/layouts/mainLayout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="986" selection-end="986" vertical-scroll-proportion="-9.730769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/layouts/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="330" selection-end="330" vertical-scroll-proportion="-6.5384617">
+              <folding>
+                <marker date="1384989533236" expanded="true" signature="167:328" placeholder="..." />
+                <marker date="1384989533236" expanded="true" signature="177:321" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/components/views/menu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="73" selection-start="932" selection-end="932" vertical-scroll-proportion="-15.692307">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Menu.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/components/Menu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="44" selection-start="774" selection-end="774" vertical-scroll-proportion="-13.807693">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.header_image" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/acece9a4/f0e24244-806b-428f-b409-f121b358c88b/test..header_image">
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/adminka/create.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="81" selection-start="416" selection-end="465" vertical-scroll-proportion="-3.8461537">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminkaController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/AdminkaController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="58" selection-start="269" selection-end="269" vertical-scroll-proportion="0.34068137">
+              <folding>
+                <marker date="1384989932542" expanded="true" signature="4388:4518" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HeaderImage.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/models/HeaderImage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="52" selection-start="2212" selection-end="2212" vertical-scroll-proportion="-54.26923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/protected/views/layouts/mainLayout.php" />
+        <option value="$PROJECT_DIR$/protected/models/Category.php" />
+        <option value="$PROJECT_DIR$/protected/views/adminka/createCategory.php" />
+        <option value="$PROJECT_DIR$/protected/views/adminka/updateCategory.php" />
+        <option value="$PROJECT_DIR$/protected/views/adminka/chooseCategoryForUpdate.php" />
+        <option value="$PROJECT_DIR$/protected/views/adminka/chooseArticleForUpdate.php" />
+        <option value="$PROJECT_DIR$/protected/views/layouts/adminka.php" />
+        <option value="$PROJECT_DIR$/css/adminka/styles.css" />
+        <option value="dbtable:/acece9a4/f0e24244-806b-428f-b409-f121b358c88b/test..header_image" />
+        <option value="$PROJECT_DIR$/protected/components/Constan.php" />
+        <option value="$PROJECT_DIR$/protected/models/HeaderImage.php" />
+        <option value="$PROJECT_DIR$/protected/views/adminka/headerImage.php" />
+        <option value="$PROJECT_DIR$/protected/views/layouts/header.php" />
+        <option value="$PROJECT_DIR$/protected/components/views/menu.php" />
+        <option value="$PROJECT_DIR$/protected/components/Menu.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/AdminkaController.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents ProjectPane="true" />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commands" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="headerImages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Database.TableEditor.Splitter" value="0.6730769" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="editing.templates" />
+    <property name="last_opened_file_path" value="C:/Program Files/mysql-5.6.14-win32/mysql-connector-java-5.1.18-bin.jar" />
+    <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\denwer\home\one\www\images\storage\headerImages" />
+      <recent name="C:\denwer\home\one\www\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\denwer\home\one\www\protected\controllers" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value="VISIBILITY_SORTER" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29dc0a88-45ca-4002-a9aa-b4c487f061ed" name="Default" comment="" />
+      <created>1382808883378</created>
+      <updated>1382808883378</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329806" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19090909" sideWeight="0.67019403" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20227273" sideWeight="0.7623932" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1719697" sideWeight="0.67019403" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23760684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/protected/views/layouts/header.php</url>
+          <line>1</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/protected/models/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="24" selection-start="671" selection-end="671" vertical-scroll-proportion="0.7192308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/adminka.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="25" selection-start="306" selection-end="306" vertical-scroll-proportion="-2.6153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/adminka/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="18" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/adminka/createCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="34" selection-start="295" selection-end="295" vertical-scroll-proportion="0.25515947">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/adminka/chooseArticleForUpdate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="58" selection-start="855" selection-end="855" vertical-scroll-proportion="0.47467166">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/adminka/chooseCategoryForUpdate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="27" selection-start="50" selection-end="58" vertical-scroll-proportion="0.099609375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/Constan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="18" selection-start="111" selection-end="111" vertical-scroll-proportion="0.19921875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/adminka/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="81" selection-start="416" selection-end="465" vertical-scroll-proportion="-3.8461537">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/acece9a4/f0e24244-806b-428f-b409-f121b358c88b/test..header_image">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/adminka/headerImage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="68" selection-start="1009" selection-end="1009" vertical-scroll-proportion="-15.038462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/mainLayout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="986" selection-end="986" vertical-scroll-proportion="-9.730769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="330" selection-end="330" vertical-scroll-proportion="-6.5384617">
+          <folding>
+            <marker date="1384989533236" expanded="true" signature="167:328" placeholder="..." />
+            <marker date="1384989533236" expanded="true" signature="177:321" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/views/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="73" selection-start="932" selection-end="932" vertical-scroll-proportion="-15.692307">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/Menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="44" selection-start="774" selection-end="774" vertical-scroll-proportion="-13.807693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/HeaderImage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="52" selection-start="2212" selection-end="2212" vertical-scroll-proportion="-54.26923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/AdminkaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="58" selection-start="269" selection-end="269" vertical-scroll-proportion="0.34068137">
+          <folding>
+            <marker date="1384989932542" expanded="true" signature="4388:4518" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
