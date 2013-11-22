@@ -55249,3 +55249,96 @@ in Z:\home\lb\www\protected\views\layouts\column1.php (6)
 in Z:\home\lb\www\protected\controllers\SiteController.php (45)
 2013/11/22 08:51:02 [trace] [system.CModule] Loading "clientScript" application component
 in Z:\home\lb\www\protected\controllers\SiteController.php (45)
+2013/11/22 14:31:46 [trace] [system.CModule] Loading "log" application component
+in Z:\home\lb\www\index.php (13)
+2013/11/22 14:31:46 [trace] [system.CModule] Loading "request" application component
+in Z:\home\lb\www\index.php (13)
+2013/11/22 14:31:46 [trace] [system.CModule] Loading "urlManager" application component
+in Z:\home\lb\www\index.php (13)
+2013/11/22 14:31:46 [trace] [system.CModule] Loading "coreMessages" application component
+in Z:\home\lb\www\index.php (13)
+2013/11/22 14:31:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "scripts/app/forum/views/view.post.js".' in Z:\home\lb\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\lb\www\framework\web\CWebApplication.php(141): CWebApplication->runController('scripts/app/for...')
+#1 Z:\home\lb\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\lb\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/scripts/app/forum/views/view.post.js
+HTTP_REFERER=http://lb/in.html
+---
+2013/11/22 14:31:46 [trace] [system.CModule] Loading "errorHandler" application component
+2013/11/22 14:31:46 [trace] [system.CModule] Loading "widgetFactory" application component
+in Z:\home\lb\www\protected\views\layouts\column1.php (2)
+in Z:\home\lb\www\protected\controllers\SiteController.php (45)
+2013/11/22 14:31:46 [trace] [system.CModule] Loading "user" application component
+in Z:\home\lb\www\protected\views\layouts\main.php (35)
+in Z:\home\lb\www\protected\views\layouts\column1.php (6)
+in Z:\home\lb\www\protected\controllers\SiteController.php (45)
+2013/11/22 14:31:46 [trace] [system.CModule] Loading "session" application component
+in Z:\home\lb\www\protected\views\layouts\main.php (35)
+in Z:\home\lb\www\protected\views\layouts\column1.php (6)
+in Z:\home\lb\www\protected\controllers\SiteController.php (45)
+2013/11/22 14:31:47 [trace] [system.CModule] Loading "clientScript" application component
+in Z:\home\lb\www\protected\controllers\SiteController.php (45)
+2013/11/22 16:26:18 [trace] [system.CModule] Loading "log" application component
+in Z:\home\lb\www\index.php (13)
+2013/11/22 16:26:18 [trace] [system.CModule] Loading "request" application component
+in Z:\home\lb\www\index.php (13)
+2013/11/22 16:26:19 [trace] [system.CModule] Loading "urlManager" application component
+in Z:\home\lb\www\index.php (13)
+2013/11/22 16:26:19 [trace] [system.CModule] Loading "coreMessages" application component
+in Z:\home\lb\www\index.php (13)
+2013/11/22 16:26:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "scripts/app/forum/models/HeadrModel.js".' in Z:\home\lb\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\lb\www\framework\web\CWebApplication.php(141): CWebApplication->runController('scripts/app/for...')
+#1 Z:\home\lb\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\lb\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/scripts/app/forum/models/HeadrModel.js
+HTTP_REFERER=http://lb/in.html
+---
+2013/11/22 16:26:19 [trace] [system.CModule] Loading "errorHandler" application component
+2013/11/22 16:26:20 [trace] [system.CModule] Loading "widgetFactory" application component
+in Z:\home\lb\www\protected\views\layouts\column1.php (2)
+in Z:\home\lb\www\protected\controllers\SiteController.php (45)
+2013/11/22 16:26:20 [trace] [system.CModule] Loading "user" application component
+in Z:\home\lb\www\protected\views\layouts\main.php (35)
+in Z:\home\lb\www\protected\views\layouts\column1.php (6)
+in Z:\home\lb\www\protected\controllers\SiteController.php (45)
+2013/11/22 16:26:20 [trace] [system.CModule] Loading "session" application component
+in Z:\home\lb\www\protected\views\layouts\main.php (35)
+in Z:\home\lb\www\protected\views\layouts\column1.php (6)
+in Z:\home\lb\www\protected\controllers\SiteController.php (45)
+2013/11/22 16:26:20 [trace] [system.CModule] Loading "clientScript" application component
+in Z:\home\lb\www\protected\controllers\SiteController.php (45)
+2013/11/22 18:02:32 [trace] [system.CModule] Loading "log" application component
+in Z:\home\lb\www\index.php (13)
+2013/11/22 18:02:32 [trace] [system.CModule] Loading "request" application component
+in Z:\home\lb\www\index.php (13)
+2013/11/22 18:02:32 [trace] [system.CModule] Loading "urlManager" application component
+in Z:\home\lb\www\index.php (13)
+2013/11/22 18:02:33 [trace] [system.CModule] Loading "coreMessages" application component
+in Z:\home\lb\www\index.php (13)
+2013/11/22 18:02:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "script/app/forum/models/Post.js".' in Z:\home\lb\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\lb\www\framework\web\CWebApplication.php(141): CWebApplication->runController('script/app/foru...')
+#1 Z:\home\lb\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\lb\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/script/app/forum/models/Post.js
+HTTP_REFERER=http://lb/in.html
+---
+2013/11/22 18:02:33 [trace] [system.CModule] Loading "errorHandler" application component
+2013/11/22 18:02:34 [trace] [system.CModule] Loading "widgetFactory" application component
+in Z:\home\lb\www\protected\views\layouts\column1.php (2)
+in Z:\home\lb\www\protected\controllers\SiteController.php (45)
+2013/11/22 18:02:34 [trace] [system.CModule] Loading "user" application component
+in Z:\home\lb\www\protected\views\layouts\main.php (35)
+in Z:\home\lb\www\protected\views\layouts\column1.php (6)
+in Z:\home\lb\www\protected\controllers\SiteController.php (45)
+2013/11/22 18:02:35 [trace] [system.CModule] Loading "session" application component
+in Z:\home\lb\www\protected\views\layouts\main.php (35)
+in Z:\home\lb\www\protected\views\layouts\column1.php (6)
+in Z:\home\lb\www\protected\controllers\SiteController.php (45)
+2013/11/22 18:02:37 [trace] [system.CModule] Loading "clientScript" application component
+in Z:\home\lb\www\protected\controllers\SiteController.php (45)

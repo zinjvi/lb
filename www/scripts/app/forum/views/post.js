@@ -11,11 +11,6 @@ define(['scripts/app/forum/views/base', 'use!dust', 'text!templates/temp.dust'],
 
         },
         render: function(){
-//            var string = '<p><b>{name}</b></p>';
-//
-//            var compiled = dust.compile(string, 'template.name');
-//            dust.loadSource(compiled);
-
             this.$el.html(this.renderTemplate());
             return this;
         }
