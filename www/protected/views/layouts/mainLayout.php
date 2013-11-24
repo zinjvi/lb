@@ -13,11 +13,12 @@
     <script src="/js/jquery.easing.1.3.js"></script>
     <script src="/js/tms-0.4.1.js"></script>
     <script src="/js/jquery.jcarousel.min.js"></script>
+
 </head>
 
 <body>
 
-<?php echo $this->renderPartial('//layouts/header');?>
+<?php //echo $this->renderPartial('//layouts/header');?>
 
 <?php echo $content;?>
 

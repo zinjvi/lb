@@ -1,4 +1,4 @@
-define(['scripts/app/forum/views/base', 'text!templates/forum.dust', 'scripts/app/forum/views/header', 'scripts/app/forum/views/ContentView'],
+define(['/scripts/app/common/views/base', 'text!templates/forum.dust', 'scripts/app/forum/views/header', 'scripts/app/forum/views/ContentView'],
     function(BaseView, templateSources, HeaderViev, ContentView){
 
         var ForumView = BaseView.extend({

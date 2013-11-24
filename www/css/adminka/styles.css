@@ -50,8 +50,39 @@ h3{
 /*Header image management*/
 
 .header-image-list img{
-    height: 200px;
+    width: 700px;
 }
+
+.header-image-list div.left{
+    width: 150px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.header-image-list div.image{
+    display: inline-block;
+}
+
+.header-image-list .name, .remove,
+.assign, .active{
+    margin: 0 7px 0 0;
+    display: block;
+    text-align: right;
+}
+
+.header-image-list .name{
+}
+
+.header-image-list .remove{
+}
+
+.header-image-list .assign{
+}
+
+.header-image-list .active{
+}
+
+
 
 /*Choose category*/
 

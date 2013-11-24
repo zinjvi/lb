@@ -1,4 +1,4 @@
-define(['scripts/app/forum/views/base',
+define(['/scripts/app/common/views/base',
     'use!dust', 'text!templates/header.dust',
     'scripts/app/forum/models/HeaderModel'],
     function (BaseView, dust, templateSources, HeaderModel) {

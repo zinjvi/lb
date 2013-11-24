@@ -627,49 +627,52 @@ dl dd a:hover {
 
 /************* Articles by category ***************/
 section.articles-mini{
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 .article-mini{
+    font: 16px "Times New Roman";
+    clear: both;
     margin: 50px 0;
 }
 
-.article-mini .image{
-    display: inline;
-}
-
-.article-mini .image img{
+.article-mini img{
+    float: left;
     width: 150px;
-}
-
-.article-mini .content{
-    margin: 0 0 0 25px;
     display: inline-block;
+    margin: 10px 20px 10px 0;
 }
 
-.article-mini .content p{
-    /*display: inline-block;*/
+.article-mini p{
+
+}
+
+.article-mini a{
+    color: #bf96c7;
 }
 
 .article-mini .title{
     font: 24px "Times New Roman";
-    color: #bf96c7;
+    display: inline-block;
+    margin: 20px 0 0 20px;
 }
 
 .article-mini .text{
-    /*display: inline-block;*/
+    display: inline;
+
 }
 
 
 /************* Article by category ***************/
 
 section.article{
+    font: 18px "Times New Roman";
     margin: 40px 0;
 }
 
 section.article img{
     float: left;
-    margin: 0 20px 0 0;
+    margin: 0 30px 0 0;
     width: 400px;
 }
 
@@ -682,3 +685,8 @@ section.article .title{
 section.article .text{
 
 }
+
+/********Aromo*******/
+
+
+

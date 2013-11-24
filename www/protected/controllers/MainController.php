@@ -74,4 +74,10 @@ class MainController extends CController
         $art->title = "tnnnnnn";
         $art->update();
     }
+
+    public function actionAromo(){
+
+
+        $this->render('aromo');
+    }
 }

@@ -6,12 +6,12 @@
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1382861371052" ignored="false" />
     <file path="/mainLayout.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1382808966791" ignored="false" />
-    <file path="/MainController.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384373456288" ignored="false" />
+    <file path="/MainController.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1385296667753" ignored="false" />
     <file path="/home.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383487905725" ignored="false" />
     <file path="/Bean.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1382870778712" ignored="false" />
     <file path="/HeaderHelper.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1382873099285" ignored="false" />
     <file path="/header.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384695686265" ignored="false" />
-    <file path="/style.css" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384695709626" ignored="false" />
+    <file path="/style.css" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1385307722953" ignored="false" />
     <file path="/test.html" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1382891968164" ignored="false" />
     <file path="/header.js" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1382997856510" ignored="false" />
     <file path="/Constants.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383686679900" ignored="false" />
@@ -19,11 +19,11 @@
     <file path="/a.sql" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384986745701" ignored="false" />
     <file path="/test.article" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1382908848055" ignored="false" />
     <file path="/Menu.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384989731250" ignored="false" />
-    <file path="/menu.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384989633709" ignored="false" />
+    <file path="/menu.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1385296571768" ignored="false" />
     <file path="/Category.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384712921068" ignored="false" />
     <file path="/articlesOfGroup.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383256179584" ignored="false" />
     <file path="/MyController.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383401625786" ignored="false" />
-    <file path="/articlesOfCategory.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384689205816" ignored="false" />
+    <file path="/articlesOfCategory.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1385291633845" ignored="false" />
     <file path="/article.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384693809362" ignored="false" />
     <file path="/admin.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383418006672" ignored="false" />
     <file path="/a.dummy" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383429444504" ignored="false" />
@@ -191,7 +191,7 @@
     <file path="$PROJECT_DIR$/framework/views/ca/error403.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
     <file path="$PROJECT_DIR$/framework/views/pt/error400.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383419303696" ignored="false" />
     <file path="/CKEditor.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383426494782" ignored="false" />
-    <file path="/*.regexp" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384600654521" ignored="false" />
+    <file path="/*.regexp" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1385323841168" ignored="false" />
     <file path="/create.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384607796608" ignored="false" />
     <file path="/Article.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384598941769" ignored="false" />
     <file path="$PROJECT_DIR$/framework/utils/CPasswordHelper.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383686754331" ignored="false" />
@@ -201,7 +201,7 @@
     <file path="$PROJECT_DIR$/framework/web/js/source/jquery.min.js" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1383686754331" ignored="false" />
     <file path="/index.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384610517203" ignored="false" />
     <file path="/adminka.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384705620830" ignored="false" />
-    <file path="/styles.css" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384813082712" ignored="false" />
+    <file path="/styles.css" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1385289333403" ignored="false" />
     <file path="/update.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384208962169" ignored="false" />
     <file path="/updateArticle.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384610179132" ignored="false" />
     <file path="/chooseArticleForUpdate.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384806038448" ignored="false" />
@@ -209,8 +209,15 @@
     <file path="/createCategory.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384706426358" ignored="false" />
     <file path="/chooseCategoryForUpdate.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384805837158" ignored="false" />
     <file path="/updateCategory.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384710239725" ignored="false" />
-    <file path="/headerImage.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384988781103" ignored="false" />
+    <file path="/headerImage.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1385289031786" ignored="false" />
     <file path="/HeaderImage.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1384986869270" ignored="false" />
+    <file path="/content.dust" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1385325651330" ignored="false" />
+    <file path="/aromo.php" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1385323142065" ignored="false" />
+    <file path="/application.js" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1385322930477" ignored="false" />
+    <file path="/aromo.dust" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1385308808921" ignored="false" />
+    <file path="/AromoView.js" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1385325824329" ignored="false" />
+    <file path="/ContentView.js" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1385325703013" ignored="false" />
+    <file path="/MenuView.js" changelist="29dc0a88-45ca-4002-a9aa-b4c487f061ed" time="1385324243956" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,97 +241,97 @@
     <favorites_list name="www" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="headerImage.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/adminka/headerImage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="68" selection-start="1009" selection-end="1009" vertical-scroll-proportion="-15.038462">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainLayout.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/layouts/mainLayout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="986" selection-end="986" vertical-scroll-proportion="-9.730769">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/layouts/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="330" selection-end="330" vertical-scroll-proportion="-6.5384617">
-              <folding>
-                <marker date="1384989533236" expanded="true" signature="167:328" placeholder="..." />
-                <marker date="1384989533236" expanded="true" signature="177:321" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/components/views/menu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="73" selection-start="932" selection-end="932" vertical-scroll-proportion="-15.692307">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Menu.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/components/Menu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="44" selection-start="774" selection-end="774" vertical-scroll-proportion="-13.807693">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.header_image" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/acece9a4/f0e24244-806b-428f-b409-f121b358c88b/test..header_image">
-          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/adminka/create.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="81" selection-start="416" selection-end="465" vertical-scroll-proportion="-3.8461537">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminkaController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/AdminkaController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="58" selection-start="269" selection-end="269" vertical-scroll-proportion="0.34068137">
-              <folding>
-                <marker date="1384989932542" expanded="true" signature="4388:4518" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HeaderImage.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/models/HeaderImage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="52" selection-start="2212" selection-end="2212" vertical-scroll-proportion="-54.26923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.7200448">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="mainLayout.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/protected/views/layouts/mainLayout.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="17" column="0" selection-start="987" selection-end="987" vertical-scroll-proportion="-4.6153846">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MenuView.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/scripts/app/aromo/views/MenuView.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="4" column="40" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ContentView.js" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/scripts/app/aromo/views/ContentView.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="1" column="34" selection-start="75" selection-end="75" vertical-scroll-proportion="0.049132947">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="header.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/scripts/app/forum/views/header.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="post.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/scripts/app/forum/views/post.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/scripts/app/aromo/application.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="30" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AromoView.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/scripts/app/aromo/views/AromoView.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="22" column="55" selection-start="825" selection-end="825" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="aromo.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/protected/views/main/aromo.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="26" column="28" selection-start="766" selection-end="766" vertical-scroll-proportion="-7.8461537">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/css/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="692" column="0" selection-start="10644" selection-end="10644" vertical-scroll-proportion="1.2542373">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -334,22 +341,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/scripts/app/aroma/application.js" />
+        <option value="$PROJECT_DIR$/templates/aromo/aromo.dust" />
+        <option value="$PROJECT_DIR$/scripts/app/aromo/views/aromo.js" />
+        <option value="$PROJECT_DIR$/scripts/app/common/views.js" />
+        <option value="$PROJECT_DIR$/scripts/app/forum/views/ContentView.js" />
+        <option value="$PROJECT_DIR$/scripts/app/forum/views/forum.js" />
+        <option value="$PROJECT_DIR$/scripts/app/forum/views/header.js" />
+        <option value="$PROJECT_DIR$/scripts/app/forum/views/post.js" />
         <option value="$PROJECT_DIR$/protected/views/layouts/mainLayout.php" />
-        <option value="$PROJECT_DIR$/protected/models/Category.php" />
-        <option value="$PROJECT_DIR$/protected/views/adminka/createCategory.php" />
-        <option value="$PROJECT_DIR$/protected/views/adminka/updateCategory.php" />
-        <option value="$PROJECT_DIR$/protected/views/adminka/chooseCategoryForUpdate.php" />
-        <option value="$PROJECT_DIR$/protected/views/adminka/chooseArticleForUpdate.php" />
-        <option value="$PROJECT_DIR$/protected/views/layouts/adminka.php" />
-        <option value="$PROJECT_DIR$/css/adminka/styles.css" />
-        <option value="dbtable:/acece9a4/f0e24244-806b-428f-b409-f121b358c88b/test..header_image" />
-        <option value="$PROJECT_DIR$/protected/components/Constan.php" />
-        <option value="$PROJECT_DIR$/protected/models/HeaderImage.php" />
-        <option value="$PROJECT_DIR$/protected/views/adminka/headerImage.php" />
-        <option value="$PROJECT_DIR$/protected/views/layouts/header.php" />
-        <option value="$PROJECT_DIR$/protected/components/views/menu.php" />
-        <option value="$PROJECT_DIR$/protected/components/Menu.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/AdminkaController.php" />
+        <option value="$PROJECT_DIR$/protected/views/main/aromo.php" />
+        <option value="$PROJECT_DIR$/scripts/app/aromo/application.js" />
+        <option value="$PROJECT_DIR$/scripts/app/aromo/views/MenuView.js" />
+        <option value="$PROJECT_DIR$/templates/aromo/content.dust" />
+        <option value="$PROJECT_DIR$/scripts/app/aromo/views/AromoView.js" />
+        <option value="$PROJECT_DIR$/scripts/app/aromo/views/ContentView.js" />
       </list>
     </option>
   </component>
@@ -386,6 +393,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -401,6 +409,92 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aromo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aromo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -490,187 +584,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commands" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="headerImages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Database.TableEditor.Splitter" value="0.6730769" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="editing.templates" />
-    <property name="last_opened_file_path" value="C:/Program Files/mysql-5.6.14-win32/mysql-connector-java-5.1.18-bin.jar" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\denwer\home\lb\www\scripts" />
       <recent name="C:\denwer\home\one\www\images\storage\headerImages" />
       <recent name="C:\denwer\home\one\www\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\denwer\home\lb\www\scripts\app\common\views" />
       <recent name="C:\denwer\home\one\www\protected\controllers" />
     </key>
   </component>
@@ -701,6 +644,23 @@
   <component name="StructureViewFactory">
     <option name="ACTIVE_ACTIONS" value="VISIBILITY_SORTER" />
   </component>
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="29dc0a88-45ca-4002-a9aa-b4c487f061ed" name="Default" comment="" />
@@ -711,15 +671,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329806" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19090909" sideWeight="0.67019403" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32820514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14924243" sideWeight="0.6717949" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20227273" sideWeight="0.7623932" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1719697" sideWeight="0.67019403" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17424242" sideWeight="0.6717949" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -802,123 +762,115 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/models/Category.php">
+    <entry file="file://$PROJECT_DIR$/protected/controllers/MainController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="24" selection-start="671" selection-end="671" vertical-scroll-proportion="0.7192308">
+        <state line="80" column="29" selection-start="1872" selection-end="1872" vertical-scroll-proportion="-17.884615">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/adminka.php">
+    <entry file="file://$PROJECT_DIR$/scripts/app/common/views/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="25" selection-start="306" selection-end="306" vertical-scroll-proportion="-2.6153846">
+        <state line="1" column="41" selection-start="106" selection-end="106" vertical-scroll-proportion="0.031598512">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/adminka/styles.css">
+    <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="18" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
+        <state line="692" column="0" selection-start="10644" selection-end="10644" vertical-scroll-proportion="1.2542373">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/adminka/createCategory.php">
+    <entry file="file://$PROJECT_DIR$/in.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="295" selection-end="295" vertical-scroll-proportion="0.25515947">
+        <state line="2" column="6" selection-start="42" selection-end="42" vertical-scroll-proportion="7.1923075">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/adminka/chooseArticleForUpdate.php">
+    <entry file="file://$PROJECT_DIR$/templates/aromo/menu.dust">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="58" selection-start="855" selection-end="855" vertical-scroll-proportion="0.47467166">
+        <state line="1" column="16" selection-start="21" selection-end="21" vertical-scroll-proportion="0.033203125">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/adminka/chooseCategoryForUpdate.php">
+    <entry file="file://$PROJECT_DIR$/scripts/app/forum/views/forum.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="27" selection-start="50" selection-end="58" vertical-scroll-proportion="0.099609375">
+        <state line="0" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/Constan.php">
+    <entry file="file://$PROJECT_DIR$/scripts/app/forum/views/header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="18" selection-start="111" selection-end="111" vertical-scroll-proportion="0.19921875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/adminka/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="81" selection-start="416" selection-end="465" vertical-scroll-proportion="-3.8461537">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/acece9a4/f0e24244-806b-428f-b409-f121b358c88b/test..header_image">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/adminka/headerImage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="68" selection-start="1009" selection-end="1009" vertical-scroll-proportion="-15.038462">
+        <state line="0" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/layouts/mainLayout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="986" selection-end="986" vertical-scroll-proportion="-9.730769">
+        <state line="17" column="0" selection-start="987" selection-end="987" vertical-scroll-proportion="-4.6153846">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/header.php">
+    <entry file="file://$PROJECT_DIR$/scripts/app/forum/views/post.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="330" selection-end="330" vertical-scroll-proportion="-6.5384617">
-          <folding>
-            <marker date="1384989533236" expanded="true" signature="167:328" placeholder="..." />
-            <marker date="1384989533236" expanded="true" signature="177:321" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/views/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="73" selection-start="932" selection-end="932" vertical-scroll-proportion="-15.692307">
+        <state line="0" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/Menu.php">
+    <entry file="file://$PROJECT_DIR$/protected/views/main/aromo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="44" selection-start="774" selection-end="774" vertical-scroll-proportion="-13.807693">
+        <state line="26" column="28" selection-start="766" selection-end="766" vertical-scroll-proportion="-7.8461537">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/HeaderImage.php">
+    <entry file="file://$PROJECT_DIR$/scripts/app/aromo/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="52" selection-start="2212" selection-end="2212" vertical-scroll-proportion="-54.26923">
+        <state line="0" column="30" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/AdminkaController.php">
+    <entry file="file://$PROJECT_DIR$/scripts/app/aromo/views/MenuView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="58" selection-start="269" selection-end="269" vertical-scroll-proportion="0.34068137">
-          <folding>
-            <marker date="1384989932542" expanded="true" signature="4388:4518" placeholder="..." />
-          </folding>
+        <state line="4" column="40" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/aromo/views/AromoView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="55" selection-start="825" selection-end="825" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/forum/views/ContentView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/aromo/content.dust">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/aromo/views/ContentView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="34" selection-start="75" selection-end="75" vertical-scroll-proportion="0.049132947">
+          <folding />
         </state>
       </provider>
     </entry>
