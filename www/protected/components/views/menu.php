@@ -22,7 +22,7 @@
             </li>
             <?php }?>
             <li class="category category-left">
-                <a class="category-link" href="#">Форум</a>
+                <a class="category-link" href="main/forum">Форум</a>
             </li>
         </ul>
     </nav>

@@ -1,30 +1,35 @@
-define(['common/views/base', 'use!dust',
-    'text!/templates/aromo/aromo.dust',
-    'aromo/views/MenuView', 'aromo/views/ContentView'],
-    function(BaseView, dust, templateSources, MenuView, ContentView){
+define(['use!backbone', 'common/views/base', 'use!dust',
+    'text!/templates/aromo/aromo.dust', 'aromo/views/ContentView',
+    'aromo/collections/AromoCollection'],
+    function(Backbone, BaseView, dust, templateSources, ContentView, AromoCollection){
 
-        var PostView = BaseView.extend({
+        var AromoView = BaseView.extend({
             class: 'aromo-view',
             template:{
                 name: 'aromo.template',
                 source: templateSources
             },
-            menuView: new MenuView(),
             contentView: new ContentView(),
-
-//            model: new Post(),
+            aromos: new AromoCollection(),
+            events: {
+                'click .menu-item': 'showAromo'
+            },
             initialize: function(){
-                $('.content').append(this.el);
+                $('section.aromo').append(this.el);
+                this.model = new Backbone.Model({'aromos': this.aromos.toJSON()});
                 this.render();
             },
             render: function(){
                 this.$el.html(this.renderTemplate());
-                this.$el.find('.menu')
-                    .append(this.menuView.render().el);
+                return this;
+            },
+            showAromo: function(event){
+                var id = event.target.id;
+                var aromo = this.aromos.get(id);
+                this.contentView.model = aromo;
                 this.$el.find('.content')
                     .append(this.contentView.render().el);
-                return this;
             }
         });
-        return PostView;
+        return AromoView;
     });

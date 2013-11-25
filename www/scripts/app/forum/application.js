@@ -1,6 +1,6 @@
-define(['jquery', 'underscore', 'scripts/app/forum/models/post',
-    'scripts/app/forum/views/post',
-    'scripts/app/forum/views/forum'],
+define(['jquery', 'underscore', 'forum/models/PostModel',
+    'forum/views/PostView',
+    'forum/views/ForumView'],
     function($, _, Post, PostView, ForumView){
 
     return {

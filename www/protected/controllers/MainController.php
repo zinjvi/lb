@@ -59,6 +59,10 @@ class MainController extends CController
         ));
     }
 
+    public function actionForum(){
+        $this->render("forum");
+    }
+
     public function actionTest()
     {
         $newArt = new Article();

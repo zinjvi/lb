@@ -687,6 +687,18 @@ section.article .text{
 }
 
 /********Aromo*******/
-
+section.aromo a{
+    color: #bf96c7;
+}
+section.aromo .menu li{
+    width: 100px;
+    height: 30px;
+}
+section.aromo .menu{
+    float: left;
+}
+section.aromo .content{
+    display: inline;
+}
 
 

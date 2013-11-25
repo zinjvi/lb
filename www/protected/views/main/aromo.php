@@ -28,6 +28,6 @@
         application.start();
     });
 </script>
-<div class="content">
+<section class="aromo">
 
-</div>
+</section>
