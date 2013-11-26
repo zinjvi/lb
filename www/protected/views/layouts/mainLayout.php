@@ -18,7 +18,7 @@
 
 <body>
 
-<?php //echo $this->renderPartial('//layouts/header');?>
+<?php echo $this->renderPartial('//layouts/header');?>
 
 <?php echo $content;?>
 

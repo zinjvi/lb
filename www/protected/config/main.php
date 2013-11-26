@@ -57,9 +57,9 @@ return array(
         // uncomment the followingo use a MySQL database
         */
         'db'=>array(
-            'connectionString' => 'mysql:host=localhost;dbname=test',
+            'connectionString' => 'mysql:host=localhost;dbname=lb',
             'emulatePrepare' => true,
-            'username' => '',
+            'username' => 'root',
             'password' => '',
             'charset' => 'utf8',
 //            'tablePrefix' => 'o_',
