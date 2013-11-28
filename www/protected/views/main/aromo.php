@@ -24,7 +24,8 @@
         }
     });
 
-    require(['aromo/application'], function(application){
+    require(['aromo/application', 'file!'], function(application){
+        window.app = application;
         application.start();
     });
 </script>

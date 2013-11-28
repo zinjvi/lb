@@ -1,9 +1,9 @@
 define(['aromo/views/AromoView'], function(AromoView){
     var application = {
-
+        aromoView: {},
         start: function(){
             console.log('start');
-            new AromoView();
+            this.aromoView = new AromoView();
         }
     }
     return application;

@@ -84,4 +84,9 @@ class MainController extends CController
 
         $this->render('aromo');
     }
+
+    public function actionApp()
+    {
+        $this->render('app');
+    }
 }

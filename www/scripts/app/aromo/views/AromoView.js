@@ -1,7 +1,8 @@
 define(['use!backbone', 'common/views/base', 'use!dust',
     'text!/templates/aromo/aromo.dust', 'aromo/views/ContentView',
     'aromo/collections/AromoCollection'],
-    function(Backbone, BaseView, dust, templateSources, ContentView, AromoCollection){
+    function(Backbone, BaseView, dust, templateSources,
+             ContentView, AromoCollection){
 
         var AromoView = BaseView.extend({
             class: 'aromo-view',
@@ -11,12 +12,15 @@ define(['use!backbone', 'common/views/base', 'use!dust',
             },
             contentView: new ContentView(),
             aromos: new AromoCollection(),
+            model: {},
             events: {
                 'click .menu-item': 'showAromo'
             },
             initialize: function(){
                 $('section.aromo').append(this.el);
-                this.model = new Backbone.Model({'aromos': this.aromos.toJSON()});
+                this.model = new Backbone.Model({
+                    'aromos': this.aromos.toJSON()
+                });
                 this.render();
             },
             render: function(){
