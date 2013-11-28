@@ -1,9 +1,0 @@
-2013/11/09 14:37:10 [error] [Message Here...] 
-in Z:\home\one\www\protected\controllers\MainController.php (53)
-in Z:\home\one\www\index.php (13)
-2013/11/09 14:37:10 [info] [controller] mm
-in Z:\home\one\www\protected\controllers\MainController.php (57)
-in Z:\home\one\www\index.php (13)
-2013/11/09 14:37:10 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Article".
-in Z:\home\one\www\protected\controllers\MainController.php (62)
-in Z:\home\one\www\index.php (13)
