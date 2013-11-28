@@ -1,13 +1,13 @@
 <section class="articles-mini">
     <?php foreach($articles as $article){?>
         <div class="article-mini">
-<!--            <div class="image">-->
+<!--            <div class="left">-->
                 <?php echo CHtml::image($article->image);?>
 <!--            </div>-->
-<!--            <div class="content">-->
-                    <?php echo CHtml::link($article->title,
-                        array("main/article", "articleId"=>$article->id),
-                        array("class"=>"title"));?>
+<!--            <div class="right">-->
+                <?php echo CHtml::link($article->title,
+                    array("main/article", "articleId"=>$article->id),
+                    array("class"=>"title"));?>
                 <span class="text">
                     <?php echo substr($article->description, 0, 700);?>
                     ...
@@ -15,7 +15,6 @@
                         array("main/article", "articleId"=>$article->id));?>
                 </span>
 <!--            </div>-->
-
         </div>
     <?php }?>
 </section>

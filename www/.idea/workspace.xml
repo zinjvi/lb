@@ -247,12 +247,17 @@
           <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
                 <state line="333" column="21" selection-start="5295" selection-end="5295" vertical-scroll-proportion="-2.84">
                   <folding>
                     <marker date="1385665635115" expanded="true" signature="3931:3956" placeholder="{...}" />
                     <marker date="1385665635115" expanded="true" signature="3973:3992" placeholder="{...}" />
                     <marker date="1385665635115" expanded="true" signature="5766:9624" placeholder="{...}" />
                   </folding>
+=======
+                <state line="117" column="21" selection-start="2045" selection-end="2045" vertical-scroll-proportion="-2.84">
+                  <folding />
+>>>>>>> Stashed changes
                 </state>
               </provider>
             </entry>
@@ -260,7 +265,11 @@
           <file leaf-file-name="articlesOfCategory.php" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protected/views/main/articlesOfCategory.php">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
                 <state line="17" column="0" selection-start="785" selection-end="785" vertical-scroll-proportion="0.5557692">
+=======
+                <state line="17" column="14" selection-start="784" selection-end="784" vertical-scroll-proportion="0.5557692">
+>>>>>>> Stashed changes
                   <folding />
                 </state>
               </provider>
@@ -273,7 +282,11 @@
           <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
                 <state line="630" column="1" selection-start="9847" selection-end="9847" vertical-scroll-proportion="-0.16849817">
+=======
+                <state line="173" column="16" selection-start="3106" selection-end="3106" vertical-scroll-proportion="-0.16849817">
+>>>>>>> Stashed changes
                   <folding />
                 </state>
               </provider>
@@ -784,18 +797,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state line="333" column="21" selection-start="5295" selection-end="5295" vertical-scroll-proportion="-2.84">
           <folding>
             <marker date="1385665635115" expanded="true" signature="3931:3956" placeholder="{...}" />
             <marker date="1385665635115" expanded="true" signature="3973:3992" placeholder="{...}" />
             <marker date="1385665635115" expanded="true" signature="5766:9624" placeholder="{...}" />
           </folding>
+=======
+        <state line="117" column="21" selection-start="2045" selection-end="2045" vertical-scroll-proportion="-2.84">
+          <folding />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/main/articlesOfCategory.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state line="17" column="0" selection-start="785" selection-end="785" vertical-scroll-proportion="0.5557692">
+=======
+        <state line="17" column="14" selection-start="784" selection-end="784" vertical-scroll-proportion="0.5557692">
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
