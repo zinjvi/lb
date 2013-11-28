@@ -1,11 +1,11 @@
-define(['use!backbone', 'forum/models/PostModel'],
-    function(Backbone, PostModel){
-    var PostCollection = Backbone.Collection.extend({
+define(['common/collectiions/BaseCollection', 'forum/models/PostModel'],
+    function(BaseCollection, PostModel){
+    var Collection = Backbone.Collection.extend({
         model: PostModel,
+        url: '/forum/posts',
         initialize: function(){
-            this.add({'title': 'tt 01'});
-            this.add({'title': 'tt 02'});
+            this.fetch({async:false});
         }
     });
-    return PostCollection;
+    return Collection;
 });
