@@ -1,1 +1,42 @@
-fv
+<script type="text/javascript" src="/js/layouts/header.js"></script>
+
+<div class="header">
+    <div>
+        <div class="nav">
+            <nav>
+                <ul class="menu">
+                    {#groups}
+                    <!--<?php foreach ($groups as $group) { ?>-->
+                    <li class="category category-left">
+                        <a class="category-link" href="#">{name}</a>
+                        <ul class="subcategories display-none">
+                            <!--<?php if($group->id == 2){?>-->
+                            <!--<li class="subcategory">-->
+                                <!--<a class="category-link" href="aromo">Аромотерапия</a>-->
+                            <!--</li>-->
+                            <!--<?php }?>-->
+
+                            {#categories}
+                            <!--<?php foreach ($group->categories as $category) {?>-->
+                            <li class="subcategory">
+                                <a href="#">{name}</a>
+                                <!--<?php echo CHtml::link($category->name,-->
+                                <!--array('main/articlesOfCategory', 'categoryId'=>$category->id));?>-->
+                            </li>
+                            <!--<?php }?>-->
+                            {/categories}
+                        </ul>
+                    </li>
+                    <!--<?php }?>-->
+                    {/groups}
+                    <li class="category category-left">
+                        <a class="category-link" href="main/forum">Форум</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <img class="header-image" src="/images/storage/headerImages/header-image_01.jpg">
+
+    </div>
+</div>

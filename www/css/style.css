@@ -180,7 +180,7 @@ section.articles-mini{
 }
 
 .article-mini img{
-    /*float: left;*/
+    float: left;
     width: 150px;
     /*display: inline-block;*/
     margin: 12px;
@@ -202,7 +202,10 @@ section.articles-mini{
 
 .article-mini .text{
     /*display: inline-block;*/
+}
 
+.article-mini .text p{
+    /*float: left;    */
 }
 
 
