@@ -23,7 +23,7 @@ require.config({
     }
 });
 
-require(['application', 'css!/css/style'], function(application){
+require(['application'], function(application){
     window.app = application;
     application.start();
 });

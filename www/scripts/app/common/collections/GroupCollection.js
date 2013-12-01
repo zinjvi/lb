@@ -1,4 +1,4 @@
-define(['common/collections/BaseCollection', 'models/GroupModel'],
+define(['common/collections/BaseCollection', 'common/models/GroupModel'],
     function(BaseCollection, GroupModel){
         var GroupCollection = BaseCollection.extend({
             model: GroupModel,

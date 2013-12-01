@@ -1,40 +1,64 @@
-define(['use!backbone', 'configs/frameConfig',
-    'views/MainFrameView', 'common/views/base',
-    'article/views/ArticlesListView', 'article/views/ArticleView'],
-    function(Backbone, frameConfig,
-             MainFrameView, BaseView,
-             ArticlesListView, ArticleView){
-    var AppRouter = Backbone.Router.extend({
+define(['use!underscore', 'use!backbone',
+    'common/views/BaseView', 'article/routerConfig',
+    'adminka/routerConfig'],
+    function(_, Backbone, BaseView,articleRouters,
+             arminkaRoutes){
 
-        frame: new MainFrameView(),
-
-        initialize: function(){
-            this.frame.render();
-        },
-
-        routes: {
-            '': 'index',
-            'articlesList/:categoryId': 'articlesList',
-            'article/:articleId': 'article'
-        },
-
-        index: function(){
-        },
-
-        articlesList: function(categoryId){
-            this.frame.setContent(new ArticlesListView({
-                categoryId: categoryId
-            }))
-
-        },
-
-        article: function(articleId){
-            this.frame.setContent(new ArticleView({
-                articleId: articleId
-            }))
-            scrollTo(0, 340);
+        var addExternalRoutes = function (router) {
+            _.each(router.externalRoutes, function (externalRoutes) {
+                addOneExternalRoutes(router, externalRoutes);
+            }, router)
         }
-    });
 
-    return AppRouter;
-});
+        var addOneExternalRoutes = function (router, externalRoutes) {
+            _.each(externalRoutes, function (collback, route) {
+                this.route(route, collback);
+            }, router)
+        }
+
+        var AppRouter = Backbone.Router.extend({
+            externalRoutes: [arminkaRoutes, articleRouters],
+            frame: {},
+            setView: function(view, Frame){
+                if(!(this.frame instanceof Frame)){
+                    this.frame = new Frame();
+                    this.frame.render();
+                }
+                this.frame.setContent(view);
+            },
+            routes: {
+//                '': 'index',
+//                'articlesList/:categoryId': 'articlesList',
+//                'article/:articleId': 'article'
+            },
+            initialize: function () {
+//                this.frame.render();
+                addExternalRoutes(this);
+            }//,
+//            index: function () {
+//                var Frame = MainFrameView;
+//                console.log("index");
+//                this.setView(new IndexView(), Frame);
+//            },
+//            articlesList: function (categoryId) {
+//                var Frame = MainFrameView;
+//                console.log("articles list");
+//                this.setView(new ArticlesListView({
+//                    categoryId: categoryId
+//                }), Frame);
+//            },
+//            article: function (articleId) {
+//                var Frame = MainFrameView;
+//                var View = ArticleView;
+//                console.log("article");
+//                this.setView(new ArticleView({
+//                    articleId: articleId
+//                }), Frame);
+////                this.frame.setContent(new ArticleView({
+////                    articleId: articleId
+////                }))
+//                scrollTo(0, 340);
+//            }
+        });
+        return AppRouter;
+    });

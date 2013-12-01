@@ -1,4 +1,4 @@
-define(['use!backbone', 'common/views/base', 'use!dust',
+define(['use!backbone', 'common/views/BaseView', 'use!dust',
     'text!article/templ/articlesList.dust',
     'article/collections/ArticleCollection'],
     function(Backbone, BaseView, dust, templateSources,

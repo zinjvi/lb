@@ -7,7 +7,7 @@
                 <ul class="menu">
                     {#groups}
                     <li class="category category-left">
-                        <a class="category-link" href="#">{name}</a>
+                        <a class="category-link" href="" onclick="return false">{name}</a>
                         <ul class="subcategories display-none">
                             {#aromoShow groupId=id}
                             <li class="subcategory">
@@ -25,10 +25,13 @@
                     <li class="category category-left">
                         <a class="category-link" href="#">Форум</a>
                     </li>
+                    <li class="category category-left">
+                        <a class="category-link" href="#adminka">Adminka</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-        <img class="header-image" src="/images/storage/headerImages/header-image_01.jpg">
+        <a href="#"><img class="header-image" src="/images/storage/headerImages/header-image_01.jpg"></a>
     </div>
 </div>
 

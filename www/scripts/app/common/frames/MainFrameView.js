@@ -1,7 +1,9 @@
-define(['use!backbone', 'common/views/base', 'text!/templates/mainFrameView.dust',
-    "collections/GroupCollection"],
-    function(Backbone, BaseView, templateSource, GroupCollection){
-    var View = BaseView.extend({
+define(['use!backbone', 'common/frames/BaseFrameView',
+    'text!/templates/mainFrameView.dust',
+    "common/collections/GroupCollection", 'css!common/css/style'],
+    function(Backbone, BaseFrameView, templateSource,
+             GroupCollection){
+    var MainFrameView = BaseFrameView.extend({
         template:{
             name: 'content.template',
             source: templateSource
@@ -25,15 +27,6 @@ define(['use!backbone', 'common/views/base', 'text!/templates/mainFrameView.dust
                 }
             });
         },
-        render: function(){
-            this.$el.html(this.renderTemplate());
-            this.$content = this.$el.find('.content');
-            $('body').append(this.el);
-        },
-        setContent: function(view){
-            this.$content.html('');
-            this.$content.append(view.render().el);
-        },
         onClickMenu: function(event){
             var $openSubcategory = this.$el
                 .find('ul.subcategories[style*="display: block"]');
@@ -50,5 +43,5 @@ define(['use!backbone', 'common/views/base', 'text!/templates/mainFrameView.dust
 //            $subcategories.slideToggle();
         }
     });
-    return View;
+    return MainFrameView;
 });

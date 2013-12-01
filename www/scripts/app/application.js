@@ -1,6 +1,6 @@
-define(['views/MainFrameView', 'AppRouter',
-    'configs/frameConfig', 'common/views/base'],
-    function (MainFrameView, AppRouter, frameConfig, BaseView) {
+define(['common/frames/MainFrameView', 'AppRouter',
+    'common/views/BaseView'],
+    function (MainFrameView, AppRouter, BaseView) {
 
         var router = new AppRouter();
         BaseView.prototype.router = this.router;
@@ -8,11 +8,10 @@ define(['views/MainFrameView', 'AppRouter',
         var application = {
 //        frameView: new MainFrameView(),
             router: router,
-            frames: frameConfig,
             start: function () {
-                this.router.route('my', function () {
-                    console.log('my');
-                });
+//                this.router.route('my', function () {
+//                    console.log('my');
+//                });
                 Backbone.history.start();
                 console.log("s");
             }

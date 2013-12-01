@@ -1,4 +1,4 @@
-define(['common/collectiions/BaseCollection', 'models/CategoryModel'],
+define(['common/collectiions/BaseCollection', 'common/models/CategoryModel'],
     function(BaseCollection, CategoryModel){
         var CategoryCollection = BaseCollection.extend({
             model: CategoryModel
