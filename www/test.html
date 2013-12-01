@@ -1,48 +1,39 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
 <head>
+    <meta charset="UTF-8">
     <title></title>
-    <style type="text/css">
-        body {
-            margin: 0 auto 0 auto;
-            width: 1000px;
-            background: #9aafe5;
-        }
+    <script type="text/javascript" src="scripts/lib/underscore.js"/>
+    <script type="text/javascript" src="scripts/lib/jquery.js"/>
+    <script type="text/javascript" src="scripts/lib/backbone.js"/>
+    <script type="text/javascript">
+        $(function(){
+            console.log("s");
+        });
+        (function(){
 
-        nav {
-            display: inline-block;
-            width: 100%;
-            background: #529EC6;
+            window.App = {
+                Models: {},
+                Collections: {},
+                Views: {},
+                Router: {}
+            };
+            App.Router = Backbone.Router.extend({
+                routes: {
+                    '': 'index'
+                },
+                index: function(){
+                    $(document.body).append("Index route has been called..");
+                }
+            });
 
-        }
+            new App.Router;
+            Backbone.history.start();
 
-        .cont {
-            width: 20%;
-            border: 1px #006600;
-            float: left;
-        }
-
-    </style>
+        })();
+    </script>
 </head>
 <body>
-<nav>
-    <div class="cont">
-        sdf
-    </div>
-    <div class="cont">
-        sdf
-    </div>
-    <div class="cont">
-        sdf
-    </div>
-    <div class="cont">
-        sdf
-    </div>
-    <div class="cont">
-        sdf
-    </div>
 
-
-</nav>
 </body>
 </html>

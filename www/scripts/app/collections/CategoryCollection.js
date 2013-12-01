@@ -1,6 +1,6 @@
 define(['common/collectiions/BaseCollection', 'models/CategoryModel'],
     function(BaseCollection, CategoryModel){
-        var CategoryCollection = Backbone.Collection.extend({
+        var CategoryCollection = BaseCollection.extend({
             model: CategoryModel
 //            url: '/article/groups',
 //            initialize: function(){

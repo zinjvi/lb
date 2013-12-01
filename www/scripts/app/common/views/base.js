@@ -7,7 +7,6 @@ define(['use!backbone', 'use!dust'], function (Backbone, dust) {
             var compiled = dust.compile(this.template.source,
                 this.template.name);
             dust.loadSource(compiled);
-
             var rendered;
             dust.render(this.template.name,
                 this.model&&this.model.toJSON(),

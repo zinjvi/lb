@@ -24,4 +24,13 @@ class ArticleController extends AbstractController
         $article = Article::model()->findByPk($id);
         $this->returnJson($article);
     }
+
+    public function actionArticlesByCategoryId($id)
+    {
+        Yii::log("Category Id = $id");
+        $article = Article::model()->findAllByAttributes(array(
+            'category_id'=>$id
+        ));
+        $this->returnJson($article);
+    }
 }

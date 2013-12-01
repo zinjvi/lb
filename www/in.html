@@ -3,37 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <script type="text/javascript" da src="scripts/lib/require.js"></script>
+    <script type="text/javascript" src="scripts/lib/underscore.js"></script>
+    <script type="text/javascript" src="scripts/lib/jquery.js"></script>
+    <script type="text/javascript" src="scripts/lib/backbone.js"></script>
     <script type="text/javascript">
-        require.config({
-            paths: {
-                text: 'scripts/lib/text',
-                backbone: 'scripts/lib/backbone',
-                jquery: 'scripts/lib/jquery',
-                underscore: 'scripts/lib/underscore',
-                use: 'scripts/lib/use',
-                dust: 'scripts/lib/dust'
-            },
-            use: {
-                backbone: {
-                    deps: ["use!underscore", "jquery"],
-                    attach: "Backbone"
+        $(function(){
+            console.log("s");
+            var AppRouter = Backbone.Router.extend({
+                routes: {
+                    "": "index",
+                    "w": "welcome"
                 },
-                underscore: {
-                    attach: "_"
+                index: function() {
+                    console.log("i");
+
                 },
-                dust: {
-                    attach: "dust"
+                welcome: function() {
+                    console.log("w");
                 }
-            }
+            });
+
+            var appRouterInstance = new AppRouter();
+            Backbone.history.start();
         });
 
-        require(['scripts/app/forum/application.js'], function(application){
-            application.start();
-        });
     </script>
 </head>
 <body>
-
+<a href="#">i</a>
+<br/><br/>
+<a href="#w">w</a>
 </body>
 </html>

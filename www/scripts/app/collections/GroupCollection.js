@@ -1,6 +1,6 @@
 define(['common/collections/BaseCollection', 'models/GroupModel'],
     function(BaseCollection, GroupModel){
-        var GroupCollection = Backbone.Collection.extend({
+        var GroupCollection = BaseCollection.extend({
             model: GroupModel,
             url: '/article/groups',
             initialize: function(){
