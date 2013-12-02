@@ -1,4 +1,4 @@
-define(['common/views/base', 'use!dust',
+define(['common/views/BaseView', 'use!dust',
     'text!/templates/aromo/content.dust'],
     function(BaseView, dust, templateSources){
 

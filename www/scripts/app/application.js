@@ -1,10 +1,21 @@
-define(['views/FrameView'], function(FrameView){
-    var application = {
-        frameView: new FrameView(),
-        start: function(){
-            console.log("s");
-        }
-    }
+define(['common/frames/MainFrameView', 'AppRouter',
+    'common/views/BaseView'],
+    function (MainFrameView, AppRouter, BaseView) {
 
-    return application;
-});
+        var router = new AppRouter();
+        BaseView.prototype.router = this.router;
+
+        var application = {
+//        frameView: new MainFrameView(),
+            router: router,
+            start: function () {
+//                this.router.route('my', function () {
+//                    console.log('my');
+//                });
+                Backbone.history.start();
+                console.log("s");
+            }
+        }
+
+        return application;
+    });

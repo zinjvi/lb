@@ -1,4 +1,4 @@
-define(['common/views/base', 'text!/templates/forum/forum.dust', 'forum/views/AnonsesPanelView',
+define(['common/views/BaseView', 'text!/templates/forum/forum.dust', 'forum/views/AnonsesPanelView',
     'forum/views/PostsPanelView'],
     function(BaseView, templateSources, AnonsesPanelView, PostsPanelView){
 
