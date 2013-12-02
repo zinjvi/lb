@@ -1,15 +1,15 @@
 define(['common/views/BaseView',
-    'text!adminka/templ/manageCategory.dust'],
+    'text!adminka/templ/articlesList.dust'],
     function(BaseView, templateSources){
 
-        var ManageCategoryView = BaseView.extend({
+        var ArticlesListView = BaseView.extend({
             template:{
-                name: 'manageCategory.template',
+                name: 'articlesList.template',
                 source: templateSources
             },
             initialize: function(){
 
             }
         });
-        return ManageCategoryView;
+        return ArticlesListView;
     });

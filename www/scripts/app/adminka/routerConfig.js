@@ -1,9 +1,7 @@
 define(['adminka/frames/AdminkaFrameView',
     'adminka/views/IndexView',
-    'adminka/views/ManageArticleView',
-    'adminka/views/ManageCategoryView'],
-    function(AdminkaFrameView, IndexView, ManageArticleView,
-             ManageCategoryView){
+    'adminka/views/ManageArticleView'],
+    function(AdminkaFrameView, IndexView, ManageArticleView){
     return {
         'adminka': function(){
             var Frame = AdminkaFrameView;
@@ -14,11 +12,6 @@ define(['adminka/frames/AdminkaFrameView',
             var Frame = AdminkaFrameView;
             console.log("rout: '#adminka/article'");
             this.setView(new ManageArticleView(), Frame);
-        },
-        'adminka/category': function(){
-            var Frame = AdminkaFrameView;
-            console.log("rout: '#adminka/category'");
-            this.setView(new ManageCategoryView(), Frame);
         }
     }
 });

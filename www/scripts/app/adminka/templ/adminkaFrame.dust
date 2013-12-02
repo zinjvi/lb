@@ -6,7 +6,6 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#adminka">Главная</a></li>
-                <li><a href="#adminka/category">Категории</a></li>
                 <li><a href="#adminka/article">Статьи</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

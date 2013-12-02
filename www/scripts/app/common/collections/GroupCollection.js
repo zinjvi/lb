@@ -4,6 +4,7 @@ define(['common/collections/BaseCollection', 'common/models/GroupModel'],
             model: GroupModel,
             url: '/article/groups',
             initialize: function(){
+                // TODO | remove 'fetch' from initialize
                 this.fetch({async:false});
             }
         });
