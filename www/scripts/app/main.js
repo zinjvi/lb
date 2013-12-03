@@ -7,7 +7,8 @@ require.config({
         underscore: '/scripts/lib/underscore',
         use: '/scripts/lib/use',
         dust: '/scripts/lib/dust',
-        css: '/scripts/lib/css'
+        css: '/scripts/lib/css',
+        bootstrap: '/scripts/lib/bootstrap'
     },
     use: {
         backbone: {
