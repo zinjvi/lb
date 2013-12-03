@@ -10,15 +10,13 @@ define(['jquery', 'common/views/BaseView',
             events:{
                 'click .open-modal': 'openModal'
             },
+            modal: new ModalWinView(),
             initialize: function(){
-
+//                this.modal.render();
             },
             openModal: function(){
-                console.log("om");
-                var modal = new ModalWinView();
-                this.$el.append(modal.render().el);
-
-                $('#myModal').modal('show');
+                this.modal.show();
+                console.log("open modal");
             }
         });
         return IndexView;

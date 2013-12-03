@@ -3,6 +3,7 @@ define(['common/views/BaseView',
     function(BaseView, templateSources){
 
         var ModalWinView = BaseView.extend({
+            className: '_modal-win-panel',
             template:{
                 name: 'modalWin.template',
                 source: templateSources
@@ -11,21 +12,15 @@ define(['common/views/BaseView',
                 'click .modal-dialog': 'closeModal'
             },
             initialize: function(){
-                $('#myModal').on('hidden.bs.modal', function () {
-                    // do something…
-                    console.log("close");
-                    this.remove();
-                })
+
             },
-            closeModal: function(){
-
-
+            show: function(){
+                $('body').append(this.render().el);
+                this.$el.modal('show');
+            },
+            hide: function(){
+                this.$el.modal('hide');
             }
-            /*,
-            render: function(){
-                BaseView.render.call(this);
-
-            }*/
         });
         return ModalWinView;
     });

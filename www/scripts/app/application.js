@@ -52,9 +52,9 @@ define(['jquery', 'use!backbone', 'common/frames/MainFrameView', 'AppRouter',
         }
 
         var application = {
-            //router: new AppRouter(),
+            router: new AppRouter(),
             start: function () {
-                //Backbone.history.start();
+                Backbone.history.start();
 //                test1();
 //                test2();
                 console.log("application start");
