@@ -1,10 +1,15 @@
 <ul class="list-group">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in sdf sdfsdf
-        sdfsdf sdfsdf sdfsdf sdfsdf ddfgdfgdf gdfg dfgdfdfgb dfsdf sdfsdf
-        ddfgdfgdf gdfg dfgdfdfgb dfsdf sdfsdf ddfgdfgdf gdfg dfgdfdfgb
+    {#articles}
+    <li class="list-group-item">
+        <span class="article-name">{title}</span>
+        <span id="b" class="actions">
+            <button type="button" class="btn btn-success btn-sm change-article">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+            <button type="button" class="btn btn-danger btn-sm remove-article">
+                <span class="glyphicon glyphicon-remove"></span>
+            </button>
+        </span>
     </li>
-    <li class="list-group-item">Morbi leo risus</li>
-    <li class="list-group-item">Porta ac consectetur ac</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    {/articles}
 </ul>

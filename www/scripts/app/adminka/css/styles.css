@@ -181,7 +181,6 @@ h3{
 }
 
 .choose-article .group{
-    /*background: #e9d08e;*/
     margin-bottom: 10px;
     padding-bottom: 7px;
 }
@@ -197,4 +196,18 @@ h3{
 /************* Article manage ***********/
 .choose-article-panel{
     width: 450px;
+}
+
+span.actions{
+    float: right;
+}
+
+.actions button{
+    margin: 0 3px;
+}
+
+
+/******* Botstrap Fixes ********/
+.choose-article-panel .panel-group .panel{
+    overflow: visible;
 }

@@ -9,12 +9,6 @@ define(['common/collections/BaseCollection',
                     url: 'article/articlesByCategoryId/'+categoryId
                 })
             }
-
-//            url: '/article/groups',
-//            initialize: function(){
-//                this.fetch({async:false});
-//            }
-
         });
         return ArticleCollection;
     });

@@ -101,12 +101,12 @@ define(['jquery', 'use!backbone', 'AppRouter'],
 
 
         var application = {
-//            router: new AppRouter(),
+            router: new AppRouter(),
             start: function () {
-//                Backbone.history.start();
+                Backbone.history.start();
 //                test1();
 //                test2();
-                test3();
+                //test3();
 
                 console.log("application start");
             }
