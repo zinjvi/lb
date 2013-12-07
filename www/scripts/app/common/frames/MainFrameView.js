@@ -1,5 +1,5 @@
 define(['use!backbone', 'common/frames/BaseFrameView',
-    'text!/templates/mainFrameView.dust',
+    'text!common/templ/mainFrameView.dust',
     "common/collections/GroupCollection", 'css!common/css/style'],
     function(Backbone, BaseFrameView, templateSource,
              GroupCollection){

@@ -1,15 +1,16 @@
-define(['use!backbone', 'common/views/BaseView',
-    'text!/templates/mainFrameView.dust'],
-    function(Backbone, BaseView, templateSource,
-             GroupCollection){
+define(['use!backbone', 'common/views/BaseView'],
+    function(Backbone, BaseView){
         var BaseFrameView = BaseView.extend({
-            className: 'app-frame',
             $content: {},
             render: function(){
-                $('body').html('');
+                if(!$('#frame-panel').length){
+                    $('<div/>').attr('id', 'frame-panel')
+                        .appendTo('body');
+                }
+                $('#frame-panel').html('');
                 this.$el.html(this.renderTemplate());
+                this.$el.appendTo('#frame-panel');
                 this.$content = this.$el.find('.content');
-                $('body').append(this.el);
             },
             setContent: function(view){
                 this.$content.html('');

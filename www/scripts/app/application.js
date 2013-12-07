@@ -1,13 +1,12 @@
-define(['jquery', 'use!backbone', 'common/frames/MainFrameView', 'AppRouter',
-    'common/views/BaseView'],
-    function ($, Backbone, MainFrameView, AppRouter, BaseView) {
+define(['jquery', 'use!backbone', 'AppRouter'],
+    function ($, Backbone, AppRouter) {
 
-        var test1 = function(){
+        var test1 = function () {
             var Model = Backbone.Model.extend({
                 default: {
                     name: ''
                 },
-                f: function(){
+                f: function () {
                     console.log("f");
                 }
             });
@@ -21,10 +20,10 @@ define(['jquery', 'use!backbone', 'common/frames/MainFrameView', 'AppRouter',
             var MainModel = Backbone.Model.extend({
                 collection: new Collection(),
                 m: model,
-                main: function(){
+                main: function () {
                     var object = {};
                     _.extend(object, Backbone.Events);
-                    object.on("alert", function(msg) {
+                    object.on("alert", function (msg) {
                         console.log("Triggered: " + msg);
                     });
                     object.trigger("alert", "an event");
@@ -43,20 +42,72 @@ define(['jquery', 'use!backbone', 'common/frames/MainFrameView', 'AppRouter',
 //            model.f();
         }
 
-        var test2 = function(){
+        var test2 = function () {
             var v = $.extend({
-                f1: function(){
+                f1: function () {
                     console.log("f1");
                 }
             });
         }
 
+        var test3 = function () {
+            function getXmlHttp() {
+                try {
+                    return new ActiveXObject("Msxml2.XMLHTTP");
+                } catch (e) {
+                    try {
+                        return new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (ee) {
+                    }
+                }
+                if (typeof XMLHttpRequest != 'undefined') {
+                    return new XMLHttpRequest();
+                }
+            }
+
+            var url = 'http://lb/article/articlesByCategoryId/2';
+            var xmlHttp = getXmlHttp();
+
+            xmlHttp.open('GET', url, true);
+            xmlHttp.onreadystatechange = function(){
+                console.log("ready state: "+xmlHttp.readyState);
+//                console.log("content: "+xmlHttp.responseText);
+            }
+            xmlHttp.send(null);
+
+            console.log("opend");
+
+
+/*            function getUrl(url, cb) {
+                var xmlhttp = getXmlHttp();
+                xmlhttp.open("GET", url);
+                xmlhttp.onreadystatechange = function () {
+                    if (xmlhttp.readyState == 4) {
+                        cb(
+                            xmlhttp.status,
+                            xmlhttp.getAllResponseHeaders(),
+                            xmlhttp.responseText
+                        );
+                    }
+                }
+                xmlhttp.send(null);
+            }
+
+            getUrl('http://lb/article/articlesByCategoryId/2', function(a, b, c){
+                console.log("cb");
+            })*/
+
+        }
+
+
         var application = {
-            router: new AppRouter(),
+//            router: new AppRouter(),
             start: function () {
-                Backbone.history.start();
+//                Backbone.history.start();
 //                test1();
 //                test2();
+                test3();
+
                 console.log("application start");
             }
         }

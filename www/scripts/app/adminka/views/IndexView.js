@@ -1,6 +1,7 @@
 define(['jquery', 'common/views/BaseView',
-    'text!adminka/templ/index.dust', 'common/views/ModalWinView'],
-    function($, BaseView, templateSources, ModalWinView, modal){
+    'text!adminka/templ/index.dust', 'common/views/ModalWinView',
+    'adminka/views/ManageArticleView'],
+    function($, BaseView, templateSources, ModalWinView, ALV){
 
         var IndexView = BaseView.extend({
             template:{
@@ -10,12 +11,26 @@ define(['jquery', 'common/views/BaseView',
             events:{
                 'click .open-modal': 'openModal'
             },
-            modal: new ModalWinView(),
             initialize: function(){
-//                this.modal.render();
             },
             openModal: function(){
-                this.modal.show();
+                var modal = new ModalWinView({
+                    title: "title test",
+                    content: new ALV(),//"content test",
+                    buttons: [
+                        {
+                            'label': 'Closable First',
+                            'classes': 'btn-default close-modal'
+                        },
+                        {
+                            'label': 'Second',
+                            'classes': 'btn-primary close-modal',
+                            'click': function(){
+                                console.log("clclcl second");
+                            }
+                        }
+                    ]
+                });
                 console.log("open modal");
             }
         });

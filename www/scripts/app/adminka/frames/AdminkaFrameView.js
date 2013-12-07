@@ -3,6 +3,7 @@ define(['use!backbone', 'common/frames/BaseFrameView',
     'css!adminka/css/styles', 'css!/css/bootstrap', 'bootstrap'],
     function (Backbone, BaseFrameView, templateSource) {
         var AdminkaFrameView = BaseFrameView.extend({
+            className: '_adminka-frame',
             template: {
                 name: 'content.template',
                 source: templateSource
