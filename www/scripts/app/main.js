@@ -2,7 +2,9 @@ require.config({
     baseUrl: "/scripts/app/",
     paths: {
         text: '/scripts/lib/text',
-        backbone: '/scripts/lib/backbone',
+        backbone: '/scripts/lib/backbone/backbone',
+        localStorage: '/scripts/lib/backbone/localStorage',
+        modelBinder: '/scripts/lib/backbone/modelBinder',
         jquery: '/scripts/lib/jquery',
         underscore: '/scripts/lib/underscore',
         use: '/scripts/lib/use',
