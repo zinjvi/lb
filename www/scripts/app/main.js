@@ -5,12 +5,25 @@ require.config({
         backbone: '/scripts/lib/backbone/backbone',
         localStorage: '/scripts/lib/backbone/localStorage',
         modelBinder: '/scripts/lib/backbone/modelBinder',
-        jquery: '/scripts/lib/jquery',
+        jquery: '/scripts/lib/jquery/jquery',
+        'jquery.validate': '/scripts/lib/jquery/jquery.validate',
+        'jquery.serializeObject': '/scripts/lib/jquery/jquery.serializeObject',
         underscore: '/scripts/lib/underscore',
         use: '/scripts/lib/use',
         dust: '/scripts/lib/dust',
         css: '/scripts/lib/css',
         bootstrap: '/scripts/lib/bootstrap'
+    },
+    shim: {
+        'backbone': {
+            deps: ['underscore', 'jquery'],
+            exports: 'Backbone'
+        },
+        'underscore': {
+            exports: '_'
+        },
+        'jquery.validate': ['jquery'],
+        'jquery.serializeObject': ['jquery']
     },
     use: {
         backbone: {

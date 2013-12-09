@@ -26,8 +26,10 @@ define(['use!backbone', 'use!dust'], function (Backbone, dust) {
 
         render: function () {
             this.$el.html(this.renderTemplate());
+            this.afterRender();
             return this;
         },
+        afterRender: function(){},
         renderTemplate: function () {
             //TODO need optimization
             this.template;

@@ -47,6 +47,10 @@ h3{
     margin-left: 30px;
 }
 
+.right-panel{
+    float: right;
+}
+
 /*Header image management*/
 
 .header-image-list img{
@@ -196,6 +200,7 @@ h3{
 /************* Article manage ***********/
 .choose-article-panel{
     width: 450px;
+    float: left;
 }
 
 span.actions{

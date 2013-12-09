@@ -1,61 +1,65 @@
 <!--<script type="text/javascript" src="../../../js/ckeditor/ckeditor.js"></script>-->
 
 <!--<script type="text/javascript">-->
-    <!--$(function () {-->
-        <!--CKEDITOR.replace('ck', {-->
-            <!--filebrowserImageUploadUrl: '/adminka/saveImage',-->
-            <!--filebrowserWindowWidth: 800,-->
-            <!--filebrowserWindowHeight: 500-->
-        <!--});-->
-    <!--});-->
+<!--$(function () {-->
+<!--CKEDITOR.replace('ck', {-->
+<!--filebrowserImageUploadUrl: '/adminka/saveImage',-->
+<!--filebrowserWindowWidth: 800,-->
+<!--filebrowserWindowHeight: 500-->
+<!--});-->
+<!--});-->
 <!--</script>-->
+        <style type="text/css">
+            .lc{
+                background-color: slategrey;
+                width: 300px;
+                height: 200px;
+            }
+        </style>
+        <div class="cl">sdfsdsdfsdfsdfsdfsdfsdfsdf sdfsdfsdf sdf sdfsdf sdfsdfs dfsdfssdf
+        sdf sdfs
+        d fsdfsdfsdfsdf sdfsdfsdf sdfsdf</div>
 
-<div class="update-form">
-    <div class="left">
-        <div class="input-line">
-            <div class="title">Title :</div>
+<form class="edit-article">
+    <!--<div class="update-form">-->
+        <!--<div class="left">-->
+            <div class="input-line">
+                <div class="title">Title :</div>
+                <div class="input">
+                    <input type="text" name="title" required/>
+                </div>
+            </div>
+            <div class="input-line">
+                <div class="title">Image :</div>
+                <div class="input">
+                    <input type="file" value="{image}" required/>
+                </div>
+            </div>
+            <div class="input-line">
+                <div class="title">Category :</div>
+                <div class="input">
+                    <!--<?php     echo CHtml::dropDownList("Article[category_id]", $article->category->id,-->
+                    <!--CHtml::listData($categories, "id", "name"), array('empty' => ''));?>-->
+                </div>
+            </div>
+        <!--</div>-->
+        <!--<div class="right">-->
+            <div class="article-image">
+                <img src="{image}">
+                <!--<?php echo CHtml::image($article->image);?>-->
+            </div>
+        <!--</div>-->
+        <div class="input-block">
+            <div class="title">Content :</div>
             <div class="input">
-                <input type="text" value="{title}"/>
+                <textarea name="description" required></textarea>
+                <!--<?php echo CHtml::activeTextArea($article, "description", array(-->
+                <!--"id" => "ck"));?>-->
             </div>
         </div>
         <div class="input-line">
-            <div class="title">Image :</div>
-            <div class="input">
-                <input type="file" value="{image}"/>
-            </div>
+            <button>Сохранить</button>
+            <!--<?php echo CHtml::submitButton('Submit');?>-->
         </div>
-        <div class="input-line">
-            <div class="title">Category :</div>
-            <div class="input"><?php     echo CHtml::dropDownList("Article[category_id]", $article->category->id,
-                CHtml::listData($categories, "id", "name"), array('empty' => ''));?></div>
-        </div>
-    </div>
-    <div class="right">
-        <div class="article-image">
-            <?php echo CHtml::image($article->image);?>
-        </div>
-    </div>
-    <div class="input-block">
-        <div class="title">Content :</div>
-        <div class="input"><?php echo CHtml::activeTextArea($article, "description", array(
-                "id" => "ck"));?>
-        </div>
-    </div>
-    <div class="input-line">
-        <?php echo CHtml::submitButton('Submit');?>
-    </div>
-
-
-    <?php
-
-
-
-
-
-
-
-
-     ?>
-
-    <?php echo CHtml::endForm();?>
-</div>
+    <!--</div>-->
+</form>

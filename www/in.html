@@ -1,37 +1,75 @@
-<!doctype html>
-<html lang="en-US">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <script type="text/javascript" src="scripts/lib/underscore.js"></script>
-    <script type="text/javascript" src="scripts/lib/jquery.js"></script>
-    <script type="text/javascript" src="scripts/lib/backbone/backbone.js"></script>
-    <script type="text/javascript">
-        $(function(){
-            console.log("s");
-            var AppRouter = Backbone.Router.extend({
-                routes: {
-                    "": "index",
-                    "w": "welcome"
-                },
-                index: function() {
-                    console.log("i");
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type"/>
+    <title>Example 1</title>
 
+    <!-- include source files here... -->
+    <script type="text/javascript" src="scripts/lib/underscore.js"></script>
+    <script type="text/javascript" src="scripts/lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="scripts/lib/backbone/backbone.js"></script>
+    <script type="text/javascript" src="scripts/lib/backbone/ModelBinder.js"></script>
+
+    <script>
+        $().ready(function () {
+
+            model = new Backbone.Model();
+
+            model.set({firstName: 'Bob'});
+
+//            model.bind('change', function () {
+//                $('#modelData').html(JSON.stringify(model.toJSON()));
+//            });
+
+
+            ViewClass = Backbone.View.extend({
+
+                _modelBinder: undefined,
+
+                initialize:function () {
+                    this._modelBinder = new Backbone.ModelBinder();
                 },
-                welcome: function() {
-                    console.log("w");
+
+                close: function(){
+                    this._modelBinder.unbind();
+                },
+
+                render:function () {
+                    var html = '\
+                      \
+                      <div id="welcome"> Welcome, <span name="firstName"></span> <span name="lastName"></span>\
+                      <br><br>\
+                      <form>\
+                        Edit your information:\
+                            <input type="text" name="firstName"/>\
+                            <input type="text" name="lastName"/></div>\
+                      </form>\
+                      ';
+
+                    this.$el.html(html);
+
+                    this._modelBinder.bind(model, this.el);
+
+                    return this;
                 }
             });
 
-            var appRouterInstance = new AppRouter();
-            Backbone.history.start();
+            view = new ViewClass();
+
+            $('#viewContent').append(view.render().$el);
         });
 
     </script>
+
 </head>
 <body>
-<a href="#">i</a>
-<br/><br/>
-<a href="#w">w</a>
+<br>
+Model data: <div id="modelData"></div>
+
+<hr><br>
+<div id="viewContent">
+
+</div>
+
 </body>
 </html>

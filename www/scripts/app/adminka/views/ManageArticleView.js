@@ -55,7 +55,7 @@ define(['use!backbone', 'common/views/BaseView',
                     articleId: event.target.id
                 });
                 editArticleView.render();
-                this.$el.find('.edit-article-panel')
+                this.$el.find('.right-panel')
                     .append(editArticleView.el)
             }
         });
