@@ -1,7 +1,7 @@
 define(['common/views/BaseView', 'use!dust',
-    'text!adminka/templ/editArticle.dust', 'modelBinder',
+    'text!adminka/templ/editArticle.dust',
     'article/models/ArticleModel', 'jquery', 'jquery.validate', 'jquery.serializeObject'],
-    function(BaseView, dust, templateSources, ModelBinder,
+    function(BaseView, dust, templateSources,
              ArticleModel, $){
 
         var EditArticleView = BaseView.extend({
@@ -14,27 +14,36 @@ define(['common/views/BaseView', 'use!dust',
                 'submit form.edit-article': 'saveArticle'
             },
             $form: undefined,
-            initialize: function(){
-                Backbone.ModelBinder.SetOptions({
-                    changeTriggers: {
-                        '': '',
-                        'button': 'click'
-                    }
-                });
-                this.modelBinder = new ModelBinder();
-                this.model = new ArticleModel();
-                this.model.on('change', function(){
-                    console.log("ch");
-                })
+            initialize: function(options){
+                if (options && options.articleId) {
+                    this.model = new ArticleModel({
+                        id: options.articleId
+                    });
+                    this.model.fetchById();
+                }else{
+                    this.model = new ArticleModel();
+                }
+//
+//
+//                this.model.on('change', function(){
+//                    console.log("ch");
+//                })
             },
             afterRender: function(){
-                this.modelBinder.bind(this.model, this.$('form.edit-article'));
+                $.validator.setDefaults({
+                    errorPlacement: function(error, element){
+                        console.log("error");
+                        console.log(error);
+                        console.log(element);
+                    }
+                })
                 this.$el.find('form.edit-article').validate();
                 this.$form = this.$el.find('form.edit-article');
             },
             saveArticle: function(event){
                 event.preventDefault();
                 this.model.set(this.$form.serializeObject());
+                this.model.save();
             }
         });
         return EditArticleView;

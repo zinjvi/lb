@@ -8,68 +8,38 @@
     <script type="text/javascript" src="scripts/lib/underscore.js"></script>
     <script type="text/javascript" src="scripts/lib/jquery/jquery.js"></script>
     <script type="text/javascript" src="scripts/lib/backbone/backbone.js"></script>
-    <script type="text/javascript" src="scripts/lib/backbone/ModelBinder.js"></script>
-
+    <script type="text/javascript" src="scripts/lib/prototype.js"></script>
     <script>
-        $().ready(function () {
-
-            model = new Backbone.Model();
-
-            model.set({firstName: 'Bob'});
-
-//            model.bind('change', function () {
-//                $('#modelData').html(JSON.stringify(model.toJSON()));
-//            });
-
-
-            ViewClass = Backbone.View.extend({
-
-                _modelBinder: undefined,
-
-                initialize:function () {
-                    this._modelBinder = new Backbone.ModelBinder();
+//        $(function(){
+            var Person = Class.create();
+            Person.prototype = {
+                initialize: function(name) {
+                    this.name = name;
                 },
+                say: function(message) {
+                    return this.name + ': ' + message;
+                }
+            };
 
-                close: function(){
-                    this._modelBinder.unbind();
-                },
+            var guy = new Person('Miro');
+            guy.say('hi');
 
-                render:function () {
-                    var html = '\
-                      \
-                      <div id="welcome"> Welcome, <span name="firstName"></span> <span name="lastName"></span>\
-                      <br><br>\
-                      <form>\
-                        Edit your information:\
-                            <input type="text" name="firstName"/>\
-                            <input type="text" name="lastName"/></div>\
-                      </form>\
-                      ';
-
-                    this.$el.html(html);
-
-                    this._modelBinder.bind(model, this.el);
-
-                    return this;
+            var Pirate = Class.create();
+            Pirate.prototype = Object.extend(new Person(), {
+                // redefine the speak method
+                say: function(message) {
+                    return this.name + ': ' + message + ', yarr!';
                 }
             });
 
-            view = new ViewClass();
-
-            $('#viewContent').append(view.render().$el);
-        });
-
+            var john = new Pirate('Long John');
+            john.say('ahoy matey');
+//        });
     </script>
 
 </head>
 <body>
-<br>
-Model data: <div id="modelData"></div>
 
-<hr><br>
-<div id="viewContent">
-
-</div>
 
 </body>
 </html>

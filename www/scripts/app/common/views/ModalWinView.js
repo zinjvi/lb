@@ -28,7 +28,11 @@ define(['use!underscore', 'use!backbone', 'common/views/BaseView',
                 'click .modal-dialog': 'closeModal'
             },
             initialize: function(options){
-                this.model = completeModel(options);
+                var defaultOptions = {
+                    close: true
+                }
+                _.extend(defaultOptions, options)
+                this.model = completeModel(defaultOptions);
                 assigneCallbacks(options, this.events);
                 
                 this.render();

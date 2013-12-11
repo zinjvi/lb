@@ -27,7 +27,8 @@ define(['use!backbone', 'common/views/BaseView',
             },
             events: {
                 'click .articles-list': 'showArticleList',
-                'click .change-article': 'changeArticle'
+                'click .change-article': 'changeArticle',
+                'click .add-article': 'addArticle'
             },
             model: completeModel(),
             initialize: function(){
@@ -50,13 +51,20 @@ define(['use!backbone', 'common/views/BaseView',
                     $destPanelBody.append(articlesListView.render().el);
                 }
             },
-            changeArticle: function(event){
+            changeArticle: function($event){
                 var editArticleView = new EditArticleView({
-                    articleId: event.target.id
+                    articleId: $event.currentTarget.id
                 });
                 editArticleView.render();
                 this.$el.find('.right-panel')
-                    .append(editArticleView.el)
+                    .append(editArticleView.el);
+            },
+            addArticle: function($event){
+                console.log("add article");
+                var editArticleView = new EditArticleView();
+                editArticleView.render();
+                this.$el.find('.right-panel')
+                    .append(editArticleView.el);
             }
         });
         return ManageArticleView;

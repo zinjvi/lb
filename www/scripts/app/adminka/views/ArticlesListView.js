@@ -1,8 +1,9 @@
 define(['use!backbone', 'common/views/BaseView',
     'text!adminka/templ/articlesList.dust',
-    'article/collections/ArticleCollection'],
+    'article/collections/ArticleCollection',
+    'adminka/views/ArticleListItemView'],
     function(Backbone, BaseView, templateSources,
-             ArticleCollection){
+             ArticleCollection, ArticleListItemView){
 
         var completeModel = function(categoryId){
             var articles = new ArticleCollection();
@@ -18,8 +19,18 @@ define(['use!backbone', 'common/views/BaseView',
                 name: 'articlesList.template',
                 source: templateSources
             },
+            afterRender: function(){
+                var articles = new ArticleCollection();
+                articles.fetchByCategoryId(this.options.categoryId);
+                articles.each(function(element, index){
+                    var itemView = new ArticleListItemView({
+                        model: element
+                    });
+                    this.$el.find('ul').append(itemView.render().el);
+                }, this);
+            },
             initialize: function(options){
-                this.model = completeModel(options.categoryId);
+                this.options = options;
             }
         });
         return ArticlesListView;

@@ -21,17 +21,18 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a id="{id}" class="articles-list" data-toggle="collapse" data-parent="#categories" href="#category_{id}">
+                                    <a id="{id}" class="articles-list" data-toggle="collapse"
+                                       data-parent="#categories" href="#category_{id}">
                                         {name}
                                     </a>
                                     <span id="b" class="actions">
-                                        <button type="button" class="btn btn-success btn-sm">
+                                        <button data-id="{id}" type="button" class="btn btn-success btn-sm add-article">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                        <button data-id="{id}" type="button" class="btn btn-success btn-sm change-category">
                                             <span class="glyphicon glyphicon-pencil"></span>
                                         </button>
-                                        <button type="button" class="btn btn-success btn-sm">
-                                            <span class="glyphicon glyphicon-pencil"></span>
-                                        </button>
-                                        <button type="button" class="btn btn-danger btn-sm">
+                                        <button data-id="{id}" type="button" class="btn btn-danger btn-sm remove-category">
                                             <span class="glyphicon glyphicon-remove"></span>
                                         </button>
                                     </span>

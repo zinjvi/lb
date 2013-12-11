@@ -65,18 +65,42 @@ class MainController extends CController
 
     public function actionTest()
     {
-        $newArt = new Article();
-        $newArt->title = "titleOfNew";
-        $newArt->category_id = 4;
-        $newArt->description = "descr";
-        $newArt->save(false);
+        $cars=array("Saab","Volvo","BMW","Toyota");
 
-        $art = Article::model()->findByAttributes(array("title"=>"titleOfNew"));
-        echo "id = ".$art->id;
-        echo "title = ".$art->title;
+        echo '<pre>';
+        echo "Car:<br/>";
+        print_r($cars);
+        echo '</pre>';
 
-        $art->title = "tnnnnnn";
-        $art->update();
+        $encode=CJSON::encode($cars);
+
+        echo $encode;
+
+        $decode=CJSON::decode($encode);
+        echo '<pre>';
+        print_r($decode);
+        echo '</pre>';
+
+        echo '~~~~~~~~~~~~~~~~~<br/>';
+/*        $json = "{"id'='10'}";
+        echo $json;
+//        $d=CJSON::decode($json, true);
+        $d = json_decode($json);
+        echo '<pre>';
+        print_r($d);
+        echo '</pre>';*/
+
+        echo '~~~~~~~~~~~~~~~~~<br/>';
+        $j = '{"id": "10"}';
+        $json = '{"inbox":[{"from":"55512351","date":"29\/03\/2010","time":"21:24:10","utcOffsetSeconds":3600,"recipients":[{"address":"55512351","name":"55512351","deliveryStatus":"notRequested"}],"body":"This is message text."},{"from":"55512351","date":"29\/03\/2010","time":"21:24:12","utcOffsetSeconds":3600,"recipients":[{"address":"55512351","name":"55512351","deliveryStatus":"notRequested"}],"body":"This is message text."},{"from":"55512351","date":"29\/03\/2010","time":"21:24:13","utcOffsetSeconds":3600,"recipients":[{"address":"55512351","name":"55512351","deliveryStatus":"notRequested"}],"body":"This is message text."},{"from":"55512351","date":"29\/03\/2010","time":"21:24:13","utcOffsetSeconds":3600,"recipients":[{"address":"55512351","name":"55512351","deliveryStatus":"notRequested"}],"body":"This is message text."}]}';
+        $data = json_decode($j);
+        print_r($data);
+        echo '<br/>~~~~~<br/>';
+        Yii::log($j);
+        $d = CJSON::decode($j);
+        print_r($d);
+        Yii::log($d['id']);
+//        var_dump($data);
     }
 
     public function actionAromo(){

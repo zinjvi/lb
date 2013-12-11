@@ -13,6 +13,9 @@ define(['use!backbone', 'use!dust'], function (Backbone, dust) {
                         name: 'templateName.template',
                         source: templateSources
                     },
+                    events: {
+
+                    },
                     initialize: function(){
 
                     }

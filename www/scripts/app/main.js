@@ -4,7 +4,6 @@ require.config({
         text: '/scripts/lib/text',
         backbone: '/scripts/lib/backbone/backbone',
         localStorage: '/scripts/lib/backbone/localStorage',
-        modelBinder: '/scripts/lib/backbone/modelBinder',
         jquery: '/scripts/lib/jquery/jquery',
         'jquery.validate': '/scripts/lib/jquery/jquery.validate',
         'jquery.serializeObject': '/scripts/lib/jquery/jquery.serializeObject',

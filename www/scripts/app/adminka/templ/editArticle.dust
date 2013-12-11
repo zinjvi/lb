@@ -8,58 +8,97 @@
 <!--filebrowserWindowHeight: 500-->
 <!--});-->
 <!--});-->
-<!--</script>-->
-        <style type="text/css">
-            .lc{
-                background-color: slategrey;
-                width: 300px;
-                height: 200px;
-            }
-        </style>
-        <div class="cl">sdfsdsdfsdfsdfsdfsdfsdfsdf sdfsdfsdf sdf sdfsdf sdfsdfs dfsdfssdf
-        sdf sdfs
-        d fsdfsdfsdfsdf sdfsdfsdf sdfsdf</div>
 
-<form class="edit-article">
-    <!--<div class="update-form">-->
-        <!--<div class="left">-->
-            <div class="input-line">
-                <div class="title">Title :</div>
-                <div class="input">
-                    <input type="text" name="title" required/>
-                </div>
-            </div>
-            <div class="input-line">
-                <div class="title">Image :</div>
-                <div class="input">
-                    <input type="file" value="{image}" required/>
-                </div>
-            </div>
-            <div class="input-line">
-                <div class="title">Category :</div>
-                <div class="input">
-                    <!--<?php     echo CHtml::dropDownList("Article[category_id]", $article->category->id,-->
-                    <!--CHtml::listData($categories, "id", "name"), array('empty' => ''));?>-->
-                </div>
-            </div>
+
+
+<!--<style type="text/css">-->
+    <!--.d{-->
+        <!--background-color: slategrey;-->
+        <!--width: 500px;-->
+        <!--height: 10px;-->
+    <!--}-->
+<!--</style>-->
+
+<!--<form class="form-horizontal" role="form">-->
+    <!--<div class="form-group">-->
+        <!--<label for="inputEmail3" class="col-sm-2 control-label">Email</label>-->
+        <!--<div class="col-sm-10">-->
+            <!--<input type="email" class="form-control" id="inputEmail3" placeholder="Email">-->
         <!--</div>-->
-        <!--<div class="right">-->
-            <div class="article-image">
-                <img src="{image}">
-                <!--<?php echo CHtml::image($article->image);?>-->
-            </div>
-        <!--</div>-->
-        <div class="input-block">
-            <div class="title">Content :</div>
-            <div class="input">
-                <textarea name="description" required></textarea>
-                <!--<?php echo CHtml::activeTextArea($article, "description", array(-->
-                <!--"id" => "ck"));?>-->
-            </div>
-        </div>
-        <div class="input-line">
-            <button>Сохранить</button>
-            <!--<?php echo CHtml::submitButton('Submit');?>-->
-        </div>
     <!--</div>-->
+    <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">Password</label>-->
+        <!--<div class="col-sm-10">-->
+            <!--<input type="password" class="form-control" id="inputPassword3" placeholder="Password">-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+        <!--<div class="col-sm-offset-2 col-sm-10">-->
+            <!--<div class="checkbox">-->
+                <!--<label>-->
+                    <!--<input type="checkbox"> Remember me-->
+                <!--</label>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+        <!--<div class="col-sm-offset-2 col-sm-10">-->
+            <!--<button type="submit" class="btn btn-default">Sign in</button>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</form>-->
+
+<!--<div class="d">-->
+
+<!--</div>-->
+<!--<div class="d">-->
+
+<!--</div>-->
+<!--<div class="d">-->
+
+<!--</div>-->
+
+
+<form class="edit-article form-horizontal" role="form">
+    <input type="hidden" name="id" value="{id}">
+
+    <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">Заголовок :</label>
+
+        <div class="col-sm-10">
+            <input id="title" type="text" name="title" class="form-control"
+                   value="{title}" placeholder="Заголовок статьи." required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="image" class="col-sm-2 control-label">Изображение :</label>
+
+        <div class="col-sm-10">
+            <input id="image" type="file" name="image" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="category" class="col-sm-2 control-label">Категория :</label>
+
+        <div class="col-sm-10">
+            <input id="category" type="text" name="category" class="form-control"
+                   value="{category.id}">
+        </div>
+    </div>
+    <!--<div class="article-image">-->
+    <!--<img src="{image}">-->
+    <!--</div>-->
+    <div class="form-group">
+        <div class="col-sm-10">
+            <textarea id="description" type="text" name="description"
+                      class="form-control">{description}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+
+        <div class="col-sm-10">
+            <button>Сохранить</button>
+        </div>
+    </div>
 </form>
