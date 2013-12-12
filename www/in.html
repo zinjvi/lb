@@ -10,31 +10,14 @@
     <script type="text/javascript" src="scripts/lib/backbone/backbone.js"></script>
     <script type="text/javascript" src="scripts/lib/prototype.js"></script>
     <script>
-//        $(function(){
-            var Person = Class.create();
-            Person.prototype = {
-                initialize: function(name) {
-                    this.name = name;
-                },
-                say: function(message) {
-                    return this.name + ': ' + message;
-                }
-            };
 
-            var guy = new Person('Miro');
-            guy.say('hi');
+        console.log(['q', 'qw', 'qwe'].all(function(item){
+            return item.length >= 1;
+        }));
 
-            var Pirate = Class.create();
-            Pirate.prototype = Object.extend(new Person(), {
-                // redefine the speak method
-                say: function(message) {
-                    return this.name + ': ' + message + ', yarr!';
-                }
-            });
 
-            var john = new Pirate('Long John');
-            john.say('ahoy matey');
-//        });
+
+
     </script>
 
 </head>

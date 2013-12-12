@@ -1,17 +1,20 @@
 define(['use!backbone'], function (Backbone) {
     var ArticleModel = Backbone.Model.extend({
         'defaults': {
-            'id': '0',
+            'id': 0,
             'title': '',
             'description': '',
             'image': '',
             'category_id': ''
         },
+        isNew: function() {
+            return this.id;
+        },
         url: function(){
-            if(this.id){
-                return 'article/saveArticle/'+this.id;
+            if(parseInt(this.id)){
+                return 'article/api/'+this.id;
             }
-            return 'article/saveArticle';
+            return 'article/api';
         },//'article/saveArticle',
         initialize: function(){
         },

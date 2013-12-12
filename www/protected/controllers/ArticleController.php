@@ -34,33 +34,37 @@ class ArticleController extends AbstractController
         $this->returnJson($article);
     }
 
-    public function actionSaveArticle($id)
+    public function actionApi()
     {
-        Yii::log('save article');
+        Yii::log('article api');
         if ($_SERVER['REQUEST_METHOD'] == 'PUT'){
             Yii::log('PUT');
             $json = file_get_contents('php://input');
-            Yii::log($json);
+//            Yii::log($json);
 
             $o = CJSON::decode($json);
-            Yii::log($o['id']);
-            Yii::log($o['title']);
-            Yii::log($o['description']);
+//            Yii::log($o['id']);
+//            Yii::log($o['title']);
+//            Yii::log($o['description']);
 
             $article = Article::model()->findByPk($o['id']);
             $article->attributes = $o;
-            Yii::log($article->id);
-            Yii::log($article->title);
-            Yii::log($article->description);
+//            Yii::log($article->id);
+//            Yii::log($article->title);
+//            Yii::log($article->description);
             $article->save(false);
         }
 
         if ($_SERVER['REQUEST_METHOD'] == 'DELETE'){
             Yii::log('DELETE');
             Yii::log('id='.$id);
-            Article::model()->deleteByPk($id);
+//            Article::model()->deleteByPk($id);
         }
 
+        if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+            Yii::log('POST');
+//            Article::model()->deleteByPk($id);
+        }
     }
         public function loadArticle($id)
         {
