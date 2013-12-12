@@ -1,9 +1,10 @@
-define(['use!backbone'], function (Backbone) {
+define(['use!backbone', 'common/models/GroupModel'],
+    function (Backbone, GroupModel) {
     var CategoryModel = Backbone.Model.extend({
         'defaults': {
             'id': '',
             'name': '',
-            'group_id': ''
+            'group': new GroupModel()
         }
     });
     return CategoryModel;

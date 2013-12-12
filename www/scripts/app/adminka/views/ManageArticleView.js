@@ -1,11 +1,14 @@
 define(['use!backbone', 'common/views/BaseView',
+    'common/views/ModalWinView',
     'text!adminka/templ/manageArticle.dust',
     'common/collections/GroupCollection',
     'adminka/views/ArticlesListView',
     'adminka/views/EditArticleView',
+    'adminka/views/EditCategoryView',
     'css!adminka/css/styles'],
-    function(Backbone, BaseView, templateSources,
-        GroupCollection, ArticlesListView, EditArticleView){
+    function(Backbone, BaseView, ModalWinView, templateSources,
+        GroupCollection, ArticlesListView, EditArticleView,
+        EditCategoryView){
 
         var completeModel = function(){
             var groups = new GroupCollection();
@@ -28,7 +31,8 @@ define(['use!backbone', 'common/views/BaseView',
             events: {
                 'click .articles-list': 'showArticleList',
                 'click .change-article': 'changeArticle',
-                'click .add-article': 'addArticle'
+                'click .add-article': 'addArticle',
+                'click .add-category': 'addCategory'
             },
             model: completeModel(),
             initialize: function(){
@@ -65,6 +69,15 @@ define(['use!backbone', 'common/views/BaseView',
                 editArticleView.render();
                 this.$el.find('.right-panel')
                     .append(editArticleView.el);
+            },
+            addCategory: function($event){
+                var groupId = $($event.currentTarget).data('id')
+                var modal = new ModalWinView({
+                    title: "Создание новой категории",
+                    content: new EditCategoryView({
+                        groupId: groupId
+                    })
+                });
             }
         });
         return ManageArticleView;

@@ -10,6 +10,9 @@ define(['use!underscore', 'use!backbone', 'common/views/BaseView',
         }
         
         var assigneCallbacks = function(options, events){
+            if(!options.buttons){
+                return;
+            }
             for (var i = 0; i < options.buttons.length; i++) {
                 var button = options.buttons[i];
                 if(button.click){
@@ -17,6 +20,30 @@ define(['use!underscore', 'use!backbone', 'common/views/BaseView',
                 }
             }
         }
+
+        /**
+         *
+         * For example:
+
+         var modal = new ModalWinView({
+                    title: "title test",
+                    content: "content test",
+                    buttons: [
+                        {
+                            'label': 'Closable First',
+                            'classes': 'btn-default close-modal'
+                        },
+                        {
+                            'label': 'Second',
+                            'classes': 'btn-primary close-modal',
+                            'click': function(){
+                                console.log("cl second");
+                            }
+                        }
+                    ]
+                });
+         *
+         */
 
         var ModalWinView = BaseView.extend({
             className: '_modal-win-panel',

@@ -4,9 +4,9 @@ define(['use!backbone', 'use!dust'], function (Backbone, dust) {
     /**
      *
      *
-         define(['common/views/BaseView', 'use!dust',
+         define(['common/views/BaseView',
          'text!/template.dust'],
-         function(BaseView, dust, templateSources){
+         function(BaseView, templateSources){
 
                 var SomeView = BaseView.extend({
                     template:{
