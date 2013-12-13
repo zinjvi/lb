@@ -1,5 +1,5 @@
-define(['use!backbone'], function (Backbone) {
-    var GroupModel = Backbone.Model.extend({
+define(['backbone.deepModel'], function (Backbone) {
+    var GroupModel = Backbone.DeepModel.extend({
         'defaults': {
             'id': '',
             'name': ''

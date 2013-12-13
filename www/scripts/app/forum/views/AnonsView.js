@@ -1,4 +1,4 @@
-define(['common/views/BaseView', 'use!dust',
+define(['common/views/BaseView', 'dust',
     'text!/templates/forum/anons.dust'],
     function(BaseView, dust, templateSources, PostModel){
 

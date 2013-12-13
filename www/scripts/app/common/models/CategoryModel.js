@@ -1,6 +1,6 @@
-define(['use!backbone', 'common/models/GroupModel'],
+define(['backbone.deepModel', 'common/models/GroupModel'],
     function (Backbone, GroupModel) {
-    var CategoryModel = Backbone.Model.extend({
+    var CategoryModel = Backbone.DeepModel.extend({
         'defaults': {
             'id': '',
             'name': '',

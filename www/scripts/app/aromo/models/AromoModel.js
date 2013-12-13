@@ -1,4 +1,4 @@
-define(['use!backbone'], function (Backbone) {
+define(['backbone'], function (Backbone) {
     var AromoModel = Backbone.Model.extend({
         'defaults': {
             'id': '',

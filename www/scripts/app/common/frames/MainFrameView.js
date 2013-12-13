@@ -1,4 +1,4 @@
-define(['use!backbone', 'common/frames/BaseFrameView',
+define(['backbone', 'common/frames/BaseFrameView',
     'text!common/templ/mainFrameView.dust',
     "common/collections/GroupCollection", 'css!common/css/style'],
     function(Backbone, BaseFrameView, templateSource,

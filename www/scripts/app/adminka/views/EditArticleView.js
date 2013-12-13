@@ -1,7 +1,7 @@
-define(['common/views/BaseView', 'use!dust',
+define(['common/views/BaseView',
     'text!adminka/templ/editArticle.dust',
     'article/models/ArticleModel', 'jquery', 'jquery.validate', 'jquery.serializeObject'],
-    function(BaseView, dust, templateSources,
+    function(BaseView, templateSources,
              ArticleModel, $){
 
         var EditArticleView = BaseView.extend({

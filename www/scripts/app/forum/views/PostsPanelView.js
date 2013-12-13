@@ -1,4 +1,4 @@
-define(['common/views/BaseView', 'use!dust',
+define(['common/views/BaseView', 'dust',
     'text!/templates/forum/postsPanel.dust',
     'forum/collections/PostCollection', 'forum/views/PostView'],
     function(BaseView, dust, templateSources, PostCollection, PostView){

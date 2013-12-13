@@ -1,4 +1,4 @@
-define(['use!backbone', 'common/views/BaseView'],
+define(['backbone', 'common/views/BaseView'],
     function(Backbone, BaseView){
         var BaseFrameView = BaseView.extend({
             $content: {},

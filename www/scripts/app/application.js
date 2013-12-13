@@ -1,4 +1,4 @@
-define(['jquery', 'use!backbone', 'AppRouter'],
+define(['jquery', 'backbone', 'AppRouter'],
     function ($, Backbone, AppRouter) {
 
         var test1 = function () {

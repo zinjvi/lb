@@ -1,4 +1,4 @@
-define(['common/views/BaseView', 'use!dust',
+define(['common/views/BaseView', 'dust',
     'text!article/templ/article.dust',
     'article/models/ArticleModel'],
     function(BaseView, dust, templateSources, ArticleModel){

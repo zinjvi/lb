@@ -1,4 +1,4 @@
-define(['use!backbone'], function (Backbone) {
+define(['backbone'], function (Backbone) {
     var ArticleModel = Backbone.Model.extend({
         'defaults': {
             'id': 0,

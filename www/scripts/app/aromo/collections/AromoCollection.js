@@ -1,4 +1,4 @@
-define(['common/collections/BaseCollection', 'use!underscore',
+define(['common/collections/BaseCollection', 'underscore',
     'aromo/models/AromoModel', 'jquery'],
     function (BaseCollection, _, AromoModel, $) {
         var self;

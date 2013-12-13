@@ -1,12 +1,13 @@
-define(['use!backbone', 'common/views/BaseView',
+define(['backbone', 'common/views/BaseView',
     'common/views/ModalWinView',
+    'common/models/CategoryModel',
     'text!adminka/templ/manageArticle.dust',
     'common/collections/GroupCollection',
     'adminka/views/ArticlesListView',
     'adminka/views/EditArticleView',
     'adminka/views/EditCategoryView',
     'css!adminka/css/styles'],
-    function(Backbone, BaseView, ModalWinView, templateSources,
+    function(Backbone, BaseView, ModalWinView, CategoryModel, templateSources,
         GroupCollection, ArticlesListView, EditArticleView,
         EditCategoryView){
 
@@ -32,8 +33,11 @@ define(['use!backbone', 'common/views/BaseView',
                 'click .articles-list': 'showArticleList',
                 'click .change-article': 'changeArticle',
                 'click .add-article': 'addArticle',
-                'click .add-category': 'addCategory'
+                'click .add-category': 'addCategory',
+                'click .change-category': 'changeCategory'
             },
+            // TODO | groups must be in model
+            groups: new GroupCollection(),
             model: completeModel(),
             initialize: function(){
 
@@ -72,10 +76,27 @@ define(['use!backbone', 'common/views/BaseView',
             },
             addCategory: function($event){
                 var groupId = $($event.currentTarget).data('id')
+                var category = new CategoryModel({
+                    group:{
+                        id: groupId
+                    }
+                });
                 var modal = new ModalWinView({
                     title: "Создание новой категории",
                     content: new EditCategoryView({
-                        groupId: groupId
+                        model: category
+                    })
+                });
+            },
+            changeCategory: function($event){
+                var groupId = $($event.currentTarget).parents('.group-panel').data('id');
+                var categoryId = $($event.currentTarget).data('id');
+                var category = this.groups.get(groupId).get('categories')[categoryId];
+
+                var modal = new ModalWinView({
+                    title: "Редактирование категории",
+                    content: new EditCategoryView({
+//                        model: category
                     })
                 });
             }

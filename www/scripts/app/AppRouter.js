@@ -1,4 +1,4 @@
-define(['use!underscore', 'use!backbone',
+define(['underscore', 'backbone',
     'common/views/BaseView', 'article/routerConfig',
     'adminka/routerConfig'],
     function(_, Backbone, BaseView,articleRouters,

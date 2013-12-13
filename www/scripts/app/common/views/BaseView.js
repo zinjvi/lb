@@ -1,4 +1,4 @@
-define(['use!backbone', 'use!dust'], function (Backbone, dust) {
+define(['backbone', 'dust'], function (Backbone, dust) {
 
 
     /**

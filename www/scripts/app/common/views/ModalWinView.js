@@ -1,4 +1,4 @@
-define(['use!underscore', 'use!backbone', 'common/views/BaseView',
+define(['underscore', 'backbone', 'common/views/BaseView',
     'text!common/templ/modalWin.dust'],
     function(_, Backbone, BaseView, templateSources){
 

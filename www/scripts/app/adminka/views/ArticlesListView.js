@@ -1,4 +1,4 @@
-define(['use!backbone', 'common/views/BaseView',
+define(['backbone', 'common/views/BaseView',
     'text!adminka/templ/articlesList.dust',
     'article/collections/ArticleCollection',
     'adminka/views/ArticleListItemView'],

@@ -13,7 +13,7 @@ define(['common/views/BaseView', 'common/models/CategoryModel',
             initialize: function(options){
                 console.log("ititialize");
                 // TODO | need choose to deep model
-                this.model = new CategoryModel({group_id: options.groupId});
+//                this.model = new CategoryModel({group: options.group});
 //                var group = this.modal.get('group');
 //                group.set('id', options.groupId);
 //                this.modal.set('group', group);

@@ -1,4 +1,4 @@
-define(['use!backbone', 'common/views/BaseView', 'use!dust',
+define(['backbone', 'common/views/BaseView', 'use!dust',
     'text!/templates/aromo/aromo.dust', 'aromo/views/ContentView',
     'aromo/collections/AromoCollection'],
     function(Backbone, BaseView, dust, templateSources,

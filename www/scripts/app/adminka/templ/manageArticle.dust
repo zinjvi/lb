@@ -1,7 +1,7 @@
 <div class="choose-article-panel">
     <div class="panel-group" id="groups">
         {#groups}
-        <div class="panel panel-default">
+        <div class="panel panel-default group-panel" data-id="{id}">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#groups" href="#group_{id}">

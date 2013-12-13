@@ -1,4 +1,4 @@
-define(['use!backbone'],
+define(['backbone'],
     function (Backbone) {
         var self = {};
 

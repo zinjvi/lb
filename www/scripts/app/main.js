@@ -3,12 +3,13 @@ require.config({
     paths: {
         text: '/scripts/lib/text',
         backbone: '/scripts/lib/backbone/backbone',
+        'backbone.deepModel': '/scripts/lib/backbone/backbone.deepModel',
         localStorage: '/scripts/lib/backbone/localStorage',
         jquery: '/scripts/lib/jquery/jquery',
         'jquery.validate': '/scripts/lib/jquery/jquery.validate',
         'jquery.serializeObject': '/scripts/lib/jquery/jquery.serializeObject',
         underscore: '/scripts/lib/underscore',
-        use: '/scripts/lib/use',
+//        use: '/scripts/lib/use',
         dust: '/scripts/lib/dust',
         css: '/scripts/lib/css',
         bootstrap: '/scripts/lib/bootstrap'
@@ -21,21 +22,28 @@ require.config({
         'underscore': {
             exports: '_'
         },
+        'backbone.deepModel': {
+            deps: ['underscore', 'jquery']//,
+//            exports: 'Backbone'
+        },
+        'dust': {
+            exports: 'dust'
+        },
         'jquery.validate': ['jquery'],
         'jquery.serializeObject': ['jquery']
-    },
-    use: {
-        backbone: {
-            deps: ["use!underscore", "jquery"],
-            attach: "Backbone"
-        },
-        underscore: {
-            attach: "_"
-        },
-        dust: {
-            attach: "dust"
-        }
-    }
+    }//,
+//    use: {
+//        backbone: {
+//            deps: ["use!underscore", "jquery"],
+//            attach: "Backbone"
+//        },
+//        underscore: {
+//            attach: "_"
+//        },
+//        dust: {
+//            attach: "dust"
+//        }
+//    }
 });
 
 require(['application'], function(application){

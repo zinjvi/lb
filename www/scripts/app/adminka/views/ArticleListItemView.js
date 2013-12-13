@@ -1,7 +1,7 @@
-define(['common/views/BaseView', 'use!dust',
+define(['common/views/BaseView',
     'text!adminka/templ/articleListItem.dust',
     'common/views/ConfirmWinView'],
-    function(BaseView, dust, templateSources,
+    function(BaseView, templateSources,
              ConfirmWinView){
 
         var SomeView = BaseView.extend({

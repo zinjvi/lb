@@ -1,4 +1,4 @@
-define(['jquery', 'use!backbone', 'underscore'],
+define(['jquery', 'backbone', 'underscore'],
     function ($, Backbone, _) {
     var Post = Backbone.Model.extend({
         'defaults': {
