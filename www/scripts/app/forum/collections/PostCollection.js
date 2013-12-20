@@ -1,4 +1,4 @@
-define(['common/collectiions/BaseCollection', 'forum/models/PostModel'],
+define(['common/collections/BaseCollection', 'forum/models/PostModel'],
     function(BaseCollection, PostModel){
     var Collection = Backbone.Collection.extend({
         model: PostModel,

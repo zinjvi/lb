@@ -1,5 +1,10 @@
-define(['jquery', 'backbone', 'AppRouter'],
-    function ($, Backbone, AppRouter) {
+define(['jquery', 'backbone', 'AppRouter',
+
+    'common/collections/GroupCollection',
+    'common/models/GroupModel'],
+    function ($, Backbone, AppRouter,
+
+              GroupCollection, GroupModel) {
 
         var test1 = function () {
             var Model = Backbone.Model.extend({
@@ -76,27 +81,61 @@ define(['jquery', 'backbone', 'AppRouter'],
             xmlHttp.send(null);
 
             console.log("opend");
+        }
 
-
-/*            function getUrl(url, cb) {
-                var xmlhttp = getXmlHttp();
-                xmlhttp.open("GET", url);
-                xmlhttp.onreadystatechange = function () {
-                    if (xmlhttp.readyState == 4) {
-                        cb(
-                            xmlhttp.status,
-                            xmlhttp.getAllResponseHeaders(),
-                            xmlhttp.responseText
-                        );
+        function test4(){
+            var group = new GroupModel({
+                'id': 1,
+                'name': 'nnn1',
+                'categories': [
+                    {
+                        'id': '20',
+                        'name': 'asa'
+                    },
+                    {
+                        'id': '21',
+                        'name': 'awef'
                     }
-                }
-                xmlhttp.send(null);
-            }
+                ]
+            });
 
-            getUrl('http://lb/article/articlesByCategoryId/2', function(a, b, c){
-                console.log("cb");
-            })*/
 
+            var groups = new GroupCollection([{
+                'id': 1,
+                'name': 'nnn1',
+                'categories': [
+                    {
+                        'id': '20',
+                        'name': 'asa'
+                    },
+                    {
+                        'id': '21',
+                        'name': 'awef'
+                    }
+                ]
+            },{
+                'id': 2,
+                'name': 'nnn2'
+            }]);
+
+            console.log("asd");
+        }
+
+        function test5(){
+            var model = new Backbone.DeepModel({
+                id: 123,
+                user: {
+                    type: 'Spy',
+                    name: {
+                        first: 'Sterling',
+                        last: 'Archer'
+                    }
+                },
+                otherSpies: [
+                    { name: 'Lana' },
+                    { name: 'Cyrril' }
+                ]
+            });
         }
 
 
@@ -107,6 +146,8 @@ define(['jquery', 'backbone', 'AppRouter'],
 //                test1();
 //                test2();
                 //test3();
+//                test4();
+//                test5();
 
                 console.log("application start");
             }

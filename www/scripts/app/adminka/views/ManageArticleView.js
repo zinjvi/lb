@@ -1,4 +1,4 @@
-define(['backbone', 'common/views/BaseView',
+define(['backbone', 'backbone.relational','common/views/BaseView',
     'common/views/ModalWinView',
     'common/models/CategoryModel',
     'text!adminka/templ/manageArticle.dust',
@@ -7,7 +7,7 @@ define(['backbone', 'common/views/BaseView',
     'adminka/views/EditArticleView',
     'adminka/views/EditCategoryView',
     'css!adminka/css/styles'],
-    function(Backbone, BaseView, ModalWinView, CategoryModel, templateSources,
+    function(Backbone, BacboneRelational, BaseView, ModalWinView, CategoryModel, templateSources,
         GroupCollection, ArticlesListView, EditArticleView,
         EditCategoryView){
 
@@ -40,7 +40,7 @@ define(['backbone', 'common/views/BaseView',
             groups: new GroupCollection(),
             model: completeModel(),
             initialize: function(){
-
+                console.log("new mav");
             },
             showArticleList: function(event){
                 var target = event.target;
@@ -75,6 +75,8 @@ define(['backbone', 'common/views/BaseView',
                     .append(editArticleView.el);
             },
             addCategory: function($event){
+
+
                 var groupId = $($event.currentTarget).data('id')
                 var category = new CategoryModel({
                     group:{
@@ -91,12 +93,13 @@ define(['backbone', 'common/views/BaseView',
             changeCategory: function($event){
                 var groupId = $($event.currentTarget).parents('.group-panel').data('id');
                 var categoryId = $($event.currentTarget).data('id');
-                var category = this.groups.get(groupId).get('categories')[categoryId];
+                var category = new CategoryModel();
+                category.fetch();
 
                 var modal = new ModalWinView({
                     title: "Редактирование категории",
                     content: new EditCategoryView({
-//                        model: category
+                        model: category
                     })
                 });
             }
