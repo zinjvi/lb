@@ -1,0 +1,198 @@
+/*Common*/
+body{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+}
+
+.main{
+    margin: 10px;
+}
+
+.left-panel{
+    float: left;
+    width: 200px;
+    margin: 20px;
+}
+
+.left-panel ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-panel li{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    margin: 7px;
+    background: #e9e18d;
+}
+
+.left-panel a{
+    display: block;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.content{
+    float: left;
+    margin: 20px;
+    min-width: 900px;
+    /*width: 100%;*/
+}
+
+h3{
+    margin-left: 30px;
+}
+
+/*Header image management*/
+
+.header-image-list img{
+    width: 700px;
+}
+
+.header-image-list div.left{
+    width: 150px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.header-image-list div.image{
+    display: inline-block;
+}
+
+.header-image-list .name, .remove,
+.assign, .active{
+    margin: 0 7px 0 0;
+    display: block;
+    text-align: right;
+}
+
+.header-image-list .name{
+}
+
+.header-image-list .remove{
+}
+
+.header-image-list .assign{
+}
+
+.header-image-list .active{
+}
+
+
+
+/*Choose category*/
+
+.choose-category{
+    margin: 10px;
+}
+
+.choose-category ul{
+    padding-left: 30px;
+    list-style-type: none;
+}
+
+.choose-category .groups{
+
+}
+
+.choose-category .group{
+    /*background: #e9d08e;*/
+    margin-bottom: 10px;
+    padding-bottom: 7px;
+}
+
+.choose-category .category{
+    background: #dbd8b3;
+    margin: 7px;
+}
+
+.choose-category a.remove{
+    float: right;
+}
+
+
+/*Update & Create article*/
+
+.update-form .left{
+    float: left;
+}
+
+.input-line{
+    margin: 10px;
+}
+
+.input-line .title{
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 5px;
+}
+
+.input-line .input{
+    display: inline;
+}
+
+.input-block{
+    margin: 20px 10px 10px 10px;
+}
+
+.input-block .title{
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 5px;
+}
+
+.input-block .input{
+    margin-top: 10px;
+}
+
+.input-block .input .cke{
+    width: 100%;
+}
+
+.update-form .right{
+
+}
+
+.update-form .right .article-image img{
+    width: 500px;
+}
+
+/*Choose article*/
+
+.choose-article{
+    margin: 10px;
+}
+
+.choose-article ul{
+    padding-left: 30px;
+    list-style-type: none;
+}
+
+.choose-article .groups{
+
+}
+
+.choose-article .group{
+    /*background: #e9d08e;*/
+    margin-bottom: 10px;
+    padding-bottom: 7px;
+}
+
+.choose-article .category{
+    background: #dbd8b3;
+    margin: 7px;
+}
+.choose-article a.remove{
+    float: right;
+}
+
+/****** Manage Article ******/
+/*.choose-article-panel{*/
+    /*float: left;*/
+/*}*/

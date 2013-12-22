@@ -1,0 +1,15 @@
+<div class="articles-mini">
+    {#articles}
+    <div class="article-mini">
+        <div class="left">
+            <img src="{image}">
+        </div>
+        <div class="right">
+            <a class="title" href="#article/{id}">{title}</a>
+            <span class="text">
+                <p>{enter}</p>
+            </span>
+        </div>
+    </div>
+    {/articles}
+</div>

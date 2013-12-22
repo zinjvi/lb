@@ -1,0 +1,12 @@
+{
+    "name": "lb",
+    "description": "lb",
+    "version": "0.0.1",
+    "dependencies": {
+        "express": "3.4.7",
+        "mongoose": "3.8.3",
+        "requirejs": "2.1.9",
+        "ejs": "0.8.5",
+        "jade": "0.35.0"
+    }
+}
