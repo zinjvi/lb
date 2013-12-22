@@ -1,5 +1,0 @@
-<section id="content">
-
-
-
-</section>
