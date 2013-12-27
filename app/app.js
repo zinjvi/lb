@@ -1,8 +1,13 @@
 var require = require('requirejs');
 var express = require('express');
 var mongoose = require('mongoose');
+var ObjectId = mongoose.Types.ObjectId;
 var GroupSchema = require('models/Group');
 var CategorySchema = require('models/Category');
+var Article = require('models/Article');
+
+
+var id = mongoose.Types.ObjectId('4edd40c86762e0fb12000003');
 
 
 require.config({
@@ -129,6 +134,31 @@ app.get('/api/groups', function (req, res) {
             res.send(values)
             console.log(values);
         });
+});
+
+app.get('/as', function(req, res){
+    var a = new Article({
+//        _id: mongoose.Schema.ObjectId,
+        title: "qweqwe"
+    });
+    a.save(function(err){
+        console.log("err: " + err);
+        res.send("err: " + err);
+    });
+});
+
+app.get('/af', function(req, res){
+    Article.find({}).exec(function(err, val){
+        res.send(val);
+    });
+});
+
+app.get('/afo', function(req, res){
+    Article.findById({_id: mongoose.Types.ObjectId('52b7db02cd7299fc21000002')})
+        .exec(function(err, val){
+        console.log(err)
+        res.send(val);
+    });
 });
 
 app.listen(3000);
