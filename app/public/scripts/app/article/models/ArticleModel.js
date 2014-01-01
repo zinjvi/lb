@@ -1,7 +1,7 @@
 define(['backbone'], function (Backbone) {
     var ArticleModel = Backbone.Model.extend({
         'defaults': {
-            'id': 0,
+            '_id': 0,
             'title': '',
             'description': '',
             'image': '',

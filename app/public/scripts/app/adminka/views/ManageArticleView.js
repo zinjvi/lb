@@ -1,15 +1,16 @@
 define(['backbone', 'backbone.relational','common/views/BaseView',
     'common/views/ModalWinView',
     'common/models/CategoryModel',
+    'common/models/GroupModel',
     'text!adminka/templ/manageArticle.dust',
     'common/collections/GroupCollection',
     'adminka/views/ArticlesListView',
     'adminka/views/EditArticleView',
     'adminka/views/EditCategoryView',
     'css!adminka/css/styles'],
-    function(Backbone, BacboneRelational, BaseView, ModalWinView, CategoryModel, templateSources,
-        GroupCollection, ArticlesListView, EditArticleView,
-        EditCategoryView){
+    function(Backbone, BacboneRelational, BaseView, ModalWinView,
+             CategoryModel, GroupModel, templateSources, GroupCollection,
+             ArticlesListView, EditArticleView, EditCategoryView){
 
         var completeModel = function(){
             var groups = new GroupCollection();
@@ -76,19 +77,34 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
                     .append(editArticleView.el);
             },
             addCategory: function($event){
-
-
-                var groupId = $($event.currentTarget).data('id')
+                var groupId = $($event.currentTarget).data('id');
+                var group = new GroupModel({_id: groupId});
+                group.fetch({async: false});
                 var category = new CategoryModel({
-                    group:{
-                        id: groupId
-                    }
+                    group: group.toJSON()
                 });
                 var modal = new ModalWinView({
                     title: "Создание новой категории",
                     content: new EditCategoryView({
                         model: category
-                    })
+                    }),
+                    buttons: [
+                        {
+                            'label': 'Сохранить',
+                            'classes': 'btn-success close-modal',
+                            'click': function(){
+                                var categoryForm = $('form.edit-category')
+                                    .serializeObject();
+                                var category = new CategoryModel(categoryForm);
+                                category.save();
+                                console.log(categoryForm);
+                            }
+                        },
+                        {
+                            'label': 'Отмена',
+                            'classes': 'btn-default close-modal'
+                        }
+                    ]
                 });
             },
             changeCategory: function($event){

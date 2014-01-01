@@ -1,7 +1,7 @@
 define(['mongoose', 'models/Group'],
     function (mongoose, Group) {
         var Category = new mongoose.Schema({
-            _id: Number,
+//            _id: Number,
             name: {
                 type: String,
                 require: true

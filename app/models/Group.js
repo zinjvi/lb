@@ -1,11 +1,5 @@
 define(['mongoose', 'models/Category'],
     function(mongoose, Category){
-//    var Group = new mongoose.Schema({
-//        name: {
-//            type: String,
-//            required: true
-//        }
-//    });
     return mongoose.model('Group', {
         _id: Number,
         name: {
@@ -13,7 +7,7 @@ define(['mongoose', 'models/Category'],
             required: true
         },
         categories: [{
-            type: Number, ref: 'Category'
+            type: mongoose.Schema.ObjectId, ref: 'Category'
         }]
     });
 });

@@ -18,6 +18,9 @@ var app = express();
 app.set('views', __dirname);
 app.set('view engine', 'ejs');
 app.use('/public', express.static(__dirname + '/public'));
+app.configure(function(){
+    app.use(express.bodyParser());
+});
 
 mongoose.connect('mongodb://localhost/lb');
 
@@ -127,19 +130,72 @@ app.get('/api/categories', function (req, res) {
         });
 });
 
+app.get('/api/c', function(req, res){
+    var c = new CategorySchema();
+});
+
+
+// ~~~~~~~~~~~~~~~ Groups ~~~~~~~~~~~~~~
+
 app.get('/api/groups', function (req, res) {
     GroupSchema.find({}).populate('categories')
         .exec(function (err, values) {
-            if (err) res.send(err);
+            if (err) console.log(err);
             res.send(values)
             console.log(values);
         });
 });
 
+app.get('/api/groups/:id', function(req, res){
+    GroupSchema.findById(req.params.id, function(err, val){
+        console.log(err);
+        res.send(val);
+    })
+});
+
+// ~~~~~~~~~~~~~~~ Categories ~~~~~~~~~~~
+
+app.post('/api/categories', function(req, res){
+    console.log('/api/categories');
+    console.log(req.body);
+    req.body._id = null;
+    var category = new CategorySchema(req.body);
+//    category._id = null;
+    category.save(function(err, cat){
+        console.log('ctegogy save callback');
+        console.log(err);
+        console.log(cat);
+        res.send();
+    });
+    console.log('category:');
+    console.log(category);
+       GroupSchema.findById({_id: category.group}, function(err, group){
+           console.log(group);
+        group.categories.push(category._id);
+        group.save(function(err){
+            console.log(err);
+        });
+       });
+
+
+});
+
+// ~~~~~~~~~~~~~~~ Article ~~~~~~~~~~~~~~
+
+app.get('/api/articles', function(req, res){
+    Article.find(function(err, values){
+        if(err) console.log(err);
+        res.send(values);
+        console.log(values);
+    });
+});
+
+
 app.get('/as', function(req, res){
     var a = new Article({
-//        _id: mongoose.Schema.ObjectId,
-        title: "qweqwe"
+//        _id: new mongoose.Schema.Types.ObjectId(),
+        title: "qweqwe",
+        description: "descr"
     });
     a.save(function(err){
         console.log("err: " + err);
