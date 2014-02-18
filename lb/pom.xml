@@ -1,14 +1,40 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
+    <repositories>
+        <repository>
+            <id>Java.Net</id>
+            <url>http://download.java.net/maven/2/</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+            <!--&lt;!&ndash; Javaee API &ndash;&gt;-->
+            <!--<dependency>-->
+                <!--<groupId>javax</groupId>-->
+                <!--<artifactId>javaee-api</artifactId>-->
+                <!--<version>6.0</version>-->
+            <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>javax.servlet</groupId>-->
+            <!--<artifactId>jstl</artifactId>-->
+            <!--<version>1.2</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>taglibs</groupId>-->
+            <!--<artifactId>standard</artifactId>-->
+            <!--<version>1.1.2</version>-->
+            <!--<scope>compile</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>javax.servlet</groupId>-->
+            <!--<artifactId>servlet-api</artifactId>-->
+            <!--<version>3.0-alpha-1</version>-->
+        <!--</dependency>-->
 
 
         <dependency>
@@ -162,26 +188,26 @@
     <build>
         <finalName>lb</finalName>
             <plugins>
-                <!--<plugin>-->
-                    <!--<groupId>org.codehaus.mojo</groupId>-->
-                    <!--<artifactId>build-helper-maven-plugin</artifactId>-->
-                    <!--<version></version>-->
-                    <!--<executions>-->
-                        <!--<execution>-->
-                            <!--<id>add-integration-test-sources</id>-->
-                            <!--<phase>generate-test-sources</phase>-->
-                            <!--<goals>-->
-                                <!--<goal>add-test-source</goal>-->
-                            <!--</goals>-->
-                            <!--<configuration>-->
-                                <!--&lt;!&ndash; Configures the source directory of integration tests. &ndash;&gt;-->
-                                <!--<sources>-->
-                                    <!--<source>src/itest/java</source>-->
-                                <!--</sources>-->
-                            <!--</configuration>-->
-                        <!--</execution>-->
-                    <!--</executions>-->
-                <!--</plugin>-->
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>build-helper-maven-plugin</artifactId>
+                    <version>1.8</version>
+                    <executions>
+                        <execution>
+                            <id>add-integration-test-sources</id>
+                            <phase>generate-test-sources</phase>
+                            <goals>
+                                <goal>add-test-source</goal>
+                            </goals>
+                            <configuration>
+                                <!-- Configures the source directory of integration tests. -->
+                                <sources>
+                                    <source>src/itest/java</source>
+                                </sources>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
@@ -220,44 +246,38 @@
                     </executions>
                 </plugin>
                 <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>2.12</version>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>failsafe-maven-plugin</artifactId>
+                    <version>2.4.3-alpha-1</version>
                     <executions>
                         <execution>
-                            <id>integration-tests</id>
                             <goals>
                                 <goal>integration-test</goal>
-                                <!--<goal>verify</goal>-->
+                                <goal>verify</goal>
                             </goals>
-                            <!--<configuration>-->
-                            <!-- Skips integration tests if the value of skip.integration.tests property is true -->
-                            <!--<skipTests>${skip.integration.tests}</skipTests>-->
-                            <!--</configuration>-->
                         </execution>
                     </executions>
                 </plugin>
                 <plugin>
                     <groupId>org.mortbay.jetty</groupId>
-                    <artifactId>maven-jetty-plugin</artifactId>
-                    <version>6.1.26</version>
+                    <artifactId>jetty-maven-plugin</artifactId>
+                    <version>8.1.5.v20120716</version>
                     <configuration>
-                        <scanIntervalSeconds>10</scanIntervalSeconds>
+                        <!--<scanIntervalSeconds>10</scanIntervalSeconds>-->
                         <stopKey>foo</stopKey>
-                        <stopPort>7070</stopPort>
-                        <contextPath>/</contextPath>
-                        <tmpDirectory>${project.basedir}/target</tmpDirectory>
-                        <webApp>${project.basedir}/target/test.war</webApp>
-                        <daemon>true</daemon>
-                        <reload>manual</reload>
+                        <stopPort>9999</stopPort>
                     </configuration>
                     <executions>
                         <execution>
                             <id>start-jetty</id>
                             <phase>pre-integration-test</phase>
                             <goals>
-                                <goal>deploy-war</goal>
+                                <goal>run</goal>
                             </goals>
+                            <configuration>
+                                <scanIntervalSeconds>0</scanIntervalSeconds>
+                                <daemon>true</daemon>
+                            </configuration>
                         </execution>
                         <execution>
                             <id>stop-jetty</id>
@@ -268,6 +288,48 @@
                         </execution>
                     </executions>
                 </plugin>
+                <!--<plugin>-->
+                    <!--<groupId>org.mortbay.jetty</groupId>-->
+                    <!--<artifactId>maven-jetty-plugin</artifactId>-->
+                    <!--<version>6.1.26</version>-->
+                    <!--<configuration>-->
+                        <!--<scanIntervalSeconds>10</scanIntervalSeconds>-->
+                        <!--<stopKey>foo</stopKey>-->
+                        <!--<stopPort>7070</stopPort>-->
+                        <!--<stopPort>1070</stopPort>-->
+                        <!--<contextPath>/</contextPath>-->
+                        <!--<tmpDirectory>${project.basedir}/target</tmpDirectory>-->
+                        <!--<webApp>${project.basedir}/target/test.war</webApp>-->
+                        <!--<daemon>true</daemon>-->
+                        <!--<reload>manual</reload>-->
+                    <!--</configuration>-->
+                    <!--<executions>-->
+                        <!--<execution>-->
+                            <!--<id>start-jetty</id>-->
+                            <!--<phase>pre-integration-test</phase>-->
+                            <!--<goals>-->
+                                <!--<goal>deploy-war</goal>-->
+                                <!--<goal>run</goal>-->
+                            <!--</goals>-->
+                        <!--</execution>-->
+                        <!--<execution>-->
+                            <!--<id>stop-jetty</id>-->
+                            <!--<phase>post-integration-test</phase>-->
+                            <!--<goals>-->
+                                <!--<goal>stop</goal>-->
+                            <!--</goals>-->
+                        <!--</execution>-->
+                    <!--</executions>-->
+                <!--</plugin>-->
+                <plugin>
+                    <groupId>org.apache.tomcat.maven</groupId>
+                    <artifactId>tomcat7-maven-plugin</artifactId>
+                    <version>2.2</version>
+                    <!--<configuration>-->
+                        <!--<path>/mycontext</path>-->
+                    <!--</configuration>-->
+                </plugin>
+
             </plugins>
     </build>
 
