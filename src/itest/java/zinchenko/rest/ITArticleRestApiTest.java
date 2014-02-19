@@ -1,15 +1,10 @@
 package zinchenko.rest;
 
-import com.eclipsesource.restfuse.Destination;
-import com.eclipsesource.restfuse.HttpJUnitRunner;
-import com.eclipsesource.restfuse.Method;
-import com.eclipsesource.restfuse.Response;
-import com.eclipsesource.restfuse.annotation.Context;
-import com.eclipsesource.restfuse.annotation.HttpTest;
+
+import com.jayway.restassured.RestAssured;
+import com.jayway.restassured.response.Response;
 import org.codehaus.jackson.map.ObjectMapper;
-import org.junit.Ignore;
-import org.junit.Rule;
-import org.junit.runner.RunWith;
+import org.junit.Test;
 import zinchenko.TestConstants;
 import zinchenko.domain.Article;
 
@@ -22,21 +17,11 @@ import static org.junit.Assert.assertEquals;
  * User: zinchenko
  * Date: 16.02.14
  */
-@RunWith( HttpJUnitRunner.class )
-@Ignore
 public class ITArticleRestApiTest {
 
     public static final String ARTICLE_PATH = "/rest/Article";
 
-    @Rule
-    public Destination destination = new Destination(TestConstants.REST_BASE_URL);
-
-
-    @Context
-    private Response response;
-
-    @HttpTest(method = Method.GET, path = ARTICLE_PATH + "/1")
-    public void testGetById() throws Exception {
+/*    public void testGetById() throws Exception {
         Article article = new Article();
         article.setId(1L);
         article.setTitle("test title 1");
@@ -45,9 +30,9 @@ public class ITArticleRestApiTest {
 
         assertEquals(expectedResult, response.getBody(String.class));
         assertEquals(200, response.getStatus());
-    }
+    }*/
 
-    @HttpTest( method = Method.GET, path = ARTICLE_PATH + "/all" )
+    @Test
     public void testGetAll() throws Exception {
         List<Article> articles = new ArrayList<Article>();
         Article article = new Article();
@@ -62,13 +47,12 @@ public class ITArticleRestApiTest {
         articles.add(article);
         String expectedBody = new ObjectMapper().writeValueAsString(articles);
 
-        String actualBody = response.getBody(String.class);
-        assertEquals(expectedBody, actualBody);
-        assertEquals(200, response.getStatus());
+        Response response = RestAssured.get(TestConstants.REST_BASE_URL + ARTICLE_PATH + "/all");
+        assertEquals(expectedBody, response.asString());
+        assertEquals(200, response.getStatusCode());
     }
 
-    @HttpTest(method = Method.DELETE, path = ARTICLE_PATH + "/1")
-    public void testDelete() throws Exception {
+/*    public void testDelete() throws Exception {
         List<Article> articles = new ArrayList<Article>();
         Article article = new Article();
         article.setId(1L);
@@ -79,5 +63,5 @@ public class ITArticleRestApiTest {
 
         assertEquals(expectedBody, response.getBody(String.class));
         assertEquals(200, response.getStatus());
-    }
+    }*/
 }

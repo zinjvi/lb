@@ -6,6 +6,6 @@ package zinchenko;
  */
 public class TestConstants {
 
-    public static final String REST_BASE_URL = "http://localhost:8080/";
+    public static final String REST_BASE_URL = "http://localhost:8080";
 
 }
