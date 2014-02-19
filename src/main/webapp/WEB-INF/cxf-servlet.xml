@@ -10,12 +10,12 @@
     <import resource="classpath:applicationContext.xml"/>
 
     <bean id="userManagerService"
-          class="zinchenko.ArticleRestImpl">
+          class="zinchenko.rest.impl.ArticleRestApiImpl">
     </bean>
 
     <jaxrs:server id="webService" address="/rest">
         <jaxrs:serviceBeans>
-            <bean class="zinchenko.ArticleRestImpl" />
+            <bean class="zinchenko.rest.impl.ArticleRestApiImpl" />
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
