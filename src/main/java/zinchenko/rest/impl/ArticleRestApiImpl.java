@@ -5,6 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 import zinchenko.dao.ArticleDao;
 import zinchenko.domain.Article;
 import zinchenko.rest.ArticleRestApi;
+import zinchenko.service.ArticleService;
 
 import javax.ws.rs.core.Response;
 import java.util.List;
@@ -14,6 +15,9 @@ public class ArticleRestApiImpl implements ArticleRestApi {
 
     @Autowired
     ArticleDao articleDao;
+
+    @Autowired
+    ArticleService articleService;
 
     public ArticleRestApiImpl() {
     }
@@ -33,17 +37,19 @@ public class ArticleRestApiImpl implements ArticleRestApi {
 
     @Override
     public Response save(Article article) {
+        articleDao.save(article);
         return Response.status(Response.Status.OK).build();
     }
 
     @Override
     public Response update(Article article) {
+        articleDao.save(article);
         return Response.status(Response.Status.OK).build();
     }
 
     @Override
     public Response delete(Long id) {
-        System.out.println("delete " + id);
+        articleService.delete(id);
         return Response.status(Response.Status.OK).build();
     }
 

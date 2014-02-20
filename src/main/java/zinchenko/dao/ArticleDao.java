@@ -14,7 +14,7 @@ public interface ArticleDao {
 
     public Article find(Long id);
 
-    public Article save(Article article);
+    public Long save(Article article);
 
     public void delete(Article article);
 

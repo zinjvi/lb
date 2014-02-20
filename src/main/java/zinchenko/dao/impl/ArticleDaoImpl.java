@@ -1,5 +1,6 @@
 package zinchenko.dao.impl;
 
+import org.hibernate.criterion.Criterion;
 import org.springframework.stereotype.Repository;
 import zinchenko.dao.ArticleDao;
 import zinchenko.domain.Article;
@@ -21,16 +22,17 @@ public class ArticleDaoImpl extends AbstractDao implements ArticleDao {
 
     @Override
     public Article find(Long id) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return (Article) getCurrentSession().get(Article.class, id);
+
     }
 
     @Override
-    public Article save(Article article) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public Long save(Article article) {
+        return (Long) getCurrentSession().save(article);
     }
 
     @Override
     public void delete(Article article) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        getCurrentSession().delete(article);
     }
 }
