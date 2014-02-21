@@ -51,6 +51,26 @@ public class ITArticleRestApiTest {
     }
 
     @Test
+    public void testDelete() throws Exception {
+        List<Article> articles = new ArrayList<Article>();
+        Article article = new Article();
+        article.setId(2L);
+        article.setTitle("test title 2");
+        article.setDescription("test description 2");
+        articles.add(article);
+        String expectedBody = new ObjectMapper().writeValueAsString(articles);
+
+        Response response = RestAssured.delete(TestConstants.ARTICLE_PATH + "/1");
+        assertEquals(200, response.getStatusCode());
+
+        String all = RestAssured.get(TestConstants.ARTICLE_PATH + "/all").asString();
+        //TODO | add debug logs to server ot rest controller
+        System.out.println("testDelete()");
+        System.out.println(all);
+        assertEquals(expectedBody, all);
+    }
+
+    @Test
     public void testGetById() throws Exception {
         Article article = new Article();
         article.setId(1L);
@@ -59,6 +79,9 @@ public class ITArticleRestApiTest {
         String expectedResult = new ObjectMapper().writeValueAsString(article);
 
         Response response = RestAssured.get(TestConstants.ARTICLE_PATH + "/1");
+        //TODO | add debug logs to server ot rest controller
+        System.out.println("testGetById()");
+        System.out.println(response.asString());
         assertEquals(expectedResult, response.asString());
         assertEquals(200, response.getStatusCode());
     }
@@ -81,24 +104,11 @@ public class ITArticleRestApiTest {
 //        Thread.sleep(999999999);
 
         Response response = RestAssured.get(TestConstants.ARTICLE_PATH + "/all");
+        //TODO | add debug logs to server ot rest controller
+        System.out.println("testGetAll()");
+        System.out.println(response.asString());
         assertEquals(expectedBody, response.asString());
         assertEquals(200, response.getStatusCode());
     }
 
-    @Test
-    public void testDelete() throws Exception {
-        List<Article> articles = new ArrayList<Article>();
-        Article article = new Article();
-        article.setId(2L);
-        article.setTitle("test title 2");
-        article.setDescription("test description 2");
-        articles.add(article);
-        String expectedBody = new ObjectMapper().writeValueAsString(articles);
-
-        Response response = RestAssured.delete(TestConstants.ARTICLE_PATH + "/1");
-        assertEquals(200, response.getStatusCode());
-
-        String all = RestAssured.get(TestConstants.ARTICLE_PATH + "/all").asString();
-        assertEquals(expectedBody, all);
-    }
 }
