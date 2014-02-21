@@ -1,2 +1,4 @@
-<article article_id="1" title="test title 1" description="test description 1"/>
-<article article_id="2" title="test title 2" description="test description 2"/>
+<dataset>
+    <article article_id="1" title="test title 1" description="test description 1"/>
+    <article article_id="2" title="test title 2" description="test description 2"/>
+</dataset>

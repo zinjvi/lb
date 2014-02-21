@@ -282,7 +282,11 @@
                 </dependency>-->
 
 
-
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.5.6</version>
+        </dependency>
 
 
 
@@ -298,6 +302,34 @@
     <build>
         <finalName>lb</finalName>
             <plugins>
+                <plugin>
+                    <groupId>com.btmatthews.maven.plugins.inmemdb</groupId>
+                    <artifactId>inmemdb-maven-plugin</artifactId>
+                    <version>1.4.2</version>
+                    <configuration>
+                        <monitorPort>5050</monitorPort>
+                        <port>6060</port>
+                        <monitorKey>inmemdb</monitorKey>
+                        <type>h2</type>
+                        <database>dbname</database>
+                        <username>sa</username>
+                        <password></password>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>validate</phase>
+                            <goals>
+                                <goal>run</goal>
+                            </goals>
+                            <!--<configuration>-->
+                                <!--<sources>-->
+                                    <!--<source>src/main/resources/create_database.sql</source>-->
+                                    <!--<source>src/test/data/test_users.csv</source>-->
+                                <!--</sources>-->
+                            <!--</configuration>-->
+                        </execution>
+                    </executions>
+                </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>build-helper-maven-plugin</artifactId>
