@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class S {
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException, InterruptedException {
 //        TcpServer service = new TcpServer();
 //        service.init("-tcpAllowOthers", "-tcpPort", "9099");
 //        service.start();
@@ -24,8 +24,10 @@ public class S {
 //        webSrv.start();
         System.out.println("Started Web Server.......");
 
-        Connection conn = DriverManager.getConnection("jdbc:h2:tcp://localhost:9099/~/my", "my", "");
 
+        Connection conn = DriverManager.getConnection("jdbc:h2:tcp://localhost:9123/~/my", "my", "");
+
+        Thread.sleep(99999999);
         webSrv.stop();
 
     }

@@ -6,23 +6,33 @@ import com.eclipsesource.restfuse.Method;
 import com.eclipsesource.restfuse.Response;
 import com.eclipsesource.restfuse.annotation.Context;
 import com.eclipsesource.restfuse.annotation.HttpTest;
+import org.junit.Assert;
 import org.junit.Rule;
+import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import static com.eclipsesource.restfuse.Assert.assertOk;
 
-@RunWith(HttpJUnitRunner.class)
 public class TestTest{
 
-    @Rule
-    public Destination destination = new Destination( "http://restfuse.com" );
+    @Test
+    public void test() throws SQLException {
+//        Connection conn = DriverManager.getConnection("jdbc:h2:tcp://localhost:6061/~/test",
+//
 
-    @Context
-    private Response response; // will be injected after every request
 
-    @HttpTest( method = Method.GET, path = "/" )
-    public void checkRestfuseOnlineStatus() {
-        assertOk( response );
+//        Statement statement = conn.createStatement();
+//        statement.execute("DROP ALL OBJECTS DELETE FILES");
+//        conn.commit();
+//        conn.close();
+
+
+//        Assert.assertNotNull(conn);
     }
 
 }

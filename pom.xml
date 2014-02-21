@@ -1,22 +1,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>zinchenko</groupId>
+    <artifactId>lb</artifactId>
+    <packaging>war</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>lb Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+
     <repositories>
         <repository>
             <id>Java.Net</id>
             <url>http://download.java.net/maven/2/</url>
         </repository>
     </repositories>
-    <!--<properties>
-        <scm.branch>master</scm.branch>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <groovy.version>2.2.1</groovy.version>
-        <gmaven.version>1.5</gmaven.version>
-        <hamcrest.version>1.3</hamcrest.version>
-        <jackson1.version>1.8.5</jackson1.version>
-        <jackson2.version>2.3.0</jackson2.version>
-        <maven-javadoc.version>2.9.1</maven-javadoc.version>
-    </properties>-->
-
 
     <dependencies>
         <dependency>
@@ -25,11 +23,6 @@
             <version>2.3.0</version>
             <scope>test</scope>
         </dependency>
-<!--        <dependency>
-            <groupId>org.ccil.cowan.tagsoup</groupId>
-            <artifactId>tagsoup</artifactId>
-            <version>1.2.1</version>
-        </dependency>-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -53,99 +46,13 @@
             <version>3.1.2.RELEASE</version>
             <scope>test</scope>
         </dependency>
-        <!--<dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy</artifactId>
-            <version>${groovy.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jackson2.version}</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-core-asl</artifactId>
-            <version>${jackson1.version}</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>${jackson1.version}</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>1.7.2</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>com.googlecode.json-simple</groupId>
-            <artifactId>json-simple</artifactId>
-            <version>1.1</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-core</artifactId>
-            <version>${hamcrest.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-library</artifactId>
-            <version>${hamcrest.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.0.1</version>
-        </dependency>-->
 
-        <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-        <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-        <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-        <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-        <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-        <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-        <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-        <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
-            <!--&lt;!&ndash; Javaee API &ndash;&gt;-->
-            <!--<dependency>-->
-                <!--<groupId>javax</groupId>-->
-                <!--<artifactId>javaee-api</artifactId>-->
-                <!--<version>6.0</version>-->
-            <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>javax.servlet</groupId>-->
-            <!--<artifactId>jstl</artifactId>-->
-            <!--<version>1.2</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>taglibs</groupId>-->
-            <!--<artifactId>standard</artifactId>-->
-            <!--<version>1.1.2</version>-->
-            <!--<scope>compile</scope>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>javax.servlet</groupId>-->
-            <!--<artifactId>servlet-api</artifactId>-->
-            <!--<version>3.0-alpha-1</version>-->
-        <!--</dependency>-->
-
 
         <dependency>
             <groupId>javax.ws.rs</groupId>
@@ -237,243 +144,182 @@
             <artifactId>jettison</artifactId>
             <version>1.3.3</version>
         </dependency>
-
         <dependency>
             <groupId>com.restfuse</groupId>
             <artifactId>com.eclipsesource.restfuse</artifactId>
             <version>1.0.0</version>
         </dependency>
-
-
-        <!--        <dependency>
-                    &lt;!&ndash; Use junit-dep - instead of junit - which does not include hamcrest
-                         since otherwise it leads to method-not-found collisions with the
-                         rest-assured library. &ndash;&gt;
-                    <groupId>junit</groupId>
-                    <artifactId>junit-dep</artifactId>
-                    <version>4.10</version>
-                    <scope>test</scope>
-                    <exclusions>
-                        <exclusion>
-                            <groupId>org.hamcrest</groupId>
-                            <artifactId>hamcrest-core</artifactId>
-                        </exclusion>
-                    </exclusions>
-                </dependency>
-                <dependency>
-                    <groupId>com.sun.jersey</groupId>
-                    <artifactId>jersey-bundle</artifactId>
-                    <version>1.6</version>
-                    <scope>test</scope>
-                </dependency>
-                <dependency>
-                    <groupId>com.jayway.restassured</groupId>
-                    <artifactId>rest-assured</artifactId>
-                    <version>1.6.1</version>
-                    <scope>test</scope>
-                </dependency>
-                &lt;!&ndash; Include this dependency to run tests inside the IntelliJ IDE.
-                     Maven picks it up from matterhorn-common dependencies. &ndash;&gt;
-                <dependency>
-                  <groupId>org.apache.httpcomponents</groupId>
-                  <artifactId>httpcore</artifactId>
-                  <version>4.1.4</version>
-                  <scope>test</scope>
-                </dependency>-->
-
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.5.6</version>
         </dependency>
-
-
-
-
     </dependencies>
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>zinchenko</groupId>
-    <artifactId>lb</artifactId>
-    <packaging>war</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <name>lb Maven Webapp</name>
-    <url>http://maven.apache.org</url>
     <build>
         <finalName>lb</finalName>
-            <plugins>
-                <plugin>
-                    <groupId>com.btmatthews.maven.plugins.inmemdb</groupId>
-                    <artifactId>inmemdb-maven-plugin</artifactId>
-                    <version>1.4.2</version>
-                    <configuration>
-                        <monitorPort>5050</monitorPort>
-                        <port>6060</port>
-                        <monitorKey>inmemdb</monitorKey>
-                        <type>h2</type>
-                        <database>dbname</database>
-                        <username>sa</username>
-                        <password></password>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <phase>validate</phase>
-                            <goals>
-                                <goal>run</goal>
-                            </goals>
-                            <!--<configuration>-->
-                                <!--<sources>-->
-                                    <!--<source>src/main/resources/create_database.sql</source>-->
-                                    <!--<source>src/test/data/test_users.csv</source>-->
-                                <!--</sources>-->
-                            <!--</configuration>-->
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>build-helper-maven-plugin</artifactId>
-                    <version>1.8</version>
-                    <executions>
-                        <execution>
-                            <id>add-integration-test-sources</id>
-                            <phase>generate-test-sources</phase>
-                            <goals>
-                                <goal>add-test-source</goal>
-                            </goals>
-                            <configuration>
-                                <!-- Configures the source directory of integration tests. -->
-                                <sources>
-                                    <source>src/itest/java</source>
-                                    <source>src/itest/resource</source>
-                                </sources>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.12</version>
-                    <configuration>
-                        <excludes>
-                            <exclude>**/IT*.java</exclude>
-                        </excludes>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>2.3</version>
-                    <configuration>
-                        <warName>test</warName>
-                        <!--<webResources>-->
-                            <!--<resource>-->
-                                <!--&lt;!&ndash;<filtering>true</filtering>&ndash;&gt;-->
-                                <!--<directory>src/main/webapp</directory>-->
-                                <!--<includes>-->
-                                    <!--<include>**/*.css</include>-->
-                                    <!--&lt;!&ndash; include any other file types you want to filter &ndash;&gt;-->
-                                <!--</includes>-->
-                            <!--</resource>-->
-                        <!--</webResources>-->
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>test-war</id>
-                            <phase>pre-integration-test</phase>
-                            <goals>
-                                <goal>war</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>failsafe-maven-plugin</artifactId>
-                    <version>2.4.3-alpha-1</version>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>integration-test</goal>
-                                <goal>verify</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.mortbay.jetty</groupId>
-                    <artifactId>jetty-maven-plugin</artifactId>
-                    <version>8.1.5.v20120716</version>
-                    <configuration>
-                        <!--<scanIntervalSeconds>10</scanIntervalSeconds>-->
-                        <stopKey>foo</stopKey>
-                        <stopPort>9999</stopPort>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>start-jetty</id>
-                            <phase>pre-integration-test</phase>
-                            <goals>
-                                <goal>run</goal>
-                            </goals>
-                            <configuration>
-                                <scanIntervalSeconds>0</scanIntervalSeconds>
-                                <daemon>true</daemon>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>stop-jetty</id>
-                            <phase>post-integration-test</phase>
-                            <goals>
-                                <goal>stop</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-                <!--<plugin>-->
-                    <!--<groupId>org.mortbay.jetty</groupId>-->
-                    <!--<artifactId>maven-jetty-plugin</artifactId>-->
-                    <!--<version>6.1.26</version>-->
-                    <!--<configuration>-->
-                        <!--<scanIntervalSeconds>10</scanIntervalSeconds>-->
-                        <!--<stopKey>foo</stopKey>-->
-                        <!--<stopPort>7070</stopPort>-->
-                        <!--<stopPort>1070</stopPort>-->
-                        <!--<contextPath>/</contextPath>-->
-                        <!--<tmpDirectory>${project.basedir}/target</tmpDirectory>-->
-                        <!--<webApp>${project.basedir}/target/test.war</webApp>-->
-                        <!--<daemon>true</daemon>-->
-                        <!--<reload>manual</reload>-->
-                    <!--</configuration>-->
-                    <!--<executions>-->
-                        <!--<execution>-->
-                            <!--<id>start-jetty</id>-->
-                            <!--<phase>pre-integration-test</phase>-->
-                            <!--<goals>-->
-                                <!--<goal>deploy-war</goal>-->
-                                <!--<goal>run</goal>-->
-                            <!--</goals>-->
-                        <!--</execution>-->
-                        <!--<execution>-->
-                            <!--<id>stop-jetty</id>-->
-                            <!--<phase>post-integration-test</phase>-->
-                            <!--<goals>-->
-                                <!--<goal>stop</goal>-->
-                            <!--</goals>-->
-                        <!--</execution>-->
-                    <!--</executions>-->
-                <!--</plugin>-->
-                <plugin>
-                    <groupId>org.apache.tomcat.maven</groupId>
-                    <artifactId>tomcat7-maven-plugin</artifactId>
-                    <version>2.2</version>
-                    <!--<configuration>-->
-                        <!--<path>/mycontext</path>-->
-                    <!--</configuration>-->
-                </plugin>
-
-            </plugins>
+        <plugins>
+            <plugin>
+                <groupId>com.btmatthews.maven.plugins.inmemdb</groupId>
+                <artifactId>inmemdb-maven-plugin</artifactId>
+                <version>1.4.2</version>
+                <configuration>
+                    <daemon>true</daemon>
+                    <monitorPort>5050</monitorPort>
+                    <port>6061</port>
+                    <monitorKey>inmemdb</monitorKey>
+                    <type>h2</type>
+                    <database>test</database>
+                    <username>test</username>
+                    <password>test</password>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>inmdb-start</id>
+                        <phase>process-test-classes</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>inmdb-stop</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>stop</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>sql-maven-plugin</artifactId>
+                <version>1.5</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.h2database</groupId>
+                        <artifactId>h2</artifactId>
+                        <version>1.3.170</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <driver>org.h2.Driver</driver>
+                    <url>jdbc:h2:tcp://localhost:6061/~/test</url>
+                    <username>test</username>
+                    <password>test</password>
+                    <autocommit>true</autocommit>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>drop-h2-db-files</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <sqlCommand>DROP ALL OBJECTS DELETE FILES</sqlCommand>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <id>add-integration-test-sources</id>
+                        <phase>generate-test-sources</phase>
+                        <goals>
+                            <goal>add-test-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>src/itest/java</source>
+                                <source>src/itest/resource</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.12</version>
+                <configuration>
+                    <excludes>
+                        <exclude>**/IT*.java</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <warName>test</warName>
+                    <!--<webResources>-->
+                    <!--<resource>-->
+                    <!--&lt;!&ndash;<filtering>true</filtering>&ndash;&gt;-->
+                    <!--<directory>src/main/webapp</directory>-->
+                    <!--<includes>-->
+                    <!--<include>**/*.css</include>-->
+                    <!--&lt;!&ndash; include any other file types you want to filter &ndash;&gt;-->
+                    <!--</includes>-->
+                    <!--</resource>-->
+                    <!--</webResources>-->
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>test-war</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>war</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>failsafe-maven-plugin</artifactId>
+                <version>2.4.3-alpha-1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>8.1.5.v20120716</version>
+                <configuration>
+                    <!--<scanIntervalSeconds>10</scanIntervalSeconds>-->
+                    <stopKey>foo</stopKey>
+                    <stopPort>9999</stopPort>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>start-jetty</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <scanIntervalSeconds>0</scanIntervalSeconds>
+                            <daemon>true</daemon>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>stop-jetty</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>stop</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
-
 </project>
