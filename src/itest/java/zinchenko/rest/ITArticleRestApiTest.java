@@ -78,6 +78,8 @@ public class ITArticleRestApiTest {
         articles.add(article);
         String expectedBody = new ObjectMapper().writeValueAsString(articles);
 
+//        Thread.sleep(999999999);
+
         Response response = RestAssured.get(TestConstants.ARTICLE_PATH + "/all");
         assertEquals(expectedBody, response.asString());
         assertEquals(200, response.getStatusCode());

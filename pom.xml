@@ -175,51 +175,51 @@
                 <executions>
                     <execution>
                         <id>inmdb-start</id>
-                        <phase>process-test-classes</phase>
+                        <phase>pre-integration-test</phase>
                         <goals>
                             <goal>run</goal>
                         </goals>
                     </execution>
                     <execution>
                         <id>inmdb-stop</id>
-                        <phase>prepare-package</phase>
+                        <phase>post-integration-test</phase>
                         <goals>
                             <goal>stop</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>sql-maven-plugin</artifactId>
-                <version>1.5</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.h2database</groupId>
-                        <artifactId>h2</artifactId>
-                        <version>1.3.170</version>
-                    </dependency>
-                </dependencies>
-                <configuration>
-                    <driver>org.h2.Driver</driver>
-                    <url>jdbc:h2:tcp://localhost:6061/~/test</url>
-                    <username>test</username>
-                    <password>test</password>
-                    <autocommit>true</autocommit>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>drop-h2-db-files</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>execute</goal>
-                        </goals>
-                        <configuration>
-                            <sqlCommand>DROP ALL OBJECTS DELETE FILES</sqlCommand>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.codehaus.mojo</groupId>-->
+                <!--<artifactId>sql-maven-plugin</artifactId>-->
+                <!--<version>1.5</version>-->
+                <!--<dependencies>-->
+                    <!--<dependency>-->
+                        <!--<groupId>com.h2database</groupId>-->
+                        <!--<artifactId>h2</artifactId>-->
+                        <!--<version>1.3.170</version>-->
+                    <!--</dependency>-->
+                <!--</dependencies>-->
+                <!--<configuration>-->
+                    <!--<driver>org.h2.Driver</driver>-->
+                    <!--<url>jdbc:h2:tcp://localhost:6061/~/test</url>-->
+                    <!--<username>test</username>-->
+                    <!--<password>test</password>-->
+                    <!--<autocommit>true</autocommit>-->
+                <!--</configuration>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>drop-h2-db-files</id>-->
+                        <!--<phase>integration-test</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>execute</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<sqlCommand>DROP ALL OBJECTS DELETE FILES</sqlCommand>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>

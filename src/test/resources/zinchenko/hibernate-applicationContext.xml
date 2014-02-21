@@ -21,10 +21,10 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd http://www.springfr
           destroy-method="close">
         <property name="driverClassName" value="org.h2.Driver" />
         <!--<property name="driverClassName" value="org.postgresql.Driver" />-->
-        <property name="url" value="jdbc:h2:tcp://localhost/mem:test" />
+        <property name="url" value="jdbc:h2:tcp://localhost:6061/~/test" />
         <!--<property name="url" value="jdbc:postgresql://localhost:5432/lb" />-->
-        <property name="username" value="postgres" />
-        <property name="password" value="1234" />
+        <property name="username" value="test" />
+        <property name="password" value="test" />
     </bean>
 
     <bean id="sessionFactory"
