@@ -12,6 +12,10 @@ public class TestConstants {
 
     public static final String ARTICLE_PATH = REST_PATH + "/Article";
 
+    public static final String CATEGORY_PATH = REST_PATH + "/category";
+
+    public static final String GROUP_PATH = REST_PATH + "/group";
+
 
 
 }

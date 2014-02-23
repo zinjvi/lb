@@ -1,4 +1,4 @@
-package zinchenko.dao;
+package zinchenko.service;
 
 import zinchenko.domain.Article;
 import zinchenko.domain.Category;
@@ -7,9 +7,9 @@ import java.util.List;
 
 /**
  * User: zinchenko
- * Date: 16.02.14
+ * Date: 22.02.14
  */
-public interface CategoryDao {
+public interface CategoryService {
 
     List<Category> findAll();
 
@@ -19,6 +19,6 @@ public interface CategoryDao {
 
     void update(Category category);
 
-    void delete(Category category);
+    void delete(Long id);
 
 }

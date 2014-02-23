@@ -10,7 +10,7 @@ import javax.persistence.Table;
  * Date: 16.02.14
  */
 @Entity
-@Table(name="group")
+@Table(name="group_article")
 public class Group {
 
     @Id

@@ -4,7 +4,9 @@ package zinchenko.rest;
 import com.github.springtestdbunit.DbUnitTestExecutionListener;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
 import com.jayway.restassured.RestAssured;
+import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
+import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -18,10 +20,13 @@ import org.springframework.test.context.support.DependencyInjectionTestExecution
 import zinchenko.TestConstants;
 import zinchenko.domain.Article;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.jayway.restassured.RestAssured.*;
 import static org.junit.Assert.assertEquals;
+import static zinchenko.TestConstants.ARTICLE_PATH;
 
 /**
  * User: zinchenko
@@ -60,10 +65,10 @@ public class ITArticleRestApiTest {
         articles.add(article);
         String expectedBody = new ObjectMapper().writeValueAsString(articles);
 
-        Response response = RestAssured.delete(TestConstants.ARTICLE_PATH + "/1");
+        Response response = delete(ARTICLE_PATH + "/1");
         assertEquals(200, response.getStatusCode());
 
-        String all = RestAssured.get(TestConstants.ARTICLE_PATH + "/all").asString();
+        String all = get(ARTICLE_PATH + "/all").asString();
         //TODO | add debug logs to server ot rest controller
         System.out.println("testDelete()");
         System.out.println(all);
@@ -78,7 +83,7 @@ public class ITArticleRestApiTest {
         article.setDescription("test description 1");
         String expectedResult = new ObjectMapper().writeValueAsString(article);
 
-        Response response = RestAssured.get(TestConstants.ARTICLE_PATH + "/1");
+        Response response = get(ARTICLE_PATH + "/1");
         //TODO | add debug logs to server ot rest controller
         System.out.println("testGetById()");
         System.out.println(response.asString());
@@ -101,14 +106,43 @@ public class ITArticleRestApiTest {
         articles.add(article);
         String expectedBody = new ObjectMapper().writeValueAsString(articles);
 
-//        Thread.sleep(999999999);
-
-        Response response = RestAssured.get(TestConstants.ARTICLE_PATH + "/all");
+        Response response = get(ARTICLE_PATH + "/all");
         //TODO | add debug logs to server ot rest controller
         System.out.println("testGetAll()");
         System.out.println(response.asString());
         assertEquals(expectedBody, response.asString());
         assertEquals(200, response.getStatusCode());
+    }
+
+    @Test
+    public void testSave() throws IOException {
+        Article article = new Article();
+        //TODO | remove id
+        article.setId(3L);
+        article.setTitle("new title 3");
+        article.setDescription("new description 3");
+        String articleJson= new ObjectMapper().writeValueAsString(article);
+
+        Response saveResponse = given().contentType(ContentType.JSON)
+                .body(articleJson).when().post(ARTICLE_PATH);
+        assertEquals(200, saveResponse.getStatusCode());
+
+        assertEquals(articleJson, get(ARTICLE_PATH + "/3").asString());
+    }
+
+    @Test
+    public void testUpdate() throws IOException {
+        Article article = new Article();
+        article.setId(2L);
+        article.setTitle("new title 2");
+        article.setDescription("new description 2");
+        String articleJson= new ObjectMapper().writeValueAsString(article);
+
+        Response updateResponse = given().contentType(ContentType.JSON)
+                .body(articleJson).when().put(ARTICLE_PATH);
+        assertEquals(200, updateResponse.getStatusCode());
+
+        assertEquals(articleJson, get(ARTICLE_PATH + "/2").asString());
     }
 
 }

@@ -14,6 +14,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd http://www.springfr
     <context:component-scan base-package="zinchenko.service"/>
     <context:component-scan base-package="zinchenko"/>
 
+    <context:property-placeholder location="classpath:dao.properties"/>
 
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
@@ -27,10 +28,11 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd http://www.springfr
         <property name="driverClassName" value="org.h2.Driver" />
         <!--<property name="driverClassName" value="org.postgresql.Driver" />-->
         <!--<property name="url" value="jdbc:h2:mem:test" />-->
-        <property name="url" value="jdbc:h2:tcp://localhost:6061/~/test" />
+        <!--<property name="url" value="jdbc:h2:tcp://localhost:6061/~/test" />-->
+        <property name="url" value="${database.url}" />
         <!--<property name="url" value="jdbc:postgresql://localhost:5432/lb" />-->
-        <property name="username" value="test" />
-        <property name="password" value="test" />
+        <property name="username" value="${database.username}" />
+        <property name="password" value="${database.password}" />
     </bean>
 
     <bean id="sessionFactory"

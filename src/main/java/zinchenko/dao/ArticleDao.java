@@ -10,12 +10,14 @@ import java.util.List;
  */
 public interface ArticleDao {
 
-    public List<Article> findAll();
+    List<Article> findAll();
 
-    public Article find(Long id);
+    Article find(Long id);
 
-    public Long save(Article article);
+    Long save(Article article);
 
-    public void delete(Article article);
+    void update(Article article);
+
+    void delete(Article article);
 
 }

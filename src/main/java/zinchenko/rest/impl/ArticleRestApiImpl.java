@@ -5,13 +5,17 @@ import org.springframework.transaction.annotation.Transactional;
 import zinchenko.dao.ArticleDao;
 import zinchenko.domain.Article;
 import zinchenko.rest.ArticleRestApi;
+import zinchenko.rest.Bean;
 import zinchenko.service.ArticleService;
 
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-
+//TODO | provide presentation server errors correctly
 public class ArticleRestApiImpl implements ArticleRestApi {
+
+//    @Autowired
+//    Bean bean;
 
     @Autowired
     ArticleDao articleDao;
@@ -23,7 +27,6 @@ public class ArticleRestApiImpl implements ArticleRestApi {
     }
 
     @Override
-    @Transactional
     public Article get(Long id) {
         return articleDao.find(id);
     }
@@ -43,7 +46,7 @@ public class ArticleRestApiImpl implements ArticleRestApi {
 
     @Override
     public Response update(Article article) {
-        articleDao.save(article);
+        articleDao.update(article);
         return Response.status(Response.Status.OK).build();
     }
 

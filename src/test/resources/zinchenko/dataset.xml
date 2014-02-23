@@ -1,4 +1,10 @@
 <dataset>
     <article article_id="1" title="test title 1" description="test description 1"/>
     <article article_id="2" title="test title 2" description="test description 2"/>
+
+    <category category_id="1" name="test name 1"/>
+    <category category_id="2" name="test name 2"/>
+
+    <group_article group_id="1" name="test name 1"/>
+    <group_article group_id="2" name="test name 2"/>
 </dataset>

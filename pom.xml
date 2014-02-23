@@ -9,6 +9,15 @@
     <name>lb Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
+    <properties>
+        <itegrationTest.inMemoryDatabase.url>
+            jdbc:h2:tcp://localhost:6061/~/test
+        </itegrationTest.inMemoryDatabase.url>
+        <itegrationTest.inMemoryDatabase.port>
+            6061
+        </itegrationTest.inMemoryDatabase.port>
+    </properties>
+
     <repositories>
         <repository>
             <id>Java.Net</id>
@@ -171,7 +180,7 @@
                 </dependencies>
                 <configuration>
                     <driver>org.h2.Driver</driver>
-                    <url>jdbc:h2:tcp://localhost:6061/~/test</url>
+                    <url>${itegrationTest.inMemoryDatabase.url}</url>
                     <username>test</username>
                     <password>test</password>
                     <autocommit>true</autocommit>
@@ -204,7 +213,7 @@
                 <configuration>
                     <daemon>true</daemon>
                     <monitorPort>5050</monitorPort>
-                    <port>6061</port>
+                    <port>${itegrationTest.inMemoryDatabase.port}</port>
                     <monitorKey>inmemdb</monitorKey>
                     <type>h2</type>
                     <database>test</database>
@@ -264,16 +273,22 @@
                 <version>2.3</version>
                 <configuration>
                     <warName>test</warName>
-                    <!--<webResources>-->
-                    <!--<resource>-->
-                    <!--&lt;!&ndash;<filtering>true</filtering>&ndash;&gt;-->
-                    <!--<directory>src/main/webapp</directory>-->
-                    <!--<includes>-->
-                    <!--<include>**/*.css</include>-->
-                    <!--&lt;!&ndash; include any other file types you want to filter &ndash;&gt;-->
-                    <!--</includes>-->
-                    <!--</resource>-->
-                    <!--</webResources>-->
+                    <packagingExcludes>WEB-INF/classes/dao.properties</packagingExcludes>
+                    <!--<packagingIncludes>/src/itest/resources/dao.properties</packagingIncludes>-->
+                    <!--<webResources>
+                        <resource>
+                            <directory>/src/itest/resources/</directory>
+
+                            &lt;!&ndash; the default value is ** &ndash;&gt;
+                            <includes>
+                                <include>dao.properties</include>
+                            </includes>
+                            &lt;!&ndash; there's no default value for this &ndash;&gt;
+                            &lt;!&ndash;<excludes>&ndash;&gt;
+                                &lt;!&ndash;<exclude>src/main/resources/dao.properties</exclude>&ndash;&gt;
+                            &lt;!&ndash;</excludes>&ndash;&gt;
+                        </resource>
+                    </webResources>-->
                 </configuration>
                 <executions>
                     <execution>

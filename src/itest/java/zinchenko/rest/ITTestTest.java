@@ -14,7 +14,7 @@ import static com.jayway.restassured.RestAssured.get;
 
 public class ITTestTest {
 
-    @Test
+//    @Test
     public void test() {
         try {
             String r = get("http://localhost:8080/rest/Article/all").asString();
@@ -24,7 +24,7 @@ public class ITTestTest {
         }
     }
 
-    @Test
+//    @Test
     public void test2() throws SQLException {
         Connection conn = DriverManager.getConnection("jdbc:h2:tcp://localhost:6061/~/test",
                 "test", "test");

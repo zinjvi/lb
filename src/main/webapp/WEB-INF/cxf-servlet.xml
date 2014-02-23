@@ -15,40 +15,12 @@
 
     <jaxrs:server id="webService" address="/rest">
         <jaxrs:serviceBeans>
-            <bean class="zinchenko.rest.impl.ArticleRestApiImpl" />
+            <bean class="zinchenko.rest.impl.ArticleRestApiImpl"/>
+            <bean class="zinchenko.rest.impl.CategoryRestApiImpl"/>
+            <bean class="zinchenko.rest.impl.GroupRestApiImpl"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
-            <bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+            <bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>
         </jaxrs:providers>
     </jaxrs:server>
 </beans>
-
-
-<!--    <import resource="classpath:META-INF/cxf/cxf.xml"/>
-    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
-
-    <cxf:bus>
-        <cxf:features>
-            <cxf:logging/>
-        </cxf:features>
-    </cxf:bus>
-
-
-    <bean id="userManagerService"
-          class="zinchenko.OrderInfoImpl">
-    </bean>
-
-    <bean id="jsonProvider"
-          class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>
-
-    <jaxrs:server id="userManagerREST" address="/">
-        <jaxrs:serviceBeans>
-            <ref bean="userManagerService"/>
-        </jaxrs:serviceBeans>
-        &lt;!&ndash;<jaxrs:providers>&ndash;&gt;
-            &lt;!&ndash;<ref bean="jsonProvider"/>&ndash;&gt;
-        &lt;!&ndash;</jaxrs:providers>&ndash;&gt;
-    </jaxrs:server>-->
-
-<!--</beans>-->
-
