@@ -268,12 +268,37 @@
                 </configuration>
             </plugin>
             <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.5</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                            <overwrite>true</overwrite>
+                            <resources>
+                                <resource>
+                                    <directory>${project.basedir}/src/itest/resources</directory>
+                                    <includes>
+                                        <include>**/dao.properties</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.3</version>
                 <configuration>
                     <warName>test</warName>
-                    <packagingExcludes>WEB-INF/classes/dao.properties</packagingExcludes>
+                    <!--<packagingExcludes>WEB-INF/classes/dao.properties</packagingExcludes>-->
                     <!--<packagingIncludes>/src/itest/resources/dao.properties</packagingIncludes>-->
                     <!--<webResources>
                         <resource>
@@ -344,5 +369,13 @@
                 </executions>
             </plugin>
         </plugins>
+        <testResources>
+            <testResource>
+                <directory>${project.basedir}/src/test/resources</directory>
+            </testResource>
+            <testResource>
+                <directory>${project.basedir}/src/itest/resources</directory>
+            </testResource>
+        </testResources>
     </build>
 </project>
