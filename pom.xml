@@ -16,6 +16,7 @@
         <itegrationTest.inMemoryDatabase.port>
             6061
         </itegrationTest.inMemoryDatabase.port>
+        <!--<maven.resources.overwrite>true</maven.resources.overwrite>-->
     </properties>
 
     <repositories>
@@ -273,7 +274,7 @@
                 <executions>
                     <execution>
                         <id>copy-resources</id>
-                        <phase>prepare-package</phase>
+                        <phase>validate</phase>
                         <goals>
                             <goal>copy-resources</goal>
                         </goals>
@@ -284,7 +285,7 @@
                                 <resource>
                                     <directory>${project.basedir}/src/itest/resources</directory>
                                     <includes>
-                                        <include>**/dao.properties</include>
+                                        <include>**/*.*</include>
                                     </includes>
                                 </resource>
                             </resources>
@@ -369,6 +370,9 @@
                 </executions>
             </plugin>
         </plugins>
+        <!--<pluginManagement>-->
+            <!--<plugins></plugins>-->
+        <!--</pluginManagement>-->
         <testResources>
             <testResource>
                 <directory>${project.basedir}/src/test/resources</directory>
@@ -378,4 +382,10 @@
             </testResource>
         </testResources>
     </build>
+    <!--<profiles>-->
+        <!--<profile>-->
+            <!--<id>first</id>-->
+
+        <!--</profile>-->
+    <!--</profiles>-->
 </project>
