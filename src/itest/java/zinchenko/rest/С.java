@@ -12,7 +12,7 @@ import java.sql.Statement;
 
 import static com.jayway.restassured.RestAssured.get;
 
-public class ITTestTest {
+public class С {
 
 //    @Test
     public void test() {

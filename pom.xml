@@ -16,7 +16,6 @@
         <itegrationTest.inMemoryDatabase.port>
             6061
         </itegrationTest.inMemoryDatabase.port>
-        <!--<maven.resources.overwrite>true</maven.resources.overwrite>-->
     </properties>
 
     <repositories>
@@ -169,38 +168,6 @@
         <finalName>lb</finalName>
         <plugins>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>sql-maven-plugin</artifactId>
-                <version>1.5</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.h2database</groupId>
-                        <artifactId>h2</artifactId>
-                        <version>1.3.174</version>
-                    </dependency>
-                </dependencies>
-                <configuration>
-                    <driver>org.h2.Driver</driver>
-                    <url>${itegrationTest.inMemoryDatabase.url}</url>
-                    <username>test</username>
-                    <password>test</password>
-                    <autocommit>true</autocommit>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>drop-h2-db-files</id>
-                        <phase>post-integration-test</phase>
-                        <goals>
-                            <goal>execute</goal>
-                        </goals>
-                        <configuration>
-                            <sqlCommand>DROP ALL OBJECTS DELETE FILES</sqlCommand>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
                 <groupId>com.btmatthews.maven.plugins.inmemdb</groupId>
                 <artifactId>inmemdb-maven-plugin</artifactId>
                 <version>1.4.2</version>
@@ -212,6 +179,7 @@
                     </dependency>
                 </dependencies>
                 <configuration>
+
                     <daemon>true</daemon>
                     <monitorPort>5050</monitorPort>
                     <port>${itegrationTest.inMemoryDatabase.port}</port>
@@ -235,6 +203,37 @@
                         <goals>
                             <goal>stop</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>sql-maven-plugin</artifactId>
+                <version>1.5</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.h2database</groupId>
+                        <artifactId>h2</artifactId>
+                        <version>1.3.174</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <driver>org.h2.Driver</driver>
+                    <url>${itegrationTest.inMemoryDatabase.url}</url>
+                    <username>test</username>
+                    <password>test</password>
+                    <autocommit>true</autocommit>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>drop-h2-db-files</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <sqlCommand>DROP ALL OBJECTS DELETE FILES</sqlCommand>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -274,7 +273,7 @@
                 <executions>
                     <execution>
                         <id>copy-resources</id>
-                        <phase>validate</phase>
+                        <phase>pre-integration-test</phase>
                         <goals>
                             <goal>copy-resources</goal>
                         </goals>
@@ -283,9 +282,9 @@
                             <overwrite>true</overwrite>
                             <resources>
                                 <resource>
-                                    <directory>${project.basedir}/src/itest/resources</directory>
+                                    <directory>src/itest/resources</directory>
                                     <includes>
-                                        <include>**/*.*</include>
+                                        <include>**/dao.properties</include>
                                     </includes>
                                 </resource>
                             </resources>
@@ -297,32 +296,23 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.3</version>
-                <configuration>
-                    <warName>test</warName>
-                    <!--<packagingExcludes>WEB-INF/classes/dao.properties</packagingExcludes>-->
-                    <!--<packagingIncludes>/src/itest/resources/dao.properties</packagingIncludes>-->
-                    <!--<webResources>
-                        <resource>
-                            <directory>/src/itest/resources/</directory>
-
-                            &lt;!&ndash; the default value is ** &ndash;&gt;
-                            <includes>
-                                <include>dao.properties</include>
-                            </includes>
-                            &lt;!&ndash; there's no default value for this &ndash;&gt;
-                            &lt;!&ndash;<excludes>&ndash;&gt;
-                                &lt;!&ndash;<exclude>src/main/resources/dao.properties</exclude>&ndash;&gt;
-                            &lt;!&ndash;</excludes>&ndash;&gt;
-                        </resource>
-                    </webResources>-->
-                </configuration>
                 <executions>
+                    <execution>
+                        <id>war</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>war</goal>
+                        </goals>
+                    </execution>
                     <execution>
                         <id>test-war</id>
                         <phase>pre-integration-test</phase>
                         <goals>
                             <goal>war</goal>
                         </goals>
+                        <configuration>
+                            <warName>test</warName>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -370,9 +360,6 @@
                 </executions>
             </plugin>
         </plugins>
-        <!--<pluginManagement>-->
-            <!--<plugins></plugins>-->
-        <!--</pluginManagement>-->
         <testResources>
             <testResource>
                 <directory>${project.basedir}/src/test/resources</directory>
@@ -382,10 +369,4 @@
             </testResource>
         </testResources>
     </build>
-    <!--<profiles>-->
-        <!--<profile>-->
-            <!--<id>first</id>-->
-
-        <!--</profile>-->
-    <!--</profiles>-->
 </project>
