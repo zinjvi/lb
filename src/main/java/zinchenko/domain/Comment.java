@@ -3,6 +3,8 @@ package zinchenko.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -20,6 +22,10 @@ public class Comment {
     @Column(name = "content")
     private String content;
 
+    @ManyToOne
+    @JoinColumn(name = "article_id")
+    private Article article;
+
     public Long getId() {
         return id;
     }
@@ -36,4 +42,11 @@ public class Comment {
         this.content = content;
     }
 
+    public Article getArticle() {
+        return article;
+    }
+
+    public void setArticle(Article article) {
+        this.article = article;
+    }
 }

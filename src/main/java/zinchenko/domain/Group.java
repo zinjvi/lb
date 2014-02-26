@@ -3,7 +3,9 @@ package zinchenko.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.List;
 
 /**
  * User: zinchenko
@@ -20,6 +22,9 @@ public class Group {
     @Column(name="name")
     private String name;
 
+    @OneToMany
+    private List<Category> categories;
+
     public Long getId() {
         return id;
     }
@@ -34,5 +39,13 @@ public class Group {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
     }
 }

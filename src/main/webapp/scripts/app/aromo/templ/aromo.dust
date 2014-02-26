@@ -1,0 +1,12 @@
+<div class="menu">
+    <ul>
+    {#aromos}
+        <li class="menu-item">
+            <a id="{id}" href="#">{name}</a>
+        </li>
+    {/aromos}
+    </ul>
+</div>
+<div class="content">
+
+</div>
