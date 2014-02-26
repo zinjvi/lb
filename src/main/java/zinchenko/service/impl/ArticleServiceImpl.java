@@ -2,10 +2,10 @@ package zinchenko.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import zinchenko.dao.ArticleDao;
 import zinchenko.domain.Article;
 import zinchenko.service.ArticleService;
+import zinchenko.service.MessageService;
 import zinchenko.service.UnexpectedServiceException;
 
 import java.util.List;
@@ -18,7 +18,10 @@ import java.util.List;
 public class ArticleServiceImpl implements ArticleService {
 
     @Autowired
-    ArticleDao articleDao;
+    private ArticleDao articleDao;
+
+    @Autowired
+    private MessageService messageService;
 
     @Override
     public List<Article> findAll() {
@@ -32,7 +35,9 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public Long save(Article article) {
-        return articleDao.save(article);
+        Long articleId = articleDao.save(article);
+        messageService.sendNewArticleIdToQueue(articleId);
+        return articleId;
     }
 
     @Override
@@ -57,5 +62,13 @@ public class ArticleServiceImpl implements ArticleService {
 
     public void setArticleDao(ArticleDao articleDao) {
         this.articleDao = articleDao;
+    }
+
+    public MessageService getMessageService() {
+        return messageService;
+    }
+
+    public void setMessageService(MessageService messageService) {
+        this.messageService = messageService;
     }
 }
