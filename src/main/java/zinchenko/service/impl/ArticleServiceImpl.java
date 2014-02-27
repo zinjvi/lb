@@ -36,7 +36,7 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public Long save(Article article) {
         Long articleId = articleDao.save(article);
-        messageService.sendNewArticleIdToQueue(articleId);
+        messageService.sendNewArticleToQueue(article);
         return articleId;
     }
 

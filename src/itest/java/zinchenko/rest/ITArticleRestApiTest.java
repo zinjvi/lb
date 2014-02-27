@@ -3,13 +3,14 @@ package zinchenko.rest;
 
 import com.github.springtestdbunit.DbUnitTestExecutionListener;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
-import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
-import org.codehaus.jackson.JsonGenerationException;
+import org.apache.activemq.broker.BrokerService;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,15 +18,18 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
-import zinchenko.TestConstants;
+import zinchenko.JmsUtils;
 import zinchenko.domain.Article;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.jayway.restassured.RestAssured.*;
+import static com.jayway.restassured.RestAssured.delete;
+import static com.jayway.restassured.RestAssured.get;
+import static com.jayway.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static zinchenko.TestConstants.ARTICLE_PATH;
 
 /**
@@ -33,7 +37,7 @@ import static zinchenko.TestConstants.ARTICLE_PATH;
  * Date: 16.02.14
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:zinchenko/hibernate-applicationContext.xml"})
+@ContextConfiguration({"classpath:zinchenko/dbUnitHibernate-applicationContext.xml"})
 @DatabaseSetup("classpath:zinchenko/dataset.xml")
 @TestExecutionListeners({DependencyInjectionTestExecutionListener.class,
         DbUnitTestExecutionListener.class})
@@ -41,6 +45,24 @@ public class ITArticleRestApiTest {
 
     @Autowired
     SessionFactory sessionFactory;
+
+    BrokerService broker;
+
+    String brokerUrl = "tcp://localhost:61616";
+
+    String queueName = "articleQueue";
+
+    @Before
+    public void before() throws Exception {
+        broker = new BrokerService();
+        broker.addConnector(brokerUrl);
+        broker.start();
+    }
+
+    @After
+    public void after() throws Exception {
+        broker.stop();
+    }
 
     @Test
     public void test() {
@@ -115,7 +137,7 @@ public class ITArticleRestApiTest {
     }
 
     @Test
-    public void testSave() throws IOException {
+    public void testSave() throws Exception {
         Article article = new Article();
         //TODO | remove id
         article.setId(3L);
@@ -128,6 +150,9 @@ public class ITArticleRestApiTest {
         assertEquals(200, saveResponse.getStatusCode());
 
         assertEquals(articleJson, get(ARTICLE_PATH + "/3").asString());
+
+        Article articleFromQueue = (Article) JmsUtils.receiveObject(brokerUrl, queueName);
+        assertNotNull(articleFromQueue);
     }
 
     @Test

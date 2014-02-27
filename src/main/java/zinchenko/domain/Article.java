@@ -7,6 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -15,7 +16,7 @@ import java.util.List;
  */
 @Entity
 @Table(name="ARTICLE")
-public class Article {
+public class Article implements Serializable {
 
     @Id
     @Column(name = "ARTICLE_ID")

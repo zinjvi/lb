@@ -3,6 +3,8 @@ package zinchenko.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
+import zinchenko.domain.Article;
+import zinchenko.domain.Comment;
 import zinchenko.service.MessageService;
 
 @Service
@@ -12,12 +14,12 @@ public class MessageServiceImpl implements MessageService{
     private JmsTemplate articleTemplate;
 
     @Override
-    public void sendNewArticleIdToQueue(Long articleId) {
-        articleTemplate.convertAndSend(articleId);
+    public void sendNewArticleToQueue(Article article) {
+        articleTemplate.convertAndSend(article);
     }
 
     @Override
-    public void sendNewCommentIdToQueue(Long commentId) {
+    public void sendNewCommentToQueue(Comment comment) {
 
     }
 

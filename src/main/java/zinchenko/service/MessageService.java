@@ -1,9 +1,12 @@
 package zinchenko.service;
 
+import zinchenko.domain.Article;
+import zinchenko.domain.Comment;
+
 public interface MessageService {
 
-    void sendNewArticleIdToQueue(Long articleId);
+    void sendNewArticleToQueue(Article article);
 
-    void sendNewCommentIdToQueue(Long commentId);
+    void sendNewCommentToQueue(Comment comment);
 
 }
