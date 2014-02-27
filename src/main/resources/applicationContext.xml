@@ -52,4 +52,20 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd http://www.springfr
         </property>
     </bean>
 
+    <!--Messages-->
+    <bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <property name="brokerURL">
+            <value>tcp://localhost:61616</value>
+        </property>
+    </bean>
+
+    <bean id="articleDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg value="orderQueue"/>
+    </bean>
+
+    <bean id="articleTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="connectionFactory" />
+        <property name="defaultDestination" ref="articleDestination" />
+    </bean>
+
 </beans>
