@@ -14,8 +14,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd http://www.springfr
     <context:component-scan base-package="zinchenko.service"/>
     <context:component-scan base-package="zinchenko"/>
 
-    <context:property-placeholder location="classpath:dao.properties"/>
-    <context:property-placeholder location="classpath:message.properties"/>
+    <context:property-placeholder location="classpath:*.properties"/>
 
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
@@ -55,9 +54,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd http://www.springfr
 
     <!--Messages-->
     <bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
-        <property name="brokerURL">
-            <value>${message.url}</value>
-        </property>
+        <property name="brokerURL" value="tcp://localhost:61616"/>
     </bean>
 
     <bean id="articleDestination" class="org.apache.activemq.command.ActiveMQQueue">
