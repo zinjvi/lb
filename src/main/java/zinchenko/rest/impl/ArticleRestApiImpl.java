@@ -7,7 +7,6 @@ import org.springframework.transaction.annotation.Transactional;
 import zinchenko.dao.ArticleDao;
 import zinchenko.domain.Article;
 import zinchenko.rest.ArticleRestApi;
-import zinchenko.rest.Bean;
 import zinchenko.service.ArticleService;
 import zinchenko.service.UnexpectedServiceException;
 
@@ -18,9 +17,6 @@ import java.util.List;
 public class ArticleRestApiImpl implements ArticleRestApi {
 
     private static final Log LOG = LogFactory.getLog(ArticleRestApiImpl.class);
-
-//    @Autowired
-//    Bean bean;
 
     @Autowired
     ArticleDao articleDao;
@@ -41,6 +37,10 @@ public class ArticleRestApiImpl implements ArticleRestApi {
     public List<Article> getAll() {
         try {
             List<Article> articles = articleDao.findAll();
+            //TODO | need do more better
+            for(Article article: articles){
+                article.setComments(null);
+            }
             LOG.debug(articles);
             return articles;
         } catch (Exception e) {
@@ -51,7 +51,7 @@ public class ArticleRestApiImpl implements ArticleRestApi {
 
     @Override
     public Response save(Article article) {
-        articleDao.save(article);
+        Long id = articleService.save(article);
         return Response.status(Response.Status.OK).build();
     }
 

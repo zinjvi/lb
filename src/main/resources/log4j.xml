@@ -9,14 +9,14 @@
         </layout>
     </appender>
 
-    <!--<logger name="zinchenko">-->
-        <!--<level value="DEBUG" />-->
-        <!--<appender-ref ref="STDOUT" />-->
-    <!--</logger>-->
+    <logger name="zinchenko">
+        <level value="DEBUG" />
+        <appender-ref ref="STDOUT" />
+    </logger>
 
-    <root>
-        <!--<priority value="DEBUG"/>-->
-        <appender-ref ref="STDOUT"/>
-    </root>
+    <!--<root>-->
+        <!--<priority value="ERROR"/>-->
+        <!--<appender-ref ref="STDOUT"/>-->
+    <!--</root>-->
 
 </log4j:configuration>

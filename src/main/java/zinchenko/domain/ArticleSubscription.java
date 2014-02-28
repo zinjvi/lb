@@ -6,7 +6,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
-//@Table(name = "subscription")
 @DiscriminatorValue("A")
 public class ArticleSubscription extends Subscription{
 

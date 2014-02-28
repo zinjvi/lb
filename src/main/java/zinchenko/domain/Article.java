@@ -1,5 +1,7 @@
 package zinchenko.domain;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,17 +17,17 @@ import java.util.List;
  * Date: 16.02.14
  */
 @Entity
-@Table(name="ARTICLE")
+@Table(name = "ARTICLE")
 public class Article implements Serializable {
 
     @Id
     @Column(name = "ARTICLE_ID")
     private Long id;
 
-    @Column(name="TITLE")
+    @Column(name = "TITLE")
     private String title;
 
-    @Column(name="DESCRIPTION")
+    @Column(name = "DESCRIPTION")
     private String description;
 
     @ManyToOne
@@ -34,6 +36,18 @@ public class Article implements Serializable {
 
     @OneToMany
     private List<Comment> comments;
+
+    @Override
+    public String toString() {
+        // TODO | need det style to optimize
+        return new ToStringBuilder(this)
+                .append("id", id)
+                .append("title", title)
+                .append("description", description)
+                .append("category", category)
+                .append("comments", comments)
+                .toString();
+    }
 
     public Long getId() {
         return id;

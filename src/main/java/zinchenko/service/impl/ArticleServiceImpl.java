@@ -1,10 +1,15 @@
 package zinchenko.service.impl;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import zinchenko.dao.ArticleDao;
+import zinchenko.dao.SubscriptionDao;
 import zinchenko.domain.Article;
+import zinchenko.domain.Subscription;
 import zinchenko.service.ArticleService;
+import zinchenko.service.EmailService;
 import zinchenko.service.MessageService;
 import zinchenko.service.UnexpectedServiceException;
 
@@ -14,14 +19,22 @@ import java.util.List;
  * User: zinchenko
  * Date: 20.02.14
  */
-@Service
+@Service(value = "articleService")
 public class ArticleServiceImpl implements ArticleService {
+
+    private static final Log LOG = LogFactory.getLog(ArticleServiceImpl.class);
 
     @Autowired
     private ArticleDao articleDao;
 
     @Autowired
     private MessageService messageService;
+
+    @Autowired
+    private SubscriptionDao subscriptionDao;
+
+    @Autowired
+    private EmailService emailService;
 
     @Override
     public List<Article> findAll() {
@@ -56,6 +69,19 @@ public class ArticleServiceImpl implements ArticleService {
         }
     }
 
+    @Override
+    public void sendEmailToSubscribers(Article article) {
+        List<Subscription> subscriptions = subscriptionDao.findByArticleId(article.getId());
+        for(Subscription subscription: subscriptions){
+            String from = "zinjvi@gmail.com";
+            String to = subscription.getPerson().getEmail();
+            String s
+                    String t = ""
+            emailService.send();
+        }
+        LOG.debug(article);
+    }
+
     public ArticleDao getArticleDao() {
         return articleDao;
     }
@@ -70,5 +96,21 @@ public class ArticleServiceImpl implements ArticleService {
 
     public void setMessageService(MessageService messageService) {
         this.messageService = messageService;
+    }
+
+    public SubscriptionDao getSubscriptionDao() {
+        return subscriptionDao;
+    }
+
+    public void setSubscriptionDao(SubscriptionDao subscriptionDao) {
+        this.subscriptionDao = subscriptionDao;
+    }
+
+    public EmailService getEmailService() {
+        return emailService;
+    }
+
+    public void setEmailService(EmailService emailService) {
+        this.emailService = emailService;
     }
 }

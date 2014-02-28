@@ -1,6 +1,8 @@
 package zinchenko.domain;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
@@ -12,6 +14,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name="subscription")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="discriminator",
+        discriminatorType = DiscriminatorType.STRING)
 abstract public class Subscription {
 
     @Id
@@ -28,5 +32,13 @@ abstract public class Subscription {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
     }
 }

@@ -20,4 +20,6 @@ public interface ArticleService {
 
     public void delete(Long id);
 
+    void sendEmailToSubscribers(Article article);
+
 }
