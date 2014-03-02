@@ -47,7 +47,7 @@ require.config({
 //    }
 });
 
-require(['application'], function(application){
-    window.app = application;
-    application.start();
-});
+//require(['application'], function(application){
+//    window.app = application;
+//    application.start();
+//});

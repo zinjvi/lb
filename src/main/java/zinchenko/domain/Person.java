@@ -22,9 +22,6 @@ public class Person {
     @Column(name="email")
     private String email;
 
-    @OneToMany
-    private List<Subscription> subscriptions;
-
     public Long getId() {
         return id;
     }
@@ -41,11 +38,4 @@ public class Person {
         this.email = email;
     }
 
-    public List<Subscription> getSubscriptions() {
-        return subscriptions;
-    }
-
-    public void setSubscriptions(List<Subscription> subscriptions) {
-        this.subscriptions = subscriptions;
-    }
 }

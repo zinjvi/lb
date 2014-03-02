@@ -8,6 +8,8 @@ public interface CommentService {
 
     List<Comment> findAll();
 
+    List<Comment> findByArticleId(Long articleId);
+
     Comment find(Long id);
 
     Long save(Comment comment);
@@ -15,5 +17,7 @@ public interface CommentService {
     void update(Comment comment);
 
     void delete(Long id);
+
+    void sendEmailToCategorySubscribers(Comment comment);
 
 }

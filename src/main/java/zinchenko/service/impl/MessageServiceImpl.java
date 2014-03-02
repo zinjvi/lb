@@ -1,6 +1,7 @@
 package zinchenko.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 import zinchenko.domain.Article;
@@ -11,23 +12,36 @@ import zinchenko.service.MessageService;
 public class MessageServiceImpl implements MessageService{
 
     @Autowired
-    private JmsTemplate articleTemplate;
+    @Qualifier("articleJmsTemplate")
+    private JmsTemplate articleJmsTemplate;
+
+    @Autowired
+    @Qualifier("commentJmsTemplate")
+    private JmsTemplate commentJmsTemplate;
 
     @Override
     public void sendNewArticleToQueue(Article article) {
-        articleTemplate.convertAndSend(article);
+        articleJmsTemplate.convertAndSend(article);
     }
 
     @Override
     public void sendNewCommentToQueue(Comment comment) {
-
+        commentJmsTemplate.convertAndSend(comment);
     }
 
-    public JmsTemplate getArticleTemplate() {
-        return articleTemplate;
+    public JmsTemplate getArticleJmsTemplate() {
+        return articleJmsTemplate;
     }
 
-    public void setArticleTemplate(JmsTemplate articleTemplate) {
-        this.articleTemplate = articleTemplate;
+    public void setArticleJmsTemplate(JmsTemplate articleJmsTemplate) {
+        this.articleJmsTemplate = articleJmsTemplate;
+    }
+
+    public JmsTemplate getCommentJmsTemplate() {
+        return commentJmsTemplate;
+    }
+
+    public void setCommentJmsTemplate(JmsTemplate commentJmsTemplate) {
+        this.commentJmsTemplate = commentJmsTemplate;
     }
 }

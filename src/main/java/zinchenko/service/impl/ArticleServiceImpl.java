@@ -2,18 +2,23 @@ package zinchenko.service.impl;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.cxf.common.jaxb.JAXBUtils;
+import org.apache.velocity.app.VelocityEngine;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.velocity.VelocityEngineUtils;
+import zinchenko.Constants;
 import zinchenko.dao.ArticleDao;
 import zinchenko.dao.SubscriptionDao;
 import zinchenko.domain.Article;
 import zinchenko.domain.Subscription;
-import zinchenko.service.ArticleService;
-import zinchenko.service.EmailService;
-import zinchenko.service.MessageService;
-import zinchenko.service.UnexpectedServiceException;
+import zinchenko.service.*;
 
+import java.text.MessageFormat;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * User: zinchenko
@@ -24,6 +29,14 @@ public class ArticleServiceImpl implements ArticleService {
 
     private static final Log LOG = LogFactory.getLog(ArticleServiceImpl.class);
 
+    public static final String NEW_ARTICLE_TEMPLATE_LOCATION = "/zinchenko/service/templates/newArticleEmailTemplate.vm";
+
+    @Value("${email.from}")
+    private String sendEmailFrom;
+
+    @Value("${email.subject.new.article.notification}")
+    private String subjectNewArticleNotification;
+
     @Autowired
     private ArticleDao articleDao;
 
@@ -31,10 +44,16 @@ public class ArticleServiceImpl implements ArticleService {
     private MessageService messageService;
 
     @Autowired
+    private CategoryService categoryService;
+
+    @Autowired
     private SubscriptionDao subscriptionDao;
 
     @Autowired
     private EmailService emailService;
+
+    @Autowired
+    private VelocityEngine velocityEngine;
 
     @Override
     public List<Article> findAll() {
@@ -70,14 +89,19 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public void sendEmailToSubscribers(Article article) {
-        List<Subscription> subscriptions = subscriptionDao.findByArticleId(article.getId());
+    public void sendEmailToCategorySubscribers(Article article) {
+        List<Subscription> subscriptions = subscriptionDao
+                .findByCategoryId(article.getCategory().getId());
+        LOG.debug(MessageFormat.format("Category {0} with id {1} has {2} subscribers",
+                article.getCategory().getName(), article.getCategory().getId(),
+                subscriptions.size()));
         for(Subscription subscription: subscriptions){
-            String from = "zinjvi@gmail.com";
-            String to = subscription.getPerson().getEmail();
-            String s
-                    String t = ""
-            emailService.send();
+            Map<String, Object> model = new HashMap<String, Object>();
+            model.put("article", article);
+            String text = VelocityEngineUtils.mergeTemplateIntoString(velocityEngine,
+                    NEW_ARTICLE_TEMPLATE_LOCATION, Constants.EMAIL_ENCODING, model);
+            emailService.send(sendEmailFrom, subscription.getPerson().getEmail(),
+                    subjectNewArticleNotification, text);
         }
         LOG.debug(article);
     }
@@ -112,5 +136,37 @@ public class ArticleServiceImpl implements ArticleService {
 
     public void setEmailService(EmailService emailService) {
         this.emailService = emailService;
+    }
+
+    public CategoryService getCategoryService() {
+        return categoryService;
+    }
+
+    public void setCategoryService(CategoryService categoryService) {
+        this.categoryService = categoryService;
+    }
+
+    public VelocityEngine getVelocityEngine() {
+        return velocityEngine;
+    }
+
+    public void setVelocityEngine(VelocityEngine velocityEngine) {
+        this.velocityEngine = velocityEngine;
+    }
+
+    public String getSendEmailFrom() {
+        return sendEmailFrom;
+    }
+
+    public void setSendEmailFrom(String sendEmailFrom) {
+        this.sendEmailFrom = sendEmailFrom;
+    }
+
+    public String getSubjectNewArticleNotification() {
+        return subjectNewArticleNotification;
+    }
+
+    public void setSubjectNewArticleNotification(String subjectNewArticleNotification) {
+        this.subjectNewArticleNotification = subjectNewArticleNotification;
     }
 }

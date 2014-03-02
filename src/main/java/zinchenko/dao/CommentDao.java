@@ -8,6 +8,8 @@ public interface CommentDao {
 
     List<Comment> findAll();
 
+    List<Comment> findByArticleId(Long articleId);
+
     Comment find(Long id);
 
     Long save(Comment comment);

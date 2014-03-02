@@ -31,21 +31,17 @@ public class Article implements Serializable {
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "category_id")
+    @JoinColumn(name = "category_id", nullable = false)
     private Category category;
-
-    @OneToMany
-    private List<Comment> comments;
 
     @Override
     public String toString() {
-        // TODO | need det style to optimize
+        // TODO | need style to optimize
         return new ToStringBuilder(this)
                 .append("id", id)
                 .append("title", title)
                 .append("description", description)
                 .append("category", category)
-                .append("comments", comments)
                 .toString();
     }
 
@@ -81,11 +77,4 @@ public class Article implements Serializable {
         this.category = category;
     }
 
-    public List<Comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
-    }
 }

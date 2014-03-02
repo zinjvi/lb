@@ -1,7 +1,9 @@
 package zinchenko.rest;
 
 
+import com.dumbster.smtp.SimpleSmtpServer;
 import com.github.springtestdbunit.DbUnitTestExecutionListener;
+import com.github.springtestdbunit.annotation.DatabaseOperation;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
@@ -20,9 +22,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
 import zinchenko.JmsUtils;
 import zinchenko.domain.Article;
+import zinchenko.domain.Category;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import static com.jayway.restassured.RestAssured.delete;
@@ -48,20 +52,24 @@ public class ITArticleRestApiTest {
 
     BrokerService broker;
 
-    String brokerUrl = "tcp://localhost:61616";
+    String brokerUrl = "tcp://localhost:1212";
 
     String queueName = "articleQueue";
+
+    private SimpleSmtpServer smtpServer;
 
     @Before
     public void before() throws Exception {
         broker = new BrokerService();
         broker.addConnector(brokerUrl);
         broker.start();
+        smtpServer = SimpleSmtpServer.start(24);
     }
 
     @After
     public void after() throws Exception {
         broker.stop();
+        smtpServer.stop();
     }
 
     @Test
@@ -143,6 +151,10 @@ public class ITArticleRestApiTest {
         article.setId(3L);
         article.setTitle("new title 3");
         article.setDescription("new description 3");
+        Category category = new Category();
+        category.setId(10L);
+        category.setName("test name 1");
+        article.setCategory(category);
         String articleJson= new ObjectMapper().writeValueAsString(article);
 
         Response saveResponse = given().contentType(ContentType.JSON)
@@ -151,8 +163,8 @@ public class ITArticleRestApiTest {
 
         assertEquals(articleJson, get(ARTICLE_PATH + "/3").asString());
 
-        Article articleFromQueue = (Article) JmsUtils.receiveObject(brokerUrl, queueName);
-        assertNotNull(articleFromQueue);
+        Thread.sleep(2000L);
+        assertEquals(smtpServer.getReceivedEmailSize(), 7);
     }
 
     @Test

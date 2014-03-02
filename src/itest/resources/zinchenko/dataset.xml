@@ -1,10 +1,39 @@
 <dataset>
-    <article article_id="1" title="test title 1" description="test description 1"/>
-    <article article_id="2" title="test title 2" description="test description 2"/>
-
-    <category category_id="1" name="test name 1"/>
-    <category category_id="2" name="test name 2"/>
-
     <group_article group_id="1" name="test name 1"/>
     <group_article group_id="2" name="test name 2"/>
+
+    <category category_id="10" name="test name 1" group_id="1"/>
+    <category category_id="11" name="test name 2" group_id="2"/>
+    <category category_id="19" name="test name 2" group_id="2"/>
+
+    <article article_id="1" title="test title 1" description="test description 1" category_id="10"/>
+    <article article_id="2" title="test title 2" description="test description 2" category_id="11"/>
+    <article article_id="3" title="test title 3" description="test description 3" category_id="11"/>
+
+    <person person_id="300" email="person300@email.com"/>
+    <person person_id="301" email="person301@email.com"/>
+    <person person_id="302" email="person302@email.com"/>
+    <person person_id="303" email="person303@email.com"/>
+    <person person_id="304" email="person304@email.com"/>
+    <person person_id="305" email="person305@email.com"/>
+    <person person_id="306" email="person306@email.com"/>
+    <person person_id="307" email="person307@email.com"/>
+    <person person_id="308" email="person308@email.com"/>
+    <person person_id="309" email="person309@email.com"/>
+
+    <subscription subscription_id="500" person_id="300" article_id="1" category_id="19" discriminator="A"/>
+    <subscription subscription_id="501" person_id="300" article_id="2" discriminator="A"/>
+    <subscription subscription_id="502" person_id="302" article_id="2" discriminator="A"/>
+    <subscription subscription_id="503" person_id="303" article_id="3" discriminator="A"/>
+    <subscription subscription_id="504" person_id="304" article_id="3" discriminator="A"/>
+    <subscription subscription_id="505" person_id="305" article_id="3" discriminator="A"/>
+
+    <subscription subscription_id="600" person_id="300" category_id="10" discriminator="C"/>
+    <subscription subscription_id="601" person_id="301" category_id="10" discriminator="C"/>
+    <subscription subscription_id="602" person_id="302" category_id="10" discriminator="C"/>
+    <subscription subscription_id="603" person_id="303" category_id="10" discriminator="C"/>
+    <subscription subscription_id="604" person_id="304" category_id="10" discriminator="C"/>
+    <subscription subscription_id="605" person_id="305" category_id="10" discriminator="C"/>
+    <subscription subscription_id="606" person_id="306" category_id="10" discriminator="C"/>
+
 </dataset>

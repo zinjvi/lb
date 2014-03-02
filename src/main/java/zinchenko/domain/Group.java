@@ -1,10 +1,7 @@
 package zinchenko.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -13,7 +10,7 @@ import java.util.List;
  */
 @Entity
 @Table(name="group_article")
-public class Group {
+public class Group implements Serializable {
 
     @Id
     @Column(name="group_id")
@@ -22,7 +19,7 @@ public class Group {
     @Column(name="name")
     private String name;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     private List<Category> categories;
 
     public Long getId() {

@@ -50,40 +50,62 @@
 
     <!--Messages-->
     <bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
-        <property name="brokerURL" value="tcp://localhost:61616"/>
+        <property name="brokerURL" value="${message.url}"/>
     </bean>
 
-    <bean id="articleDestination" class="org.apache.activemq.command.ActiveMQQueue">
+    <bean id="newArticleDestination" class="org.apache.activemq.command.ActiveMQQueue">
         <constructor-arg value="articleQueue"/>
     </bean>
 
-    <bean id="articleTemplate" class="org.springframework.jms.core.JmsTemplate">
+    <bean id="articleJmsTemplate" class="org.springframework.jms.core.JmsTemplate">
         <property name="connectionFactory" ref="connectionFactory" />
-        <property name="defaultDestination" ref="articleDestination" />
+        <property name="defaultDestination" ref="newArticleDestination" />
+    </bean>
+
+    <bean id="newCommentDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg value="commentQueue"/>
+    </bean>
+
+    <bean id="commentJmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="connectionFactory" />
+        <property name="defaultDestination" ref="newCommentDestination" />
     </bean>
 
     <!--Camel-->
     <bean id="activeMQComponent" class="org.apache.activemq.camel.component.ActiveMQComponent">
-        <property name="brokerURL" value="tcp://localhost:61616"/>
+        <property name="brokerURL" value="${message.url}"/>
     </bean>
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
         <route>
             <from uri="jms:articleQueue"/>
-            <bean ref="articleService" method="sendEmailToSubscribers"/>
+            <bean ref="articleService" method="sendEmailToCategorySubscribers"/>
+        </route>
+        <route>
+            <from uri="jms:commentQueue"/>
+            <bean ref="commentService" method="sendEmailToCategorySubscribers"/>
         </route>
     </camelContext>
 
     <!--Email-->
     <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-        <property name="host" value="smtp.gmail.com" />
-        <property name="port" value="587" />
-        <property name="username" value="username" />
-        <property name="password" value="password" />
+        <property name="host" value="${email.smtp.host}" />
+        <property name="port" value="${email.smtp.port}" />
+        <property name="username" value="${email.smtp.username}" />
+        <property name="password" value="${email.smtp.password}" />
         <property name="javaMailProperties">
             <props>
                 <prop key="mail.smtp.auth">true</prop>
                 <prop key="mail.smtp.starttls.enable">true</prop>
             </props>
+        </property>
+    </bean>
+
+    <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="velocityProperties">
+            <value>
+                resource.loader=class
+                class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+            </value>
         </property>
     </bean>
 

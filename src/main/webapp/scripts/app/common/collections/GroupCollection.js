@@ -1,9 +1,10 @@
-define(['underscore', 'common/collections/BaseCollection',
+define(['appconfig', 'underscore', 'common/collections/BaseCollection',
     'common/models/GroupModel'],
-    function(_, BaseCollection, GroupModel){
+    function(appconfig, _, BaseCollection, GroupModel){
         var GroupCollection = BaseCollection.extend({
             model: GroupModel,
-            url: '/api/groups',
+            //TODO | need implement using property
+            url: 'webservice/rest/group/all',//appconfig.url.group.all,
             initialize: function(){
 
             }

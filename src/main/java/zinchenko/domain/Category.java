@@ -7,6 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -15,7 +16,7 @@ import java.util.List;
  */
 @Entity
 @Table(name="category")
-public class Category {
+public class Category implements Serializable {
 
     @Id
     @Column(name = "category_id")
@@ -25,11 +26,8 @@ public class Category {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "group_id")
+    @JoinColumn(name = "group_id", nullable = false)
     private Group group;
-
-    @OneToMany
-    private List<Article> articles;
 
     public String getName() {
         return name;
@@ -47,11 +45,4 @@ public class Category {
         this.id = id;
     }
 
-    public List<Article> getArticles() {
-        return articles;
-    }
-
-    public void setArticles(List<Article> articles) {
-        this.articles = articles;
-    }
 }
