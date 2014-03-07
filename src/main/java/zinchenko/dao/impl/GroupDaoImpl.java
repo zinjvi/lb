@@ -17,7 +17,7 @@ public class GroupDaoImpl extends AbstractDao implements GroupDao{
     @Override
     @Transactional(readOnly = true)
     public List<Group> findAll() {
-        return getCurrentSession().createCriteria(Group.class).list();
+        return getCurrentSession().createQuery("from Group g left join fetch g.categories").list();
     }
 
     @Override

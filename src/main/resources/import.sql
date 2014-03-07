@@ -1,8 +1,11 @@
 insert into group_article (group_id, name) values (1, 'test group 1');
 insert into group_article (group_id, name) values (2, 'test group 2');
+insert into group_article (group_id, name) values (3, 'test group 3');
 
-insert into category (category_id, name, group_id) values (10, 'test category 1', 1)
-insert into category (category_id, name, group_id) values (11, 'test category 2', 2)
+insert into category (category_id, name, group_id) values (10, 'test category 10', 1)
+insert into category (category_id, name, group_id) values (11, 'test category 11', 2)
+insert into category (category_id, name, group_id) values (12, 'test category 12', 2)
+insert into category (category_id, name, group_id) values (13, 'test category 13', 2)
 
 insert into article (article_id, title, description, category_id) values (1, 'test title 1', 'test description 1', 10);
 insert into article (article_id, title, description, category_id) values (2, 'test title 2', 'test description 2', 11);

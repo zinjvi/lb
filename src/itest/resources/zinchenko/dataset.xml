@@ -1,10 +1,12 @@
 <dataset>
-    <group_article group_id="1" name="test name 1"/>
-    <group_article group_id="2" name="test name 2"/>
+    <group_article group_id="1" name="test group name 1"/>
+    <group_article group_id="2" name="test group name 2"/>
 
-    <category category_id="10" name="test name 1" group_id="1"/>
-    <category category_id="11" name="test name 2" group_id="2"/>
-    <category category_id="19" name="test name 2" group_id="2"/>
+    <category category_id="10" name="test category name 10" group_id="1"/>
+    <category category_id="11" name="test category name 11" group_id="2"/>
+    <category category_id="12" name="test category name 12" group_id="2"/>
+    <category category_id="13" name="test category name 13" group_id="1"/>
+    <category category_id="19" name="test category name 19" group_id="2"/>
 
     <article article_id="1" title="test title 1" description="test description 1" category_id="10"/>
     <article article_id="2" title="test title 2" description="test description 2" category_id="11"/>

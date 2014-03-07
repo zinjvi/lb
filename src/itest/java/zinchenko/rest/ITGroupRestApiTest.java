@@ -5,9 +5,7 @@ import com.github.springtestdbunit.annotation.DatabaseSetup;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
-import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.ObjectMapper;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -15,20 +13,21 @@ import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
 import zinchenko.TestConstants;
+import zinchenko.domain.Category;
 import zinchenko.domain.Group;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * User: zinchenko
  * Date: 23.02.14
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:zinchenko/hibernate-applicationContext.xml"})
+@ContextConfiguration({"classpath:zinchenko/dbUnitHibernate-applicationContext.xml"})
 @DatabaseSetup("classpath:zinchenko/dataset.xml")
 @TestExecutionListeners({DependencyInjectionTestExecutionListener.class,
         DbUnitTestExecutionListener.class})
@@ -60,11 +59,25 @@ public class ITGroupRestApiTest {
 
     @Test
     public void testFind() throws IOException {
+        //given
         Group group = new Group();
         group.setId(1L);
-        group.setName("test name 1");
+        group.setName("test group name 1");
+        group.setCategories(new ArrayList<Category>());
+
+        Category category = new Category();
+        category.setId(10L);
+        category.setName("test category name 10");
+        group.getCategories().add(category);
+        category = new Category();
+        category.setId(13L);
+        category.setName("test category name 13");
+        group.getCategories().add(category);
+
+        //when
         String groupJson = new ObjectMapper().writeValueAsString(group);
 
+        //then
         Response response = RestAssured.get(TestConstants.GROUP_PATH + "/1");
         assertEquals(200, response.getStatusCode());
         assertEquals(groupJson, response.asString());

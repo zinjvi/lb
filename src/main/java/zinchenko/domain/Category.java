@@ -1,14 +1,15 @@
 package zinchenko.domain;
 
+import org.apache.commons.lang.builder.EqualsBuilder;
+import org.apache.commons.lang.builder.HashCodeBuilder;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * User: zinchenko
@@ -26,8 +27,32 @@ public class Category implements Serializable {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "group_id", nullable = false)
+    @JoinColumn(name = "group_id")//, nullable = false)
+//    @JsonBackReference("")
     private Group group;
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) { return false; }
+        if (obj == this) { return true; }
+        if (obj.getClass() != getClass()) {
+            return false;
+        }
+        Category category = (Category) obj;
+        return new EqualsBuilder()
+                .append(id, category.id)
+                .append(name, category.name)
+//                .append(group, category.group)
+                .isEquals();
+    }
+
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).
+                append(id).
+                append(name).
+//                append(group).
+                toHashCode();
+    }
 
     public String getName() {
         return name;
@@ -45,4 +70,11 @@ public class Category implements Serializable {
         this.id = id;
     }
 
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
+    }
 }

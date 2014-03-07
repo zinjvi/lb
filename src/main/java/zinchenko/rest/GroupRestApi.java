@@ -21,7 +21,7 @@ public interface GroupRestApi {
 
     @GET
     @Path("/{id}")
-    Group find(@PathParam("id") Long id);
+    Group find(@PathParam("id") Long id) throws Exception;
 
     @POST
     Response save(Group group);

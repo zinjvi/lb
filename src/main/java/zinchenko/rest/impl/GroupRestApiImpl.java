@@ -1,15 +1,18 @@
 package zinchenko.rest.impl;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import zinchenko.domain.Group;
 import zinchenko.rest.GroupRestApi;
 import zinchenko.service.GroupService;
 
-import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-public class GroupRestApiImpl implements GroupRestApi{
+public class GroupRestApiImpl implements GroupRestApi {
+
+    private static final Log LOG = LogFactory.getLog(GroupRestApiImpl.class);
 
     @Autowired
     GroupService groupService;
@@ -20,7 +23,7 @@ public class GroupRestApiImpl implements GroupRestApi{
     }
 
     @Override
-    public Group find(Long id) {
+    public Group find(Long id) throws Exception {
         return groupService.find(id);
     }
 
