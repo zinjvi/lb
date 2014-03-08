@@ -13,8 +13,8 @@
     <context:property-placeholder location="classpath:*.properties"/>
 
     <bean id="transactionManager"
-          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="dataSource" />
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
     </bean>
 
     <tx:annotation-driven />
@@ -31,8 +31,14 @@
         <property name="password" value="${database.password}" />
     </bean>
 
+    <!--<bean id="builder" class="org.springframework.orm.hibernate4.LocalSessionFactoryBuilder">-->
+        <!--<constructor-arg>-->
+            <!--<-->
+        <!--</constructor-arg>-->
+    <!--</bean>-->
+
     <bean id="sessionFactory"
-          class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="annotatedPackages" value="zinchenko.domain"/>
         <property name="dataSource" ref="dataSource" />
         <property name="packagesToScan" value="zinchenko.domain"/>
