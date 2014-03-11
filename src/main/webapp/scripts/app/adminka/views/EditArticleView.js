@@ -4,8 +4,6 @@ define(['common/views/BaseView',
     function(BaseView, templateSources,
              ArticleModel, $){
 
-//        var
-
         var EditArticleView = BaseView.extend({
             className: 'edit-adticle-view',
             template:{
@@ -50,7 +48,7 @@ define(['common/views/BaseView',
                 this.model.set(this.$form.serializeObject());
                 this.model.save({
                     success: function(model, responce, options){
-                        console.log("ssss");
+//                        console.log("ssss");
                         var isNew = self.model.isNew();
                         self.model.set('id', responce);
                         if(isNew) self.eventManager.trigger(
@@ -59,9 +57,6 @@ define(['common/views/BaseView',
                             'update:article:in:list',self.model);
                         self.eventManager.trigger('clean:article:content');
                         self.remove();
-                    },
-                    error: function(model, responce, options){
-                        console.log("errre");
                     }
                 });
             }

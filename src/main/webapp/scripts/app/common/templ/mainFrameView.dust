@@ -9,11 +9,11 @@
                     <li class="category category-left">
                         <a class="category-link" href="" onclick="return false">{name}</a>
                         <ul class="subcategories display-none">
-                            {#aromoShow groupId=id}
-                            <li class="subcategory">
-                                <a class="category-link" href="#aromo">Аромотерапия</a>
-                            </li>
-                            {/aromoShow}
+                            <!--{#aromoShow groupId=id}-->
+                            <!--<li class="subcategory">-->
+                                <!--<a class="category-link" href="#aromo">Аромотерапия</a>-->
+                            <!--</li>-->
+                            <!--{/aromoShow}-->
                             {#categories}
                             <li class="subcategory">
                                 <a href="#articlesList/{id}">{name}</a>
@@ -31,7 +31,7 @@
                 </ul>
             </nav>
         </div>
-        <a href="#"><img class="header-image" src="/images/storage/headerImages/header-image_01.jpg"></a>
+        <!--<a href="#"><img class="header-image" src="/images/storage/headerImages/header-image_01.jpg"></a>-->
     </div>
 </div>
 

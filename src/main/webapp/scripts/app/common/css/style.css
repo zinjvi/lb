@@ -51,8 +51,8 @@ a:hover {
     width: 100%;
 }
 .header .nav {
-	position:absolute;
-	width:100%;
+	position:relative;
+	/*width:100%;*/
 	z-index:999;
 	background:url(../images/nav-line.png) 0 bottom repeat-x;
 	padding-bottom:1px;
@@ -65,7 +65,7 @@ nav {
 }
 ul.menu {
 	display:inline-block;
-    width: 100%;
+    /*width: 100%;*/
 }
 ul.menu .category-left{
     text-align: center;
@@ -109,6 +109,11 @@ ul.menu .subcategories{
 }
 
 /************Main Frame*************/
+
+.main-frame{
+    width: 900px;
+    margin: auto;
+}
 
 .main-frame .content{
     margin: 20px 340px 0 20px;

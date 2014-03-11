@@ -1,16 +1,4 @@
 <button type="submit" class="btn btn-success add-article" data-category-id="{categoryId}">Создать Статью</button>
 <ul class="list-group">
-<!--    {#articles}
-    <li class="list-group-item">
-        <span class="article-name">{title}</span>
-        <span id="b" class="actions">
-            <button id="{id}" type="button" class="btn btn-success btn-sm change-article">
-                <span class="glyphicon glyphicon-pencil"></span>
-            </button>
-            <button type="button" class="btn btn-danger btn-sm remove-article">
-                <span class="glyphicon glyphicon-remove"></span>
-            </button>
-        </span>
-    </li>
-    {/articles}-->
+
 </ul>

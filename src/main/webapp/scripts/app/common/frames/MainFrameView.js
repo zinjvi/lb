@@ -17,14 +17,16 @@ define(['backbone', 'common/frames/BaseFrameView',
         model: {},
         $content: {},
         initialize: function(){
+            //TODO | {async: false}
+            this.groups.fetch({async: false});
             this.model = new Backbone.Model({
-                groups: this.groups.toJSON(),
-                aromoShow: function(chunk, context, bodies,
-                                    params){
-                    if(params.groupId == 3){
-                        return chunk.render;
-                    }
-                }
+                groups: this.groups.toJSON()
+//                aromoShow: function(chunk, context, bodies,
+//                                    params){
+//                    if(params.groupId == 3){
+//                        return chunk.render;
+//                    }
+//                }
             });
         },
         onClickMenu: function(event){

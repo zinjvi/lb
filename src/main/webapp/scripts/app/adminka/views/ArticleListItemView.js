@@ -15,7 +15,7 @@ define(['common/views/BaseView',
                 'click .remove-article': 'removeArticle'
             },
             initialize: function(){
-
+                this.listenTo(this.model, 'change', this.render);
             },
             removeArticle: function () {
                 var self = this;

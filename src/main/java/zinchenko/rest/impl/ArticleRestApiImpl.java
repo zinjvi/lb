@@ -66,7 +66,7 @@ public class ArticleRestApiImpl implements ArticleRestApi {
     public Response update(Article article) {
         articleDao.update(article);
         //TODO |
-        return Response.ok(0).build();//article.getId();//Response.status(Response.Status.OK).build();
+        return Response.ok(article.getId()).build();//article.getId();//Response.status(Response.Status.OK).build();
     }
 
     @Override

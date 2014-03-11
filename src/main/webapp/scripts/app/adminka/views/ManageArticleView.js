@@ -16,16 +16,12 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
 
         var completeModel = function(){
             var groups = new GroupCollection();
+            //TODO |
             groups.fetch({async: false});
             var model = new Backbone.Model({
                 groups: groups.toJSON()
             });
             return model;
-        }
-
-        var isCurrentTagOpened = function(view, target){
-            return view.$el.find('.choose-article-panel #category_'
-                +target.id).hasClass('in');
         }
 
         var ManageArticleView = BaseView.extend({
@@ -37,7 +33,6 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
                 'click .category': 'showArticleList',
                 'click .change-article': 'changeArticle',
                 'click .add-article': 'addArticle',
-//                'click .save-article': 'saveArticle',
                 'click .add-category': 'addCategory',
                 'click .change-category': 'changeCategory'
             },

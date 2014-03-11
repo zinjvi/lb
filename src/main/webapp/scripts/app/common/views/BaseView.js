@@ -28,7 +28,6 @@ define(['backbone', 'dust', 'underscore'],
             this.afterRender();
             return this;
         },
-        //field: 'qwe',
         eventManager: _.extend({}, Backbone.Events),
         afterRender: function(){},
         renderTemplate: function () {
@@ -37,7 +36,6 @@ define(['backbone', 'dust', 'underscore'],
             var compiled = dust.compile(this.template.source,
                 this.template.name);
             dust.loadSource(compiled);
-            this.model && console.log('model for rendering: ' + this.model.toJSON());
             var rendered;
             dust.render(this.template.name,
                 this.model && this.model.toJSON(),
