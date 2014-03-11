@@ -7,6 +7,7 @@ import org.apache.velocity.app.VelocityEngine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.velocity.VelocityEngineUtils;
 import zinchenko.Constants;
 import zinchenko.dao.ArticleDao;
@@ -61,6 +62,11 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    public List<Article> findByCategoryId(Long categoryId) {
+        return articleDao.findByCategoryId(categoryId);
+    }
+
+    @Override
     public Article find(Long id) {
         return articleDao.find(id);
     }
@@ -78,11 +84,15 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    @Transactional
     public void delete(Long id) {
         try {
             Article article = new Article();
             article.setId(id);
-            articleDao.delete(article);
+            //TODO
+//            articleDao.delete(article);
+            Article a = articleDao.find(id);
+            articleDao.delete(a);
         } catch (Exception e) {
             throw new UnexpectedServiceException("Fail delete article", e);
         }

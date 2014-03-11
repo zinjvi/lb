@@ -12,6 +12,8 @@ public interface ArticleDao {
 
     List<Article> findAll();
 
+    List<Article> findByCategoryId(Long categoryId);
+
     Article find(Long id);
 
     Long save(Article article);

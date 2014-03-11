@@ -2,10 +2,10 @@ define(['common/models/BaseModel'],
     function (BaseModel) {
     var CategoryModel = BaseModel.extend({
         'defaults': {
-            '_id': '',
+            'id': '',
             'name': ''
         },
-        baseUrl: 'api/categories'
+        baseUrl: 'webservice/rest/category'
     });
     return CategoryModel;
 });

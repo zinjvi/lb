@@ -2,6 +2,8 @@ package zinchenko.domain;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonManagedReference;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,8 +29,9 @@ public class Group implements Serializable {
     @Column(name = "name")
     private String name;
 
-//    @JsonManagedReference("")
-    @OneToMany(mappedBy = "group", fetch = FetchType.LAZY)//fetch = FetchType.EAGER)//, mappedBy = "group")
+    @JsonManagedReference
+//    @JsonIgnore
+    @OneToMany(mappedBy = "group")//fetch = FetchType.EAGER)//, mappedBy = "group")
 //    @JoinTable(name = "group_article_category", joinColumns = @JoinColumn(name = "category_id"),
 //            inverseJoinColumns = @JoinColumn(name = "group_id"))
     private List<Category> categories;

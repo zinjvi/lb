@@ -2,13 +2,10 @@ package zinchenko.domain;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
+import org.codehaus.jackson.annotate.JsonBackReference;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -21,14 +18,18 @@ public class Category implements Serializable {
 
     @Id
     @Column(name = "category_id")
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    //TODO ||
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
     private Long id;
 
     @Column(name="name")
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "group_id")//, nullable = false)
-//    @JsonBackReference("")
+    @JoinColumn(name = "group_id", nullable = false)
+    @JsonBackReference
     private Group group;
 
     @Override

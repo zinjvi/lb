@@ -1,14 +1,11 @@
 package zinchenko.domain;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
@@ -22,10 +19,16 @@ public class Article implements Serializable {
 
     @Id
     @Column(name = "ARTICLE_ID")
+    //TODO ||
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
     private Long id;
 
     @Column(name = "TITLE")
     private String title;
+
+    @Column(name = "NOTICE")
+    private String notice;
 
     @Column(name = "DESCRIPTION")
     private String description;
@@ -33,6 +36,14 @@ public class Article implements Serializable {
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "article", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Comment> comments;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
+    private List<ArticleSubscription> articleSubscriptions;
 
     @Override
     public String toString() {
@@ -77,4 +88,27 @@ public class Article implements Serializable {
         this.category = category;
     }
 
+    public String getNotice() {
+        return notice;
+    }
+
+    public void setNotice(String notice) {
+        this.notice = notice;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public List<ArticleSubscription> getArticleSubscriptions() {
+        return articleSubscriptions;
+    }
+
+    public void setArticleSubscriptions(List<ArticleSubscription> articleSubscriptions) {
+        this.articleSubscriptions = articleSubscriptions;
+    }
 }

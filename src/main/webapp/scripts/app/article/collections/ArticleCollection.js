@@ -5,8 +5,9 @@ define(['common/collections/BaseCollection',
             model: ArticleModel,
             fetchByCategoryId: function(categoryId){
                 this.fetch({
+                    //TODO
                     async: false,
-                    url: 'article/articlesByCategoryId/'+categoryId
+                    url: 'webservice/rest/Article/byCategoryId/'+categoryId
                 })
             }
         });

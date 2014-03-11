@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import zinchenko.dao.CategoryDao;
 import zinchenko.domain.Category;
+import zinchenko.domain.Group;
 import zinchenko.service.CategoryService;
+import zinchenko.service.GroupService;
 
 import java.util.List;
 
@@ -18,6 +20,9 @@ public class CategoryServiceImpl implements CategoryService {
     @Autowired
     CategoryDao categoryDao;
 
+    @Autowired
+    GroupService groupService;
+
     @Override
     public List<Category> findAll() {
         return categoryDao.findAll();
@@ -30,6 +35,9 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public Long save(Category category) {
+        //TODO ||
+        Group group = groupService.find(category.getGroup().getId());
+        category.setGroup(group);
         return categoryDao.save(category);
     }
 
@@ -51,6 +59,14 @@ public class CategoryServiceImpl implements CategoryService {
 
     public void setCategoryDao(CategoryDao categoryDao) {
         this.categoryDao = categoryDao;
+    }
+
+    public GroupService getGroupService() {
+        return groupService;
+    }
+
+    public void setGroupService(GroupService groupService) {
+        this.groupService = groupService;
     }
 
 }

@@ -1,11 +1,7 @@
-<div class="choose-article-panel">
+<div class="groups-panel">
     <div class="btn-group">
-        <!--ggg-->
-        <!--<br/>-->
-        <!--{groups}-->
-        <!--<br/>-->
         {#groups}
-        <div class="btn-group">
+        <div class="btn-group group" data-id='{id}'>
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-id="{id}">
                 {name}
                 <span class="caret"></span>
@@ -13,17 +9,28 @@
             <ul class="dropdown-menu">
                 {?categories}
                     {#categories}
-                        <li><a href="#">{name}</a></li>
+                        <li>
+                            <a class="category" data-id='{id}'>{name}</a>
+                        </li>
                     {/categories}
                 {:else}
                     <li>No categories</li>
                 {/categories}
-
+                <li><a class="add-category">add category</a></li>
             </ul>
         </div>
         {/groups}
     </div>
 </div>
+<div class="articles-content">
+    <div class="articles">
+
+    </div>
+    <div class="article">
+
+    </div>
+</div>
+
 
 <!--<div class="choose-article-panel">-->
 <!--<div class="panel-group" id="groups">-->

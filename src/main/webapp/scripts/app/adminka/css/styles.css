@@ -200,19 +200,60 @@ h3{
 }
 
 /************* Article manage ***********/
-.choose-article-panel{
-    width: 450px;
+/*.choose-article-panel{*/
+    /*width: 450px;*/
+    /*float: left;*/
+/*}*/
+
+/*span.actions{*/
+    /*float: right;*/
+/*}*/
+
+/*.actions button{*/
+    /*margin: 0 3px;*/
+/*}*/
+
+.articles .add-article{
+    margin-bottom: 10px;
+}
+
+.articles-content{
+    margin-top: 10px;
+}
+
+.articles-content .articles{
+    width: 300px;
     float: left;
 }
 
-span.actions{
+.articles-content .article{
+    margin-left: 320px;
+    display: table;
+}
+
+/*
+    article list item
+*/
+
+.article-list-item:hover{
+    background: #e7e7e7;
+}
+
+.article-list-item .notice {
+    display: none;
+}
+
+.article-list-item:hover .notice{
+    display: block;
+}
+
+.article-list-item .actions {
+    display: none;
     float: right;
 }
-
-.actions button{
-    margin: 0 3px;
+.article-list-item:hover .actions {
+    display: inline;
 }
-
 
 /******* Botstrap Fixes ********/
 .choose-article-panel .panel-group .panel{

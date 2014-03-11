@@ -1,9 +1,7 @@
-define(['backbone', 'dust'], function (Backbone, dust) {
-
+define(['backbone', 'dust', 'underscore'],
+    function (Backbone, dust, _) {
 
     /**
-     *
-     *
          define(['common/views/BaseView',
          'text!/template.dust'],
          function(BaseView, templateSources){
@@ -22,9 +20,7 @@ define(['backbone', 'dust'], function (Backbone, dust) {
                 });
                 return SomeView;
             });
-     *
      */
-
     var BaseView = Backbone.View.extend({
 
         render: function () {
@@ -32,6 +28,8 @@ define(['backbone', 'dust'], function (Backbone, dust) {
             this.afterRender();
             return this;
         },
+        //field: 'qwe',
+        eventManager: _.extend({}, Backbone.Events),
         afterRender: function(){},
         renderTemplate: function () {
             //TODO need optimization

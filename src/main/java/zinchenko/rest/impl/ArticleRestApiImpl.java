@@ -11,6 +11,7 @@ import zinchenko.rest.UnexpectedRestException;
 import zinchenko.service.ArticleService;
 import zinchenko.service.UnexpectedServiceException;
 
+import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
@@ -47,10 +48,15 @@ public class ArticleRestApiImpl implements ArticleRestApi {
     }
 
     @Override
-    public Response save(Article article) {
+    public List<Article> getByCategoryId(Long categoryId) {
+        return articleService.findByCategoryId(categoryId);
+    }
+
+    @Override
+    public Long save(Article article) {
         try {
             Long id = articleService.save(article);
-            return Response.status(Response.Status.OK).build();
+            return id;//Response.status(Response.Status.OK).build();
         } catch (Exception e) {
             LOG.error("Fail sale article", e);
             throw new UnexpectedRestException("Fail sale article", e);

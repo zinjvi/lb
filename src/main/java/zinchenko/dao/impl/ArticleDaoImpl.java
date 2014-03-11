@@ -1,6 +1,8 @@
 package zinchenko.dao.impl;
 
+import org.hibernate.Criteria;
 import org.hibernate.criterion.Criterion;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import zinchenko.dao.ArticleDao;
@@ -24,6 +26,14 @@ public class ArticleDaoImpl extends AbstractDao implements ArticleDao {
 
     @Override
     @Transactional(readOnly = true)
+    public List<Article> findByCategoryId(Long categoryId) {
+        Criteria criteria = getCurrentSession().createCriteria(Article.class);
+        criteria.createCriteria("category").add(Restrictions.eq("id", categoryId));
+        return criteria.list();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
     public Article find(Long id) {
         return (Article) getCurrentSession().get(Article.class, id);
 
@@ -42,7 +52,6 @@ public class ArticleDaoImpl extends AbstractDao implements ArticleDao {
     }
 
     @Override
-    @Transactional
     public void delete(Article article) {
         getCurrentSession().delete(article);
     }

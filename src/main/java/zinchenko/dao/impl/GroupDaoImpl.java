@@ -17,13 +17,18 @@ public class GroupDaoImpl extends AbstractDao implements GroupDao{
     @Override
     @Transactional(readOnly = true)
     public List<Group> findAll() {
-        return getCurrentSession().createQuery("from Group g left join fetch g.categories").list();
+        return getCurrentSession()
+                .createQuery("select distinct g from Group g left join fetch g.categories")
+                .list();
     }
 
     @Override
     @Transactional(readOnly = true)
     public Group find(Long id) {
-        return (Group) getCurrentSession().get(Group.class, id);
+        return (Group)getCurrentSession()
+                .createQuery("select distinct g from Group g left join fetch g.categories where g.id = :id")
+                .setParameter("id", id)
+                .uniqueResult();
     }
 
     @Override

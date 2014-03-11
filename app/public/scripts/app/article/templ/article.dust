@@ -1,5 +1,0 @@
-<section class="article">
-    <img src="{image}"/>
-    <p class="title">{title}</p>
-    <div class="text">{description|s}</div>
-</section>

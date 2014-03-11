@@ -9,6 +9,11 @@
         </layout>
     </appender>
 
+    <logger name="hibernate">
+        <level value="TRACE" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+
     <logger name="zinchenko">
         <level value="DEBUG" />
         <appender-ref ref="STDOUT" />

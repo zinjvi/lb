@@ -7,8 +7,16 @@ insert into category (category_id, name, group_id) values (11, 'test category 11
 insert into category (category_id, name, group_id) values (12, 'test category 12', 2)
 insert into category (category_id, name, group_id) values (13, 'test category 13', 2)
 
-insert into article (article_id, title, description, category_id) values (1, 'test title 1', 'test description 1', 10);
-insert into article (article_id, title, description, category_id) values (2, 'test title 2', 'test description 2', 11);
+insert into article (article_id, title, notice, description, category_id) values (1, 'test title 1', 'test article notice 1', 'test description 1', 10);
+insert into article (article_id, title, notice, description, category_id) values (2, 'test title 2', 'test article notice 2', 'test description 2', 10);
+insert into article (article_id, title, notice, description, category_id) values (3, 'test title 3', 'test article notice 3', 'test description 3', 10);
+insert into article (article_id, title, notice, description, category_id) values (4, 'test title 4', 'test article notice 4', 'test description 4', 10);
+insert into article (article_id, title, notice, description, category_id) values (5, 'test title 5', 'test article notice 5', 'test description 5', 11);
+insert into article (article_id, title, notice, description, category_id) values (6, 'test title 6', 'test article notice 6', 'test description 6', 11);
+insert into article (article_id, title, notice, description, category_id) values (7, 'test title 7', 'test article notice 7', 'test description 7', 11);
+insert into article (article_id, title, notice, description, category_id) values (8, 'test title 8', 'test article notice 8', 'test description 8', 11);
+insert into article (article_id, title, notice, description, category_id) values (9, 'test title 9', 'test article notice 9', 'test description 9', 11);
+insert into article (article_id, title, notice, description, category_id) values (10, 'test title 10', 'test article notice 10', 'test description 10', 11);
 
 insert into person (person_id, email) values (300, 'zinjvi.test@gmail.com');
 insert into person (person_id, email) values (301, 'zinjvi.test@gmail.com');

@@ -6,7 +6,7 @@ define(['common/views/BaseView',
 
         var SomeView = BaseView.extend({
             tagName: 'li',
-            className: 'list-group-item',
+            className: 'article-list-item list-group-item',
             template:{
                 name: 'articleListItem.template',
                 source: templateSources
@@ -24,7 +24,9 @@ define(['common/views/BaseView',
                     },
                     function () {
                         console.log("destr");
-                        self.model.destroy()
+                        self.model.destroy();
+                        // TODO |  error handler
+                        self.remove();
                     }
                 );
             }

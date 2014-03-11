@@ -1,3 +1,4 @@
+<button type="submit" class="btn btn-success add-article" data-category-id="{categoryId}">Создать Статью</button>
 <ul class="list-group">
 <!--    {#articles}
     <li class="list-group-item">

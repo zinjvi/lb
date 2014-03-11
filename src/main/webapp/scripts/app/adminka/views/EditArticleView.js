@@ -4,6 +4,8 @@ define(['common/views/BaseView',
     function(BaseView, templateSources,
              ArticleModel, $){
 
+//        var
+
         var EditArticleView = BaseView.extend({
             className: 'edit-adticle-view',
             template:{
@@ -17,17 +19,19 @@ define(['common/views/BaseView',
             initialize: function(options){
                 if (options && options.articleId) {
                     this.model = new ArticleModel({
-                        id: options.articleId
+                        id: options.articleId,
+                        category: {
+                            id: options.categoryId
+                        }
                     });
                     this.model.fetchById();
-                }else{
-                    this.model = new ArticleModel();
+                }else {
+                    this.model = new ArticleModel({
+                        category: {
+                            id: options.categoryId
+                        }
+                    });
                 }
-//
-//
-//                this.model.on('change', function(){
-//                    console.log("ch");
-//                })
             },
             afterRender: function(){
                 $.validator.setDefaults({
@@ -40,10 +44,26 @@ define(['common/views/BaseView',
                 this.$el.find('form.edit-article').validate();
                 this.$form = this.$el.find('form.edit-article');
             },
-            saveArticle: function(event){
+            saveArticle: function(event) {
+                var self = this;
                 event.preventDefault();
                 this.model.set(this.$form.serializeObject());
-                this.model.save();
+                this.model.save({
+                    success: function(model, responce, options){
+                        console.log("ssss");
+//                        var isNew = self.model.isNew();
+//                        self.model.set('id', responce);
+//                        if(isNew) self.eventManager.trigger(
+//                            'add:new:article:to:list',self.model);
+//                        if(!isNew) self.eventManager.trigger(
+//                            'update:article:in:list',self.model);
+//                        self.eventManager.trigger('clean:article:content');
+//                        self.remove();
+                    },
+                    error: function(model, responce, options){
+                        console.log("errre");
+                    }
+                });
             }
         });
         return EditArticleView;

@@ -14,25 +14,28 @@ import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/Article")
+@Produces("application/json")
+@Consumes("application/json")
 public interface ArticleRestApi {
 
     @GET
-    @Produces("application/json")
     @Path("/{id}")
     public Article get(@PathParam("id") Long id);
 
     @GET
-    @Produces("application/json")
     @Path("/all")
     public List<Article> getAll();
 
+    // TODO | need optimize. need add possibility to declare needed fields
+    @GET
+    @Path("/byCategoryId/{categoryId}")
+    List<Article> getByCategoryId(@PathParam("categoryId") Long categoryId);
+
     @POST
-    @Consumes("application/json")
-    public Response save(Article article);
+    public Long save(Article article);
 
 
     @PUT
-    @Consumes("application/json")
     public Response update(Article article);
 
     @DELETE

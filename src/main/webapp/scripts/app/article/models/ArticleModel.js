@@ -1,27 +1,29 @@
-define(['backbone'], function (Backbone) {
-    var ArticleModel = Backbone.Model.extend({
+define(['backbone', 'common/models/BaseModel'],
+    function (Backbone, BaseModel) {
+    var ArticleModel = BaseModel.extend({
         'defaults': {
-            '_id': 0,
+            'id': '',
             'title': '',
-            'description': '',
-            'image': '',
-            'category_id': ''
+            'description': ''
+//            'image': '',
         },
-        isNew: function() {
-            return this.id;
-        },
-        url: function(){
-            if(parseInt(this.id)){
-                return 'article/api/'+this.id;
-            }
-            return 'article/api';
-        },//'article/saveArticle',
+        baseUrl: 'webservice/rest/Article',
+//        isNew: function() {
+//            return this.id;
+//        },
+//        url: function(){
+//            if(parseInt(this.id)){
+//                return 'webservice/rest/Article/'+this.id;
+//            }
+//            return 'webservice/rest/Article/';
+//        },//'article/saveArticle',
         initialize: function(){
         },
         fetchById: function(){
             this.fetch({
+                //TODO | need remove 'async: false'
                 async: false,
-                url: 'article/articleById/'+this.id
+                url: 'webservice/rest/Article/'+this.id
             });
         }
     });

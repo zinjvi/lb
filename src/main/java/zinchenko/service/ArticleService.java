@@ -12,6 +12,8 @@ public interface ArticleService {
 
     public List<Article> findAll();
 
+    public List<Article> findByCategoryId(Long categoryId);
+
     public Article find(Long id);
 
     public Long save(Article article);

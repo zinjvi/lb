@@ -2,6 +2,7 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
     'common/views/ModalWinView',
     'common/models/CategoryModel',
     'common/models/GroupModel',
+    'article/models/ArticleModel',
     'text!adminka/templ/manageArticle.dust',
     'common/collections/GroupCollection',
     'adminka/views/ArticlesListView',
@@ -9,8 +10,9 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
     'adminka/views/EditCategoryView',
     'css!adminka/css/styles'],
     function(Backbone, BacboneRelational, BaseView, ModalWinView,
-             CategoryModel, GroupModel, templateSources, GroupCollection,
-             ArticlesListView, EditArticleView, EditCategoryView){
+             CategoryModel, GroupModel, ArticleModel, templateSources,
+             GroupCollection, ArticlesListView, EditArticleView,
+             EditCategoryView){
 
         var completeModel = function(){
             var groups = new GroupCollection();
@@ -32,9 +34,10 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
                 source: templateSources
             },
             events: {
-                'click .articles-list': 'showArticleList',
+                'click .category': 'showArticleList',
                 'click .change-article': 'changeArticle',
                 'click .add-article': 'addArticle',
+//                'click .save-article': 'saveArticle',
                 'click .add-category': 'addCategory',
                 'click .change-category': 'changeCategory'
             },
@@ -43,42 +46,56 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
             initialize: function(){
                 console.log("new mav");
                 this.model = completeModel();
+                this.eventManager.on('clean:article:content', this.cleanArticleContent, this);
             },
-            showArticleList: function(event){
+            afterRender: function(){
+                this.$article = this.$el.find('.article');
+            },
+            cleanArticleContent: function(){
+                this.$article.html('');
+            },
+            showArticleList: function(event) {
                 var target = event.target;
-                console.log("list art: "+target.id);
-
-                var selector = '#category_'+target.id+' .panel-body';
-                var $destPanelBody = this.$el.find(selector);
-
-                if(isCurrentTagOpened(this, target)){
-                    console.log('o');
-                    $destPanelBody.html('');
-                }else{
-                    var articlesListView = new ArticlesListView({
-                        categoryId: target.id
-                    });
-                    $destPanelBody.append(articlesListView.render().el);
-                }
+                var categoryId = $(target).data('id');
+                console.log("list art: " + categoryId);
+                var articlesListView = new ArticlesListView({
+                    categoryId: categoryId
+                });
+                //  TODO | should be like field
+                this.$el.find('.articles').html('');
+                this.$el.find('.articles').append(articlesListView.render().el);
             },
             changeArticle: function($event){
+                var articleId = $($event.currentTarget).data('id');
                 var editArticleView = new EditArticleView({
-                    articleId: $event.currentTarget.id
+                    articleId: articleId
                 });
                 editArticleView.render();
-                this.$el.find('.right-panel')
-                    .append(editArticleView.el);
+                //  TODO | should be like field
+                this.$el.find('.article').html('');
+                this.$el.find('.article').append(editArticleView.el);
             },
             addArticle: function($event){
                 console.log("add article");
-                var editArticleView = new EditArticleView();
+                var target = $event.currentTarget;
+                var editArticleView = new EditArticleView({
+                    categoryId: $(target).data('category-id')
+                });
                 editArticleView.render();
-                this.$el.find('.right-panel')
-                    .append(editArticleView.el);
+                //TODO ||
+                this.$el.find('.article').html('');
+                this.$el.find('.article').append(editArticleView.el);
             },
+//            saveArticle: function($event){
+//                var button = $event.currentTarget;
+//                var form = $(button).parents('form.edit-article').serializeObject();
+//                var articleModel = new ArticleModel(form);
+//                articleModel.save();
+//            },
             addCategory: function($event){
-                var groupId = $($event.currentTarget).data('id');
-                var group = new GroupModel({_id: groupId});
+                var groupId = $($event.currentTarget).parents('.group').data('id');
+                var group = new GroupModel({id: groupId});
+                //TODO || {async: false}
                 group.fetch({async: false});
                 var category = new CategoryModel({
                     group: group.toJSON()

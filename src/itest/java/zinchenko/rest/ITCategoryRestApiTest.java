@@ -75,7 +75,7 @@ public class ITCategoryRestApiTest {
     public void testSave() throws IOException {
         Category category = new Category();
         //TODO | remove id
-        category.setId(3L);
+//        category.setId(3L);
         category.setName("test name 3");
         String categoryJson = new ObjectMapper()
                 .writeValueAsString(category);
