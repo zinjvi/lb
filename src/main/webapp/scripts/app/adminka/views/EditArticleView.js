@@ -51,14 +51,14 @@ define(['common/views/BaseView',
                 this.model.save({
                     success: function(model, responce, options){
                         console.log("ssss");
-//                        var isNew = self.model.isNew();
-//                        self.model.set('id', responce);
-//                        if(isNew) self.eventManager.trigger(
-//                            'add:new:article:to:list',self.model);
-//                        if(!isNew) self.eventManager.trigger(
-//                            'update:article:in:list',self.model);
-//                        self.eventManager.trigger('clean:article:content');
-//                        self.remove();
+                        var isNew = self.model.isNew();
+                        self.model.set('id', responce);
+                        if(isNew) self.eventManager.trigger(
+                            'add:new:article:to:list',self.model);
+                        if(!isNew) self.eventManager.trigger(
+                            'update:article:in:list',self.model);
+                        self.eventManager.trigger('clean:article:content');
+                        self.remove();
                     },
                     error: function(model, responce, options){
                         console.log("errre");

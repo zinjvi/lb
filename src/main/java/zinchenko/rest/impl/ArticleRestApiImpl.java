@@ -11,7 +11,6 @@ import zinchenko.rest.UnexpectedRestException;
 import zinchenko.service.ArticleService;
 import zinchenko.service.UnexpectedServiceException;
 
-import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
@@ -66,7 +65,8 @@ public class ArticleRestApiImpl implements ArticleRestApi {
     @Override
     public Response update(Article article) {
         articleDao.update(article);
-        return Response.status(Response.Status.OK).build();
+        //TODO |
+        return Response.ok(0).build();//article.getId();//Response.status(Response.Status.OK).build();
     }
 
     @Override
