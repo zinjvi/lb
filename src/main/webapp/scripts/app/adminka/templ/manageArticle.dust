@@ -7,15 +7,15 @@
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-                {?categories}
+                <!--{?categories}-->
                     {#categories}
                         <li>
                             <a class="category" data-id='{id}'>{name}</a>
                         </li>
                     {/categories}
-                {:else}
-                    <li>No categories</li>
-                {/categories}
+                <!--{:else}-->
+                    <!--<li>No categories</li>-->
+                <!--{/categories}-->
                 <li><a class="add-category">add category</a></li>
             </ul>
         </div>

@@ -1,16 +1,23 @@
 define(['backbone', 'common/views/BaseView',
     'text!adminka/templ/articlesList.dust',
+    'common/views/ModalWinView',
     'article/collections/ArticleCollection',
     'article/models/ArticleModel',
-    'adminka/views/ArticleListItemView'],
-    function (Backbone, BaseView, templateSources,
-              ArticleCollection, ArticleModel,
-              ArticleListItemView) {
+    'common/models/CategoryModel',
+    'adminka/views/ArticleListItemView',
+    'adminka/views/EditCategoryView'],
+    function (Backbone, BaseView, templateSources, ModalWinView,
+              ArticleCollection, ArticleModel, CategoryModel,
+              ArticleListItemView, EditCategoryView) {
 
+        // TODO | need to rename this and template to 'category manage'
         var ArticlesListView = BaseView.extend({
             template: {
                 name: 'articlesList.template',
                 source: templateSources
+            },
+            events: {
+                'click .change-category': 'changeCategory'
             },
             initialize: function (options) {
                 var self = this;
@@ -30,6 +37,22 @@ define(['backbone', 'common/views/BaseView',
             afterRender: function () {
                 this.$listContainer = this.$el.find('ul');
                 this.articles.fetchByCategoryId(this.options.categoryId);
+            },
+            changeCategory: function($event){
+//                var groupId = $($event.currentTarget).parents('.group-panel').data('id');
+//                var categoryId = $($event.currentTarget).data('category-id');
+                var category = new CategoryModel({
+                    id: this.options.categoryId
+                });
+                //TODO
+                category.fetch({async:false});
+
+                var modal = new ModalWinView({
+                    title: "Редактирование категории",
+                    content: new EditCategoryView({
+                        model: category
+                    })
+                });
             },
 
             addNewArticleToList: function (article) {

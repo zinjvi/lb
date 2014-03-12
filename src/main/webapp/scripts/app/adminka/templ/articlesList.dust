@@ -1,4 +1,8 @@
-<button type="submit" class="btn btn-success add-article" data-category-id="{categoryId}">Создать Статью</button>
+<div class="btn-group-vertical category-actions">
+    <button type="submit" class="btn btn-success add-article" data-category-id="{categoryId}">Создать Статью</button>
+    <button type="submit" class="btn btn-default change-category" data-category-id="{categoryId}">Редактировать Категорию</button>
+    <button type="submit" class="btn btn-danger remove-category" data-category-id="{categoryId}">Удалить Категорию</button>
+</div>
 <ul class="list-group">
 
 </ul>

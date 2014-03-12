@@ -33,8 +33,7 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
                 'click .category': 'showArticleList',
                 'click .change-article': 'changeArticle',
                 'click .add-article': 'addArticle',
-                'click .add-category': 'addCategory',
-                'click .change-category': 'changeCategory'
+                'click .add-category': 'addCategory'
             },
             // TODO | groups must be in model
             groups: new GroupCollection(),
@@ -51,9 +50,10 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
             },
             showArticleList: function(event) {
                 var target = event.target;
+                var groupId = $(target).parents('.group').data('id');
                 var categoryId = $(target).data('id');
-                console.log("list art: " + categoryId);
                 var articlesListView = new ArticlesListView({
+                    groupId: groupId,
                     categoryId: categoryId
                 });
                 //  TODO | should be like field
@@ -117,19 +117,6 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
                             'classes': 'btn-default close-modal'
                         }
                     ]
-                });
-            },
-            changeCategory: function($event){
-                var groupId = $($event.currentTarget).parents('.group-panel').data('id');
-                var categoryId = $($event.currentTarget).data('id');
-                var category = new CategoryModel();
-                category.fetch();
-
-                var modal = new ModalWinView({
-                    title: "Редактирование категории",
-                    content: new EditCategoryView({
-                        model: category
-                    })
                 });
             }
         });

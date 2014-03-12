@@ -119,6 +119,9 @@ h3{
 .choose-category a.remove{
     float: right;
 }
+.groups-panel > a.add-category {
+    color: #85858a;
+}
 
 
 /*Update & Create article*/
@@ -213,7 +216,7 @@ h3{
     /*margin: 0 3px;*/
 /*}*/
 
-.articles .add-article{
+.articles .category-actions{
     margin-bottom: 10px;
 }
 

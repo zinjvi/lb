@@ -1,11 +1,13 @@
 <span class="article-name">{title}</span>
 <span id="b" class="actions">
+    <div class="btn-group">
       <button type="button" data-id="{id}" class="btn btn-success btn-sm change-article">
             <span class="glyphicon glyphicon-pencil"></span>
       </button>
       <button type="button" class="btn btn-danger btn-sm remove-article">
             <span class="glyphicon glyphicon-remove"></span>
       </button>
+    </div>
 </span>
 <div class="notice">
     {notice}
