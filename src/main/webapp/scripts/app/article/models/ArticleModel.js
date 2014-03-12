@@ -7,6 +7,7 @@ define(['backbone', 'common/models/BaseModel'],
             'description': ''
 //            'image': '',
         },
+        // TODO | need change to urlRoot
         baseUrl: 'webservice/rest/Article',
 //        isNew: function() {
 //            return this.id;

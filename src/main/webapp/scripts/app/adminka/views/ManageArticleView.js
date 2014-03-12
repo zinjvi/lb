@@ -1,5 +1,6 @@
 define(['backbone', 'backbone.relational','common/views/BaseView',
     'common/views/ModalWinView',
+    'common/models/BaseModel',
     'common/models/CategoryModel',
     'common/models/GroupModel',
     'article/models/ArticleModel',
@@ -9,7 +10,7 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
     'adminka/views/EditArticleView',
     'adminka/views/EditCategoryView',
     'css!adminka/css/styles'],
-    function(Backbone, BacboneRelational, BaseView, ModalWinView,
+    function(Backbone, BacboneRelational, BaseView, ModalWinView, BaseModel,
              CategoryModel, GroupModel, ArticleModel, templateSources,
              GroupCollection, ArticlesListView, EditArticleView,
              EditCategoryView){
@@ -22,6 +23,16 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
                 groups: groups.toJSON()
             });
             return model;
+        }
+
+        var completeM = function(){
+            var groups = new GroupCollection();
+            groups.fetch({async: false});
+            var m = new BaseModel({
+                groups: groups
+            });
+            console.log(m.toJSON());
+            return m
         }
 
         var ManageArticleView = BaseView.extend({
@@ -40,6 +51,7 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
             initialize: function(){
                 console.log("new mav");
                 this.model = completeModel();
+                this.m = completeM();
                 this.eventManager.on('clean:article:content', this.cleanArticleContent, this);
             },
             afterRender: function(){
