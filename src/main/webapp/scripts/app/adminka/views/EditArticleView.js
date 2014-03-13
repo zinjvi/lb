@@ -46,6 +46,7 @@ define(['common/views/BaseView',
                 var self = this;
                 event.preventDefault();
                 this.model.set(this.$form.serializeObject());
+                console.log(this.$form.serializeObject());
                 this.model.save({
                     success: function(model, responce, options){
 //                        console.log("ssss");

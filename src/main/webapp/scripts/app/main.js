@@ -9,9 +9,11 @@ require.config({
         jquery: '/scripts/lib/jquery/jquery',
         'jquery.validate': '/scripts/lib/jquery/jquery.validate',
         'jquery.serializeObject': '/scripts/lib/jquery/jquery.serializeObject',
+        'jquery.formparams': '/scripts/lib/jquery/jquery.formparams',
         underscore: '/scripts/lib/underscore',
 //        use: '/scripts/lib/use',
         dust: '/scripts/lib/dust',
+        'dust.helper': '/scripts/lib/dust-helper',
         css: '/scripts/lib/css',
         bootstrap: '/scripts/lib/bootstrap'
     },
@@ -19,6 +21,9 @@ require.config({
         'backbone': {
             deps: ['underscore', 'jquery'],
             exports: 'Backbone'
+        },
+        'dust.helper': {
+            deps: ['dust']
         },
         'underscore': {
             exports: '_'
@@ -31,7 +36,8 @@ require.config({
             exports: 'dust'
         },
         'jquery.validate': ['jquery'],
-        'jquery.serializeObject': ['jquery']
+        'jquery.serializeObject': ['jquery'],
+        'jquery.formparams': ['jquery']
     }//,
 //    use: {
 //        backbone: {

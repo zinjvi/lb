@@ -1,5 +1,5 @@
-define(['backbone', 'dust', 'underscore'],
-    function (Backbone, dust, _) {
+define(['backbone', 'dust', 'dust.helper', 'underscore'],
+    function (Backbone, dust, dustHelper, _) {
 
     /**
          define(['common/views/BaseView',

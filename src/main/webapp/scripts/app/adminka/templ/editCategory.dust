@@ -1,27 +1,13 @@
-{@eq key="US" value="US"}
-<a>asd1</a>
-{/eq}
-<a>as2 - {group.id}</a>
 <form class="edit-category form-horizontal" role="form">
-    <input type="hidden" name="id" value="{id}">
+    <input type="hidden" name="id" value="{category.id}">
 
-    <!--<div class="form-group">-->
-        <!--<label class="col-sm-2 control-label">Группа</label>-->
-
-        <!--<div class="col-sm-10">-->
-            <!--<span class="label label-primary">{group.name}</span>-->
-            <!--<input id="group" type="hidden" name="group.id" class="form-control"-->
-                   <!--value="{group.id}">-->
-        <!--</div>-->
-    <!--</div>-->
     <div class="form-group">
         <label class="col-sm-2 control-label">Группа</label>
 
         <div class="col-sm-10">
-            <!--<span class="label label-primary">{group.name}</span>-->
-            <select name="group.id" class="form-control">
+            <select name="group[id]" class="form-control">
                 {#groups}
-                <option value="{id}" class="form-control">{name} - {group.id}</option>
+                <option value="{id}" class="form-control" {@eq key=id value=group.id}selected="true"{/eq} >{name}</option>
                 {/groups}
             </select>
         </div>
@@ -32,6 +18,11 @@
         <div class="col-sm-10">
             <input id="name" type="text" name="name" class="form-control"
                    value="{category.name}" placeholder="Название категории." required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-12">
+            <button type="button" class="btn btn-success pull-right save-category">Сохранить</button>
         </div>
     </div>
 </form>

@@ -1,22 +1,24 @@
-define(['underscore', 'backbone', 'common/views/BaseView',
+define(['underscore', 'backbone',
+    'common/models/BaseModel',
+    'common/views/BaseView',
     'text!common/templ/modalWin.dust'],
-    function(_, Backbone, BaseView, templateSources){
+    function (_, Backbone, BaseModel, BaseView, templateSources) {
 
-        var completeModel = function(options){
-            if(options.content instanceof Backbone.View){
-                options.content = options.content.render().$el.html();
-            }
-            return new Backbone.Model(options);
+        var completeModel = function (options) {
+//            if(options.content instanceof Backbone.View){
+//                options.content = options.content.render().$el.html();
+//            }
+            return new BaseModel(options);
         }
-        
-        var assigneCallbacks = function(options, events){
-            if(!options.buttons){
+
+        var assigneCallbacks = function (options, events) {
+            if (!options.buttons) {
                 return;
             }
             for (var i = 0; i < options.buttons.length; i++) {
                 var button = options.buttons[i];
-                if(button.click){
-                    events['click .modal-btn-'+i] = button.click;
+                if (button.click) {
+                    events['click .modal-btn-' + i] = button.click;
                 }
             }
         }
@@ -47,32 +49,47 @@ define(['underscore', 'backbone', 'common/views/BaseView',
 
         var ModalWinView = BaseView.extend({
             className: '_modal-win-panel',
-            template:{
+            template: {
                 name: 'modalWin.template',
                 source: templateSources
             },
-            events:{
+            events: {
                 'click .modal-dialog': 'closeModal'
             },
-            initialize: function(options){
+            initialize: function (options) {
                 var defaultOptions = {
                     close: true
                 }
                 _.extend(defaultOptions, options)
                 this.model = completeModel(defaultOptions);
                 assigneCallbacks(options, this.events);
-                
+
                 this.render();
+
+                // TODO
+                if (options.content instanceof Backbone.View) {
+                    this.$el.find('.modal-body').html(options.content.render().el);
+                } else {
+                    this.$el.find('.modal-body').html(options.content);
+                }
+
                 var self = this;
                 this.$el.find('.modal').on('hidden.bs.modal', function () {
                     self.remove();
                     self.$el.remove();
                 })
                 this.show();
+
+                //TODO
+                this.eventManager.on('modal:close', function(){
+                    this.$el.modal('hide');
+                    this.remove();
+                    this.$el.remove();
+                }, this );
             },
-            render: function(){
+            render: function () {
                 this.$el.html(this.renderTemplate());
-                if(!$('#single-modal-panel').length){
+                if (!$('#single-modal-panel').length) {
                     $('<div/>').attr('id', 'single-modal-panel')
                         .appendTo('body');
                 }
@@ -81,10 +98,10 @@ define(['underscore', 'backbone', 'common/views/BaseView',
             /**
              *
              */
-            show: function(options){
+            show: function (options) {
                 this.$el.find('.modal').modal('show');
             },
-            hide: function(){
+            hide: function () {
                 this.$el.modal('hide');
             }
         });

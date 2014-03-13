@@ -26,15 +26,17 @@ public class CategoryRestApiImpl implements CategoryRestApi {
     }
 
     @Override
-    public Response save(Category category) {
-        categoryService.save(category);
-        return Response.status(Response.Status.OK).build();
+    public Long save(Category category) {
+        Long id = categoryService.save(category);
+        // TODO
+        return id;
     }
 
     @Override
-    public Response update(Category category) {
+    public Long update(Category category) {
         categoryService.update(category);
-        return Response.status(Response.Status.OK).build();
+        //TODO
+        return category.getId();
     }
 
     @Override
