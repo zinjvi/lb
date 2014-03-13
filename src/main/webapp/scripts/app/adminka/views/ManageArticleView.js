@@ -19,8 +19,8 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
             var groups = new GroupCollection();
             //TODO |
             groups.fetch({async: false});
-            var model = new Backbone.Model({
-                groups: groups.toJSON()
+            var model = new BaseModel({
+                groups: groups
             });
             return model;
         }
@@ -31,6 +31,7 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
             var m = new BaseModel({
                 groups: groups
             });
+            console.log(m);
             console.log(m.toJSON());
             return m
         }
@@ -65,6 +66,7 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
                 var groupId = $(target).parents('.group').data('id');
                 var categoryId = $(target).data('id');
                 var articlesListView = new ArticlesListView({
+                    groups: this.model.get('groups'),
                     groupId: groupId,
                     categoryId: categoryId
                 });

@@ -2,12 +2,13 @@ define(['backbone', 'common/views/BaseView',
     'text!adminka/templ/articlesList.dust',
     'common/views/ModalWinView',
     'article/collections/ArticleCollection',
+    'common/models/BaseModel',
     'article/models/ArticleModel',
     'common/models/CategoryModel',
     'adminka/views/ArticleListItemView',
     'adminka/views/EditCategoryView'],
     function (Backbone, BaseView, templateSources, ModalWinView,
-              ArticleCollection, ArticleModel, CategoryModel,
+              ArticleCollection, BaseModel, ArticleModel, CategoryModel,
               ArticleListItemView, EditCategoryView) {
 
         // TODO | need to rename this and template to 'category manage'
@@ -39,18 +40,17 @@ define(['backbone', 'common/views/BaseView',
                 this.articles.fetchByCategoryId(this.options.categoryId);
             },
             changeCategory: function($event){
-//                var groupId = $($event.currentTarget).parents('.group-panel').data('id');
-//                var categoryId = $($event.currentTarget).data('category-id');
-                var category = new CategoryModel({
-                    id: this.options.categoryId
-                });
-                //TODO
-                category.fetch({async:false});
-
+//                var group = this.options.group;
+//                var category = group.get('categories').get(this.options.categoryId);
+                var groups = this.options.groups;
+                var group = groups.get(this.options.groupId);
+                var category = group.get('categories').get(this.options.categoryId);
                 var modal = new ModalWinView({
                     title: "Редактирование категории",
                     content: new EditCategoryView({
-                        model: category
+                            groups: groups,
+                            group: group,
+                            category: category
                     })
                 });
             },

@@ -1,6 +1,8 @@
-define(['common/views/BaseView', 'common/models/CategoryModel',
+define(['common/views/BaseView',
+    'common/models/BaseModel',
+    'common/models/CategoryModel',
     'text!adminka/templ/editCategory.dust'],
-    function(BaseView, CategoryModel, templateSources){
+    function(BaseView, BaseModel, CategoryModel, templateSources){
 
         var EditCategoryView = BaseView.extend({
             template:{
@@ -11,6 +13,11 @@ define(['common/views/BaseView', 'common/models/CategoryModel',
 
             },
             initialize: function(options){
+                this.model = new BaseModel({
+                    groups: options.groups,
+                    group: options.group,
+                    category: options.category
+                });
             }
         });
         return EditCategoryView;
