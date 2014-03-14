@@ -80,11 +80,10 @@ define(['underscore', 'backbone',
                 })
                 this.show();
 
-                //TODO
+                //TODO !!!!
+                var self = this;
                 this.eventManager.on('modal:close', function(){
-                    this.$el.modal('hide');
-                    this.remove();
-                    this.$el.remove();
+                    self.$modal.modal('hide');
                 }, this );
             },
             render: function () {
@@ -94,6 +93,7 @@ define(['underscore', 'backbone',
                         .appendTo('body');
                 }
                 this.$el.appendTo('#single-modal-panel');
+                this.$modal = this.$el.find('#modalWin');
             },
             /**
              *
@@ -102,6 +102,7 @@ define(['underscore', 'backbone',
                 this.$el.find('.modal').modal('show');
             },
             hide: function () {
+                console.log('hide modal');
                 this.$el.modal('hide');
             }
         });

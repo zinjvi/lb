@@ -54,12 +54,16 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
                 this.model = completeModel();
                 this.m = completeM();
                 this.eventManager.on('clean:article:content', this.cleanArticleContent, this);
+                this.eventManager.on('manageArticle:updateCategory', this.updateCategory, this);
             },
             afterRender: function(){
                 this.$article = this.$el.find('.article');
             },
             cleanArticleContent: function(){
                 this.$article.html('');
+            },
+            updateCategory: function(category){
+                console.log('updateCategory');
             },
             showArticleList: function(event) {
                 var target = event.target;
