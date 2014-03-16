@@ -53,6 +53,10 @@ h3{
     float: right;
 }
 
+.manage-article{
+    margin: 60px 10px 10px 10px;
+}
+
 /*Header image management*/
 
 .header-image-list img{
@@ -118,6 +122,9 @@ h3{
 
 .choose-category a.remove{
     float: right;
+}
+.groups-panel {
+    margin-top: 55px;
 }
 .groups-panel > a.add-category {
     color: #85858a;

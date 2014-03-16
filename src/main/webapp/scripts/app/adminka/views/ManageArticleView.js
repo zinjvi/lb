@@ -47,6 +47,7 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
                 'click .add-article': 'addArticle',
                 'click .add-category': 'addCategory'
             },
+            className: 'manage-article',
             // TODO | groups must be in model
             groups: new GroupCollection(),
             initialize: function(){
@@ -55,6 +56,8 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
                 this.m = completeM();
                 this.eventManager.on('clean:article:content', this.cleanArticleContent, this);
                 this.eventManager.on('manageArticle:updateCategory', this.updateCategory, this);
+                this.eventManager.on('manageArticle:addCategoryOnUI', this.addCategoryOnUI, this);
+                this.eventManager.on('manageArticle:removeCategoryOnUI', this.removeCategoryOnUI, this);
             },
             afterRender: function(){
                 this.$article = this.$el.find('.article');
@@ -62,8 +65,34 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
             cleanArticleContent: function(){
                 this.$article.html('');
             },
-            updateCategory: function(category){
+            updateCategory: function(updatedCategory, previousGroupId){
                 console.log('updateCategory');
+                console.log(updatedCategory);
+                var toGroupId = updatedCategory.get('group').id;
+                if(previousGroupId != updatedCategory.get('group').id){
+                    var groups = this.model.get('groups');
+                    var categories = groups.get(previousGroupId).get('categories');
+                    var category = categories.get(updatedCategory.get('id'));
+                    categories.remove(category);
+                    var toGroup = groups.get(toGroupId);
+                    toGroup.get('categories').add(category);
+                }
+                var category = this.model.get('groups').get(toGroupId)
+                    .get('categories').get(updatedCategory.get('id'));
+                category.set('name', updatedCategory.get('name'));
+                this.render();
+            },
+            addCategoryOnUI: function(category){
+                console.log(category);
+                var groupId = category.get('group').id;
+                var group = this.model.get('groups').get(groupId);
+                group.get('categories').add(category);
+                this.render();
+            },
+            removeCategoryOnUI: function(groupId, categoryId){
+                var group = this.model.get('groups').get(groupId);
+                group.get('categories').remove(categoryId);
+                this.render();
             },
             showArticleList: function(event) {
                 var target = event.target;
@@ -106,35 +135,32 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
 //                articleModel.save();
 //            },
             addCategory: function($event){
-                var groupId = $($event.currentTarget).parents('.group').data('id');
-                var group = new GroupModel({id: groupId});
-                //TODO || {async: false}
-                group.fetch({async: false});
-                var category = new CategoryModel({
-                    group: group.toJSON()
-                });
+//                var groupId = $($event.currentTarget).parents('.group').data('id');
+//                var group = new GroupModel({id: groupId});
+//                //TODO || {async: false}
+//                group.fetch({async: false});
+//                var category = new CategoryModel({
+//                    group: group.toJSON()
+//                });
+//                var modal = new ModalWinView({
+//                    title: "Создание новой категории",
+//                    content: new EditCategoryView({
+//                        model: category
+//                    })
+//                });
+                ///////
+                var $target = $($event.currentTarget);
+                var groups = this.model.get('groups');
+                var groupId = $target.parents('.group').data('id');
+                var group = groups.get(groupId);
+                var category = group.get('categories').get($target.data('id'));
                 var modal = new ModalWinView({
-                    title: "Создание новой категории",
+                    title: "Редактирование категории",
                     content: new EditCategoryView({
-                        model: category
-                    }),
-                    buttons: [
-                        {
-                            'label': 'Сохранить',
-                            'classes': 'btn-success close-modal',
-                            'click': function(){
-                                var categoryForm = $('form.edit-category')
-                                    .serializeObject();
-                                var category = new CategoryModel(categoryForm);
-                                category.save();
-                                console.log(categoryForm);
-                            }
-                        },
-                        {
-                            'label': 'Отмена',
-                            'classes': 'btn-default close-modal'
-                        }
-                    ]
+                        groups: groups,
+                        group: group,
+                        category: category
+                    })
                 });
             }
         });

@@ -2,7 +2,9 @@ package zinchenko.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import zinchenko.dao.ArticleDao;
 import zinchenko.dao.CategoryDao;
+import zinchenko.domain.Article;
 import zinchenko.domain.Category;
 import zinchenko.domain.Group;
 import zinchenko.service.CategoryService;
@@ -22,6 +24,9 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
     GroupService groupService;
+
+    @Autowired
+    ArticleDao articleDao;
 
     @Override
     public List<Category> findAll() {
@@ -67,6 +72,14 @@ public class CategoryServiceImpl implements CategoryService {
 
     public void setGroupService(GroupService groupService) {
         this.groupService = groupService;
+    }
+
+    public ArticleDao getArticleDao() {
+        return articleDao;
+    }
+
+    public void setArticleDao(ArticleDao articleDao) {
+        this.articleDao = articleDao;
     }
 
 }

@@ -24,8 +24,7 @@ define(['underscore', 'backbone',
         }
 
         /**
-         *
-         * For example:
+         * Example:
 
          var modal = new ModalWinView({
                     title: "title test",
@@ -44,7 +43,6 @@ define(['underscore', 'backbone',
                         }
                     ]
                 });
-         *
          */
 
         var ModalWinView = BaseView.extend({

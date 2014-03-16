@@ -6,6 +6,7 @@
         </div>
         <div class="right">
             <a class="title" href="#article/{id}">{title}</a>
+            <p>{notice}</p>
             <span class="text">
                 <p>{enter}</p>
             </span>

@@ -12,7 +12,13 @@ define(['common/views/BaseView',
             events: {
                 'click .save-category': 'saveCategory'
             },
+            /**
+             * @param options.groups
+             * @param options.group
+             * @param options.category
+             */
             initialize: function(options){
+                this.options = options;
                 console.log('i');
                 this.model = new BaseModel({
                     groups: options.groups,
@@ -24,12 +30,20 @@ define(['common/views/BaseView',
                 var categoryJson = this.$el.find('form.edit-category')
                     .formParams();
                 console.log(categoryJson);
-                var category = new CategoryModel(categoryJson);
+                var category = new CategoryModel(categoryJson, {parse:true});
                 var self = this;
                 category.save({
                     success: function(model, response, options){
                         console.log(model);
                         self.eventManager.trigger('modal:close');
+                        if(model.get('id')) {
+                            var previousGroupId = self.options.group.get('id');
+                            self.eventManager.trigger(
+                                'manageArticle:updateCategory', model, previousGroupId);
+                        } else {
+                            model.set('id', response);
+                            self.eventManager.trigger('manageArticle:addCategoryOnUI', model);
+                        }
                     },
                     error: function(){
                         //TODO

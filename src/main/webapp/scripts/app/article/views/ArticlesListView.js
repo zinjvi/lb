@@ -10,6 +10,7 @@ define(['backbone', 'common/views/BaseView', 'dust',
                 source: templateSources
             },
             articles: new ArticleCollections(),
+            className: 'articles-list',
             model: {},
             initialize: function(options){
                 this.articles.fetchByCategoryId(options.categoryId)

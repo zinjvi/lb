@@ -10,11 +10,11 @@ define(['common/models/BaseModel',
         },
         //TODO | need implement using property
         baseUrl: 'webservice/rest/group',//appconfig.url.group.base
-        parse: function(response, options){
+        parse: function(attrs, options){
             console.log("parse");
-            var o = _.omit(response, 'categories');
-            o.categories = new CategoryCollections(response.categories);
-            return o;
+            var attributes = _.omit(attrs, 'categories');
+            if(attrs.categories) attributes.categories = new CategoryCollections(attrs.categories);
+            return attributes;
         }
     });
     return GroupModel;

@@ -40,9 +40,10 @@ public class CategoryRestApiImpl implements CategoryRestApi {
     }
 
     @Override
-    public Response delete(Long id) {
+    public Long delete(Long id) {
         categoryService.delete(id);
-        return Response.status(Response.Status.OK).build();
+        //TODO |
+        return id;
     }
 
     public CategoryService getCategoryService() {

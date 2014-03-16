@@ -27,6 +27,6 @@ public interface CategoryRestApi {
 
     @DELETE
     @Path("/{id}")
-    Response delete(@PathParam("id") Long id);
+    Long delete(@PathParam("id") Long id);
 
 }

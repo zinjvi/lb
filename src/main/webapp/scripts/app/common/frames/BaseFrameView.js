@@ -10,7 +10,7 @@ define(['backbone', 'common/views/BaseView'],
                 $('#frame-panel').html('');
                 this.$el.html(this.renderTemplate());
                 this.$el.appendTo('#frame-panel');
-                this.$content = this.$el.find('.content');
+                this.$content = this.$el.find('.content-block');
             },
             setContent: function(view){
                 this.$content.html('');

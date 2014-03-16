@@ -1,5 +1,7 @@
-define(['common/collections/BaseCollection', 'common/models/CategoryModel'],
-    function(BaseCollection, CategoryModel){
+define(['common/collections/BaseCollection',
+    'common/models/GroupModel',
+    'common/models/CategoryModel'],
+    function(BaseCollection, GroupModel, CategoryModel){
         var CategoryCollection = BaseCollection.extend({
             model: CategoryModel
 //            url: '/article/groups',

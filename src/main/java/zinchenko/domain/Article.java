@@ -37,6 +37,9 @@ public class Article implements Serializable {
     @Column(name = "NOTICE")
     private String notice;
 
+    @Column(name="IMAGE")
+    private String image;
+
     @Column(name = "DESCRIPTION")
     private String description;
 
@@ -116,5 +119,13 @@ public class Article implements Serializable {
 
     public void setArticleSubscriptions(List<ArticleSubscription> articleSubscriptions) {
         this.articleSubscriptions = articleSubscriptions;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
