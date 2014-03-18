@@ -1,4 +1,6 @@
-define(['backbone', 'backbone.relational','common/views/BaseView',
+define(['backbone', 'backbone.relational',
+    'article/singlePageConfig',
+    'common/views/BaseView',
     'common/views/ModalWinView',
     'common/models/BaseModel',
     'common/models/CategoryModel',
@@ -10,7 +12,8 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
     'adminka/views/EditArticleView',
     'adminka/views/EditCategoryView',
     'css!adminka/css/styles'],
-    function(Backbone, BacboneRelational, BaseView, ModalWinView, BaseModel,
+    function(Backbone, BacboneRelational, singlePageConfig,
+             BaseView, ModalWinView, BaseModel,
              CategoryModel, GroupModel, ArticleModel, templateSources,
              GroupCollection, ArticlesListView, EditArticleView,
              EditCategoryView){
@@ -51,6 +54,7 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
             // TODO | groups must be in model
             groups: new GroupCollection(),
             initialize: function(){
+                console.log(singlePageConfig);
                 console.log("new mav");
                 this.model = completeModel();
                 this.m = completeM();
@@ -128,27 +132,7 @@ define(['backbone', 'backbone.relational','common/views/BaseView',
                 this.$el.find('.article').html('');
                 this.$el.find('.article').append(editArticleView.el);
             },
-//            saveArticle: function($event){
-//                var button = $event.currentTarget;
-//                var form = $(button).parents('form.edit-article').serializeObject();
-//                var articleModel = new ArticleModel(form);
-//                articleModel.save();
-//            },
             addCategory: function($event){
-//                var groupId = $($event.currentTarget).parents('.group').data('id');
-//                var group = new GroupModel({id: groupId});
-//                //TODO || {async: false}
-//                group.fetch({async: false});
-//                var category = new CategoryModel({
-//                    group: group.toJSON()
-//                });
-//                var modal = new ModalWinView({
-//                    title: "Создание новой категории",
-//                    content: new EditCategoryView({
-//                        model: category
-//                    })
-//                });
-                ///////
                 var $target = $($event.currentTarget);
                 var groups = this.model.get('groups');
                 var groupId = $target.parents('.group').data('id');

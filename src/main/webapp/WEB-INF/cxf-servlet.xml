@@ -19,6 +19,7 @@
             <bean class="zinchenko.rest.impl.CategoryRestApiImpl"/>
             <bean class="zinchenko.rest.impl.GroupRestApiImpl"/>
             <bean class="zinchenko.rest.impl.CommentRestApiImpl"/>
+            <bean class="zinchenko.rest.impl.SinglePageConfigRestApiImpl"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>

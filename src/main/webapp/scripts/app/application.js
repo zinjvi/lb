@@ -1,10 +1,9 @@
 define(['jquery', 'backbone', 'AppRouter',
-
     'common/collections/GroupCollection',
-    'common/models/GroupModel'],
+    'common/models/GroupModel',
+    'article/models/ConfigModel'],
     function ($, Backbone, AppRouter,
-
-              GroupCollection, GroupModel) {
+              GroupCollection, GroupModel, ConfigModel) {
 
         var test1 = function () {
             var Model = Backbone.Model.extend({
@@ -21,7 +20,6 @@ define(['jquery', 'backbone', 'AppRouter',
                 model: Model
             });
 //            var collection = new Collection();
-
             var MainModel = Backbone.Model.extend({
                 collection: new Collection(),
                 m: model,
@@ -143,15 +141,8 @@ define(['jquery', 'backbone', 'AppRouter',
             router: new AppRouter(),
             start: function () {
                 Backbone.history.start();
-//                test1();
-//                test2();
-                //test3();
-//                test4();
-//                test5();
-
                 console.log("application start");
             }
         }
-
         return application;
     });

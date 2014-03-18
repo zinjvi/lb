@@ -7,16 +7,16 @@ insert into category (category_id, name, group_id) values (11, 'Test category 11
 insert into category (category_id, name, group_id) values (12, 'Test test category 12', 2)
 insert into category (category_id, name, group_id) values (13, 'Test test   category 13', 2)
 
-insert into article (article_id, title, notice, description, category_id) values (1, 'Test title 1', 'test article notice 1', 'test description 1', 10);
-insert into article (article_id, title, notice, description, category_id) values (2, 'Test title 2', 'test article notice 2', 'test description 2', 10);
-insert into article (article_id, title, notice, description, category_id) values (3, 'Test title 3', 'test article notice 3', 'test description 3', 10);
-insert into article (article_id, title, notice, description, category_id) values (4, 'Test title 4', 'test article notice 4', 'test description 4', 10);
-insert into article (article_id, title, notice, description, category_id) values (5, 'Test title 5', 'test article notice 5', 'test description 5', 11);
-insert into article (article_id, title, notice, description, category_id) values (6, 'Test title 6', 'test article notice 6', 'test description 6', 11);
-insert into article (article_id, title, notice, description, category_id) values (7, 'Test title 7', 'test article notice 7', 'test description 7', 11);
-insert into article (article_id, title, notice, description, category_id) values (8, 'Test title 8', 'test article notice 8', 'test description 8', 11);
-insert into article (article_id, title, notice, description, category_id) values (9, 'Test title 9', 'test article notice 9', 'test description 9', 11);
-insert into article (article_id, title, notice, description, category_id) values (10, 'Test title 10', 'test article notice 10', 'test description 10', 11);
+insert into article (article_id, title, notice, image, description, category_id) values (1, 'Test title 1', 'test article notice 1', '2.jpg', 'test description 1', 10);
+insert into article (article_id, title, notice, image, description, category_id) values (2, 'Test title 2', 'test article notice 2', '2.jpg', 'test description 2', 10);
+insert into article (article_id, title, notice, image, description, category_id) values (3, 'Test title 3', 'test article notice 3', '2.jpg', 'test description 3', 10);
+insert into article (article_id, title, notice, image, description, category_id) values (4, 'Test title 4', 'test article notice 4', '2.jpg', 'test description 4', 10);
+insert into article (article_id, title, notice, image, description, category_id) values (5, 'Test title 5', 'test article notice 5', '2.jpg', 'test description 5', 11);
+insert into article (article_id, title, notice, image, description, category_id) values (6, 'Test title 6', 'test article notice 6', '2.jpg', 'test description 6', 11);
+insert into article (article_id, title, notice, image, description, category_id) values (7, 'Test title 7', 'test article notice 7', '2.jpg', 'test description 7', 11);
+insert into article (article_id, title, notice, image, description, category_id) values (8, 'Test title 8', 'test article notice 8', '2.jpg', 'test description 8', 11);
+insert into article (article_id, title, notice, image, description, category_id) values (9, 'Test title 9', 'test article notice 9', '2.jpg', 'test description 9', 11);
+insert into article (article_id, title, notice, image, description, category_id) values (10, 'Test title 10', 'test article notice 10', '2.jpg', 'test description 10', 11);
 
 insert into person (person_id, email) values (300, 'zinjvi.test@gmail.com');
 insert into person (person_id, email) values (301, 'zinjvi.test@gmail.com');

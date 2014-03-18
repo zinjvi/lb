@@ -1,7 +1,10 @@
-define(['backbone', 'common/views/BaseView', 'dust',
+define(['backbone',
+    'article/singlePageConfig',
+    'common/views/BaseView', 'dust',
     'text!article/templ/articlesList.dust',
     'article/collections/ArticleCollection'],
-    function(Backbone, BaseView, dust, templateSources,
+    function(Backbone, singlePageConfig, BaseView,
+             dust, templateSources,
              ArticleCollections){
 
         var ArticlesListView = BaseView.extend({
@@ -15,7 +18,8 @@ define(['backbone', 'common/views/BaseView', 'dust',
             initialize: function(options){
                 this.articles.fetchByCategoryId(options.categoryId)
                 this.model = new Backbone.Model({
-                    articles: this.articles.toJSON()
+                    articles: this.articles.toJSON(),
+                    articleImagePath: singlePageConfig.system.articleImagePath
                 });
             },
             render: function(){

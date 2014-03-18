@@ -2,7 +2,7 @@
     {#articles}
     <div class="article-mini">
         <div class="left">
-            <img src="{image}">
+            <img src="{articleImagePath}{image}">
         </div>
         <div class="right">
             <a class="title" href="#article/{id}">{title}</a>

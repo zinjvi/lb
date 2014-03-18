@@ -116,4 +116,8 @@
         </property>
     </bean>
 
+    <bean id="systemSinglePageConfig" class="zinchenko.domain.SystemSinglePageConfig">
+        <property name="articleImagePath" value="${single.page.config.article.image.path}"/>
+    </bean>
+
 </beans>
