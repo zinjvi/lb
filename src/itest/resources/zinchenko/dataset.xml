@@ -23,6 +23,16 @@
     <person person_id="308" email="person308@email.com"/>
     <person person_id="309" email="person309@email.com"/>
 
+    <comment comment_id="400" article_id="1" content="Content test test test test 400"/>
+    <comment comment_id="400" article_id="1" content="Content test test test test 400"/>
+    <comment comment_id="400" article_id="2" content="Content test test test test 400"/>
+    <comment comment_id="400" article_id="2" content="Content test test test test 400"/>
+    <comment comment_id="400" article_id="2" content="Content test test test test 400"/>
+    <comment comment_id="400" article_id="2" content="Content test test test test 400"/>
+    <comment comment_id="400" article_id="2" content="Content test test test test 400"/>
+    <comment comment_id="400" article_id="3" content="Content test test test test 400"/>
+    <comment comment_id="400" article_id="3" content="Content test test test test 400"/>
+
     <subscription subscription_id="500" person_id="300" article_id="1" category_id="19" discriminator="A"/>
     <subscription subscription_id="501" person_id="300" article_id="2" discriminator="A"/>
     <subscription subscription_id="502" person_id="302" article_id="2" discriminator="A"/>

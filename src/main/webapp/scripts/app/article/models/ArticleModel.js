@@ -1,11 +1,12 @@
-define(['backbone', 'common/models/BaseModel'],
-    function (Backbone, BaseModel) {
+define(['backbone', 'common/models/BaseModel',
+        'article/collections/CommentCollection'],
+    function (Backbone, BaseModel, CommentCollection) {
     var ArticleModel = BaseModel.extend({
         'defaults': {
             'id': '',
             'title': '',
-            'description': ''
-//            'image': '',
+            'description': '',
+            'comments': new CommentCollection()
         },
         // TODO | need change to urlRoot
         baseUrl: 'webservice/rest/Article',

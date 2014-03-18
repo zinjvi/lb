@@ -1,7 +1,9 @@
-define(['common/views/BaseView', 'dust',
+define(['article/singlePageConfig',
+    'common/views/BaseView', 'dust',
     'text!article/templ/article.dust',
     'article/models/ArticleModel'],
-    function(BaseView, dust, templateSources, ArticleModel){
+    function(singlePageConfig, BaseView, dust,
+             templateSources, ArticleModel){
 
         var ArticleView = BaseView.extend({
             template:{
@@ -12,6 +14,7 @@ define(['common/views/BaseView', 'dust',
             initialize: function(options){
                 this.model.set('id', options.articleId);
                 this.model.fetchById();
+                this.model.set('articleImagePath', singlePageConfig.system.articleImagePath);
             },
             render: function(){
                 this.$el.html(this.renderTemplate());

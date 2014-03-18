@@ -27,6 +27,7 @@ define(['backbone', 'common/views/BaseView',
              */
             initialize: function (options) {
                 var self = this;
+                //TODO | need move all 'options' fields to this View
                 this.options = options;
 
                 this.model = new Backbone.Model({

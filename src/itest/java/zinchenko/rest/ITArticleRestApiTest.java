@@ -3,7 +3,6 @@ package zinchenko.rest;
 
 import com.dumbster.smtp.SimpleSmtpServer;
 import com.github.springtestdbunit.DbUnitTestExecutionListener;
-import com.github.springtestdbunit.annotation.DatabaseOperation;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
@@ -20,20 +19,21 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
-import zinchenko.JmsUtils;
 import zinchenko.domain.Article;
 import zinchenko.domain.Category;
+import zinchenko.domain.Comment;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import static com.jayway.restassured.RestAssured.delete;
 import static com.jayway.restassured.RestAssured.get;
 import static com.jayway.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static zinchenko.EntityCreator.createArticle;
+import static zinchenko.EntityCreator.createComment;
+import static zinchenko.EntityCreator.createComments;
 import static zinchenko.TestConstants.ARTICLE_PATH;
 
 /**
@@ -107,10 +107,11 @@ public class ITArticleRestApiTest {
 
     @Test
     public void testGetById() throws Exception {
-        Article article = new Article();
-        article.setId(1L);
-        article.setTitle("test title 1");
-        article.setDescription("test description 1");
+        List<Comment> comments = createComments(
+                createComment()
+        );
+        Article article = createArticle(1L, "test title 1", "/xx/zz/n.jpg",
+                "test description 1", null, "notice test 1");
         String expectedResult = new ObjectMapper().writeValueAsString(article);
 
         Response response = get(ARTICLE_PATH + "/1");

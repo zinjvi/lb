@@ -23,6 +23,7 @@ public class Comment implements Serializable {
     @Column(name = "content")
     private String content;
 
+    //TODO | Is there need this field?
     @ManyToOne
     @JoinColumn(name = "article_id")
     private Article article;
