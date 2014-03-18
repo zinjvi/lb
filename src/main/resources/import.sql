@@ -41,9 +41,9 @@ insert into subscription(subscription_id, person_id, category_id, discriminator)
 insert into subscription(subscription_id, person_id, category_id, discriminator) values (509, 308, 10, 'C')
 
 
-insert into comment(comment_id, content, article_id) values (601, 'comment test 601 of 1 article', 1);
-insert into comment(comment_id, content, article_id) values (602, 'comment test 602 of 2 article', 2);
-insert into comment(comment_id, content, article_id) values (603, 'comment test 603 of 2 article', 2);
-insert into comment(comment_id, content, article_id) values (604, 'comment test 604 of 2 article', 2);
+insert into comment(comment_id, content, article_id) values (601, 'Comment test test test test test test test test test test test test test test test test 601 of 1 article', 1);
+insert into comment(comment_id, content, article_id) values (602, 'Comment test test test test test test test test test test test test test test test test test test test test test 602 of 2 article', 2);
+insert into comment(comment_id, content, article_id) values (603, 'Comment test test test test test test test test test test test test test test test 603 of 2 article', 2);
+insert into comment(comment_id, content, article_id) values (604, 'Comment test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test 604 of 2 article', 2);
 
 

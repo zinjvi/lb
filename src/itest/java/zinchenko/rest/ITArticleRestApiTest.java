@@ -108,7 +108,7 @@ public class ITArticleRestApiTest {
     @Test
     public void testGetById() throws Exception {
         List<Comment> comments = createComments(
-                createComment()
+                //createComment()
         );
         Article article = createArticle(1L, "test title 1", "/xx/zz/n.jpg",
                 "test description 1", null, "notice test 1");

@@ -167,24 +167,40 @@ ul{
 
 /************* Article ***************/
 
-section.article{
+.article{
     font: 18px "Times New Roman";
+    width: 590px;
 }
 
-section.article img{
+.article .image img{
     float: left;
     margin: 0 30px 0 0;
-    width: 400px;
+    width: 300px;
+}
+.article .image img:after{
+    content: " ";
+}
+.article .image:after{
+    content: " ";
 }
 
-section.article .title{
+.article .title{
     margin: 20px 0 20px 0;
     font: 24px "Times New Roman";
     color: #c72fc5;
 }
 
-section.article .text{
+.article .text{
 
+}
+.article .comments{
+    clear: both;
+    margin-top: 10px;
+}
+.article .comment{
+    margin-top: 10px;
+    padding: 12px;
+    background:rgba(204, 233, 88, 0.55);
 }
 
 

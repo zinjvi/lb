@@ -10,6 +10,7 @@ define(['article/singlePageConfig',
                 name: 'article.template',
                 source: templateSources
             },
+            className: 'article _el',
             model: new ArticleModel(),
             initialize: function(options){
                 this.model.set('id', options.articleId);

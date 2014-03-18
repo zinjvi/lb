@@ -2,6 +2,7 @@ package zinchenko.dao.impl;
 
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Criterion;
+import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,16 +28,26 @@ public class ArticleDaoImpl extends AbstractDao implements ArticleDao {
     @Override
     @Transactional(readOnly = true)
     public List<Article> findByCategoryId(Long categoryId) {
-        Criteria criteria = getCurrentSession().createCriteria(Article.class);
-        criteria.createCriteria("category").add(Restrictions.eq("id", categoryId));
-        return criteria.list();
+        return getCurrentSession().createQuery("select new zinchenko.domain.Article(" +
+                "a.id, a.title, a.notice, a.image) from Article a " +
+                "where a.category.id = :categoryId ").setParameter("categoryId", categoryId)
+                .list();
+//        Criteria criteria = getCurrentSession().createCriteria(Article.class);
+//        criteria.setProjection(Projections.projectionList()
+//                .add(Projections.property("id"))
+//                .add(Projections.property("title"))
+//                .add(Projections.property("notice"))
+//                .add(Projections.property("image")));
+//        criteria.createCriteria("category").add(Restrictions.eq("id", categoryId));
+//        return criteria.list();
     }
 
     @Override
     @Transactional(readOnly = true)
     public Article find(Long id) {
-        return (Article) getCurrentSession().get(Article.class, id);
-
+        return (Article) getCurrentSession().createQuery(
+                "select distinct a from Article a left join fetch a.comments where a.id = :id")
+                .setParameter("id", id).uniqueResult();
     }
 
     @Override

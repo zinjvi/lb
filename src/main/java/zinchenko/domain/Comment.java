@@ -1,5 +1,7 @@
 package zinchenko.domain;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -24,6 +26,7 @@ public class Comment implements Serializable {
     private String content;
 
     //TODO | Is there need this field?
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "article_id")
     private Article article;

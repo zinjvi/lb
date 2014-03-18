@@ -47,13 +47,23 @@ public class Article implements Serializable {
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comments;
 
     @JsonIgnore
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
     private List<ArticleSubscription> articleSubscriptions;
+
+    public Article() {
+
+    }
+
+    public Article(Long id, String title, String notice, String image) {
+        this.id = id;
+        this.title = title;
+        this.notice = notice;
+        this.image = image;
+    }
 
     @Override
     public String toString() {
