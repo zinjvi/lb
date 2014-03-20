@@ -23,6 +23,7 @@ define(['backbone', 'dust', 'dust.helper', 'underscore'],
      */
     var BaseView = Backbone.View.extend({
 
+        //TODO | need create function with DOM element argument. So we can render to some DOM element
         render: function () {
             this.$el.html(this.renderTemplate());
             this.afterRender();

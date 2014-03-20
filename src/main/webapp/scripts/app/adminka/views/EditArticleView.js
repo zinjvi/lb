@@ -1,8 +1,11 @@
-define(['common/views/BaseView',
+define(['underscore', 'common/views/BaseView',
+    'adminka/views/CommentView',
     'text!adminka/templ/editArticle.dust',
-    'article/models/ArticleModel', 'jquery', 'jquery.validate', 'jquery.serializeObject'],
-    function(BaseView, templateSources,
-             ArticleModel, $){
+    'article/models/ArticleModel',
+    'article/models/CommentModel',
+    'jquery', 'jquery.validate', 'jquery.serializeObject'],
+    function(_, BaseView, CommentView, templateSources,
+             ArticleModel, CommentModel, $){
 
         var EditArticleView = BaseView.extend({
             className: 'edit-adticle-view',
@@ -41,6 +44,13 @@ define(['common/views/BaseView',
                 })
                 this.$el.find('form.edit-article').validate();
                 this.$form = this.$el.find('form.edit-article');
+                this.$comments = this.$el.find('.comments');
+                _.each(this.model.get('comments'), function(comment){
+                    var commentView = new CommentView({
+                        model: new CommentModel(comment)
+                    });
+                    this.$comments.append(commentView.render().el);
+                }, this);
             },
             saveArticle: function(event) {
                 var self = this;
