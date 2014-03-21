@@ -64,7 +64,7 @@ define(['backbone', 'backbone.relational',
                 this.eventManager.on('manageArticle:removeCategoryOnUI', this.removeCategoryOnUI, this);
             },
             afterRender: function(){
-                this.$article = this.$el.find('.article');
+                this.$article = this.$el.find('.article-content');
             },
             cleanArticleContent: function(){
                 this.$article.html('');
@@ -117,9 +117,8 @@ define(['backbone', 'backbone.relational',
                     articleId: articleId
                 });
                 editArticleView.render();
-                //  TODO | should be like field
-                this.$el.find('.article').html('');
-                this.$el.find('.article').append(editArticleView.el);
+                this.$article.html('');
+                this.$article.append(editArticleView.el);
             },
             addArticle: function($event){
                 console.log("add article");
@@ -128,9 +127,8 @@ define(['backbone', 'backbone.relational',
                     categoryId: $(target).data('category-id')
                 });
                 editArticleView.render();
-                //TODO ||
-                this.$el.find('.article').html('');
-                this.$el.find('.article').append(editArticleView.el);
+                this.$article.html('');
+                this.$article.append(editArticleView.el);
             },
             addCategory: function($event){
                 var $target = $($event.currentTarget);

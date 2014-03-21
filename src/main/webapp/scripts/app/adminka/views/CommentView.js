@@ -1,4 +1,4 @@
-define(['common/views/BaseView', 'common/view/ModalWinView',
+define(['common/views/BaseView', 'common/views/ModalWinView',
     'text!adminka/templ/comment.dust'],
     function(BaseView, ModalWinView, templateSources){
 
@@ -15,32 +15,33 @@ define(['common/views/BaseView', 'common/view/ModalWinView',
 
             },
             removeComment: function($event){
+                var self = this;
                 var modal = new ModalWinView({
-                    title: "Вы уверены что хотите удалить этот комментарий?",
-                    content: "content test",
+                    title: "Подтверждение удаленияю",
+                    content: "Вы уверены что хотите удалить этот комментарий?",
                     buttons: [
                         {
-                            'label': 'Closable First',
+                            'label': 'Отмена',
                             'classes': 'btn-default close-modal'
                         },
                         {
-                            'label': 'Second',
+                            'label': 'Удалить',
                             'classes': 'btn-primary close-modal',
                             'click': function(){
-                                console.log("cl second");
+                                self.model.destroy({
+                                    success: function(){
+                                        self.remove();
+                                    },
+                                    error: function(){
+                                        //TODO | implement this function for all project
+                                    }
+                                });
                             }
                         }
                     ]
                 });
 
-                this.model.destroy({
-                    success: function(){
 
-                    },
-                    error: function(){
-                        //TODO | implement this function for all project
-                    }
-                });
             }
         });
         return CommentView;

@@ -23,4 +23,8 @@ public interface CommentRestApi {
     @POST
     Response save(Comment comment);
 
+    @DELETE
+    @Path("/{id}")
+    Long delete(@PathParam("id") Long id);
+
 }

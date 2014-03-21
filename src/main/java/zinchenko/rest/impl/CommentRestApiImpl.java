@@ -29,4 +29,11 @@ public class CommentRestApiImpl implements CommentRestApi {
         return Response.status(Response.Status.OK).build();
     }
 
+    @Override
+    public Long delete(Long id) {
+        commentService.delete(id);
+        //TODO |
+        return id;//Response.status(Response.Status.OK).build();
+    }
+
 }
