@@ -8,9 +8,9 @@
     <category category_id="13" name="test category name 13" group_id="1"/>
     <category category_id="19" name="test category name 19" group_id="2"/>
 
-    <article article_id="1" title="test title 1" description="test description 1" category_id="10"/>
-    <article article_id="2" title="test title 2" description="test description 2" category_id="11"/>
-    <article article_id="3" title="test title 3" description="test description 3" category_id="11"/>
+    <article article_id="1" title="test title 1" notice="test notice 1" image="articleImage1.jpg" description="test description 1" category_id="10"/>
+    <article article_id="2" title="test title 2" notice="test notice 2" image="articleImage2.jpg" description="test description 2" category_id="11"/>
+    <article article_id="3" title="test title 3" notice="test notice 3" image="articleImage3.jpg" description="test description 3" category_id="11"/>
 
     <person person_id="300" email="person300@email.com"/>
     <person person_id="301" email="person301@email.com"/>
@@ -23,15 +23,15 @@
     <person person_id="308" email="person308@email.com"/>
     <person person_id="309" email="person309@email.com"/>
 
-    <comment comment_id="400" article_id="1" content="Content test test test test 400"/>
-    <comment comment_id="400" article_id="1" content="Content test test test test 400"/>
-    <comment comment_id="400" article_id="2" content="Content test test test test 400"/>
-    <comment comment_id="400" article_id="2" content="Content test test test test 400"/>
-    <comment comment_id="400" article_id="2" content="Content test test test test 400"/>
-    <comment comment_id="400" article_id="2" content="Content test test test test 400"/>
-    <comment comment_id="400" article_id="2" content="Content test test test test 400"/>
-    <comment comment_id="400" article_id="3" content="Content test test test test 400"/>
-    <comment comment_id="400" article_id="3" content="Content test test test test 400"/>
+    <comment comment_id="400" article_id="1" content="Content test 400"/>
+    <comment comment_id="401" article_id="1" content="Content test 401"/>
+    <comment comment_id="402" article_id="2" content="Content test 402"/>
+    <comment comment_id="403" article_id="2" content="Content test 403"/>
+    <comment comment_id="404" article_id="2" content="Content test 404"/>
+    <comment comment_id="405" article_id="2" content="Content test 405"/>
+    <comment comment_id="406" article_id="2" content="Content test 406"/>
+    <comment comment_id="407" article_id="3" content="Content test 407"/>
+    <comment comment_id="408" article_id="3" content="Content test 408"/>
 
     <subscription subscription_id="500" person_id="300" article_id="1" category_id="19" discriminator="A"/>
     <subscription subscription_id="501" person_id="300" article_id="2" discriminator="A"/>

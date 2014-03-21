@@ -1,2 +1,2 @@
 <p>{content}</p>
-<button type="button" class="btn btn-default">Удалить</button>
+<button type="button" class="btn btn-default remove-comment">Удалить</button>
