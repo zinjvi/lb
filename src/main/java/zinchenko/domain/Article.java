@@ -43,6 +43,9 @@ public class Article implements Serializable {
     @Column(name = "DESCRIPTION")
     private String description;
 
+    @Column(name = "COMMENTS_NUMBER")
+    private Long commentsNumber;
+
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
@@ -137,5 +140,13 @@ public class Article implements Serializable {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public Long getCommentsNumber() {
+        return commentsNumber;
+    }
+
+    public void setCommentsNumber(Long commentsNumber) {
+        this.commentsNumber = commentsNumber;
     }
 }
