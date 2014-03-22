@@ -3,7 +3,7 @@ define(['backbone', 'common/models/BaseModel'],
     var ArticleModel = BaseModel.extend({
         'defaults': {
             'id': '',
-            'comment': ''
+            'content': ''
         },
         // TODO | need change to urlRoot
         baseUrl: 'webservice/rest/comment'

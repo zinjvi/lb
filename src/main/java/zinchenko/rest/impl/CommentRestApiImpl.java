@@ -24,9 +24,9 @@ public class CommentRestApiImpl implements CommentRestApi {
     }
 
     @Override
-    public Response save(Comment comment) {
-        commentService.save(comment);
-        return Response.status(Response.Status.OK).build();
+    public Long save(Comment comment) {
+        Long id = commentService.save(comment);
+        return id;
     }
 
     @Override

@@ -4,7 +4,14 @@
 <p class="title">{title}</p>
 <div class="text">{description|s}</div>
 <div class="comments">
-    {#comments}
-    <div class="comment">{content}</div>
-    {/comments}
+    <!--{#comments}-->
+    <!--<div class="comment">{content}</div>-->
+    <!--{/comments}-->
+</div>
+<div class="add-comment-section">
+    <form>
+        <input type="hidden" name="article[id]" value="{id}">
+        <textarea type="text" placeholder="Ваш комментарий..." name="content"></textarea>
+        <button class="add-comment" type="button">Добавить</button>
+    </form>
 </div>

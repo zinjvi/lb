@@ -29,6 +29,11 @@ define(['backbone', 'dust', 'dust.helper', 'underscore'],
             this.afterRender();
             return this;
         },
+        renderTo: function (element) {
+            this.$el.html(this.renderTemplate());
+            this.afterRender();
+            this.$el.appendTo(element);
+        },
         eventManager: _.extend({}, Backbone.Events),
         afterRender: function(){},
         renderTemplate: function () {

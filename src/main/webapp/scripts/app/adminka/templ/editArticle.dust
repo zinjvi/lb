@@ -10,8 +10,10 @@
 <!--});-->
 <form class="edit-article form-horizontal" role="form">
     <input type="hidden" name="id" value="{id}">
+
     <div class="form-group">
         <label for="title" class="col-sm-2 control-label">Заголовок</label>
+
         <div class="col-sm-10">
             <input id="title" type="text" name="title" class="form-control"
                    value="{title}" placeholder="Заголовок статьи." required>
@@ -19,12 +21,14 @@
     </div>
     <div class="form-group">
         <label for="image" class="col-sm-2 control-label">Изображение</label>
+
         <div class="col-sm-10">
             <input id="image" type="file" name="image" class="form-control">
         </div>
     </div>
     <div class="form-group">
         <label for="title" class="col-sm-2 control-label">Кратко о статье</label>
+
         <div class="col-sm-10">
             <input id="notice" type="text" name="notice" class="form-control"
                    value="{notice}" placeholder="Кратко о статье..." required>
@@ -43,11 +47,7 @@
             <button class="btn btn-success pull-right save-article">Сохранить</button>
         </div>
     </div>
-    <!--<div class="form-group">-->
-        <!--<div class="col-sm-10">-->
-            <div class="comments">
+    <div class="comments">
 
-            </div>
-        <!--</div>-->
-    <!--</div>-->
+    </div>
 </form>
