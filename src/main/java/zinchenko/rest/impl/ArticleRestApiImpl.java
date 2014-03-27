@@ -52,10 +52,10 @@ public class ArticleRestApiImpl implements ArticleRestApi {
     }
 
     @Override
-    public Long save(Article article) {
+    public Response save(Article article) {
         try {
             Long id = articleService.save(article);
-            return id;//Response.status(Response.Status.OK).build();
+            return Response.status(Response.Status.CREATED).entity(id).build();
         } catch (Exception e) {
             LOG.error("Fail sale article", e);
             throw new UnexpectedRestException("Fail sale article", e);
@@ -63,16 +63,15 @@ public class ArticleRestApiImpl implements ArticleRestApi {
     }
 
     @Override
-    public Response update(Article article) {
+    public Article update(Article article) {
         articleDao.update(article);
-        //TODO |
-        return Response.ok(article.getId()).build();//article.getId();//Response.status(Response.Status.OK).build();
+        return article;
     }
 
     @Override
     public Response delete(Long id) {
         articleService.delete(id);
-        return Response.status(Response.Status.OK).build();
+        return Response.status(Response.Status.NO_CONTENT).build();
     }
 
     public ArticleDao getArticleDao() {

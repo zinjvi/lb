@@ -27,7 +27,7 @@ public interface GroupRestApi {
     Response save(Group group);
 
     @PUT
-    Response update(Group group);
+    Group update(Group group);
 
     @DELETE
     @Path("/{id}")

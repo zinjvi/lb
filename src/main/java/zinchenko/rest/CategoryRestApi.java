@@ -20,13 +20,13 @@ public interface CategoryRestApi {
     Category find(@PathParam("id") Long id);
 
     @POST
-    Long save(Category category);
+    Response save(Category category);
 
     @PUT
-    Long update(Category category);
+    Category update(Category category);
 
     @DELETE
     @Path("/{id}")
-    Long delete(@PathParam("id") Long id);
+    Response delete(@PathParam("id") Long id);
 
 }

@@ -29,6 +29,7 @@ import static com.jayway.restassured.RestAssured.delete;
 import static com.jayway.restassured.RestAssured.get;
 import static com.jayway.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
+import static zinchenko.BeanBuilder.create;
 import static zinchenko.EntityCreator.createArticle;
 import static zinchenko.EntityCreator.createArticles;
 import static zinchenko.EntityCreator.createCategory;
@@ -156,7 +157,14 @@ public class ITArticleRestApiTest {
 
     @Test
     public void testSave() throws Exception {
-        //given
+//        Dada dada = new Dada();
+//        //given
+//        List list = new ArrayList<Article>();
+//        list.size();
+//        Article aaa = (Article) list.get(0);
+
+        Article a = (Article) create(Article.class)
+                .put("title", "new title").build();
         Article article = createArticle(null, "new title", "new notice",
                 "new image", "new description", null, null);
         String articleJson= new ObjectMapper().writeValueAsString(article);

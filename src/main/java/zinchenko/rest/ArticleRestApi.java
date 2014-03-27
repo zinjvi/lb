@@ -32,11 +32,11 @@ public interface ArticleRestApi {
     List<Article> getByCategoryId(@PathParam("categoryId") Long categoryId);
 
     @POST
-    public Long save(Article article);
+    public Response save(Article article);
 
 
     @PUT
-    public Response update(Article article);
+    public Article update(Article article);
 
     @DELETE
     @Path("/{id}")

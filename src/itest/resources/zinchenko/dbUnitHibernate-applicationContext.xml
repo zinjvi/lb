@@ -19,6 +19,45 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd http://www.springfr
 
     <context:property-placeholder location="classpath:dao.properties"/>
 
+    <!--<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"-->
+          <!--destroy-method="close">-->
+        <!--<property name="driverClassName" value="org.h2.Driver" />-->
+        <!--&lt;!&ndash;<property name="driverClassName" value="org.postgresql.Driver" />&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="url" value="jdbc:h2:mem:test" />&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="url" value="jdbc:h2:tcp://localhost:6061/~/test" />&ndash;&gt;-->
+        <!--<property name="url" value="${database.url}" />-->
+        <!--&lt;!&ndash;<property name="url" value="jdbc:postgresql://localhost:5432/lb" />&ndash;&gt;-->
+        <!--<property name="username" value="${database.username}" />-->
+        <!--<property name="password" value="${database.password}" />-->
+    <!--</bean>-->
+
+    <!--<bean id="sessionFactory"-->
+          <!--class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">-->
+        <!--<property name="annotatedPackages" value="zinchenko.domain"/>-->
+        <!--<property name="dataSource" ref="dataSource" />-->
+        <!--<property name="packagesToScan" value="zinchenko.domain"/>-->
+        <!--<property name="hibernateProperties">-->
+            <!--<props>-->
+                <!--&lt;!&ndash;<prop key="hibernate.current_session_context_class">thread</prop>&ndash;&gt;-->
+                <!--<prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>-->
+                <!--&lt;!&ndash;<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>&ndash;&gt;-->
+                <!--<prop key="hibernate.hbm2ddl.auto">create</prop>-->
+                <!--<prop key="hibernate.jdbc.batch_size">20</prop>-->
+                <!--&lt;!&ndash;<prop key=""&ndash;&gt;-->
+            <!--</props>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+
+
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+
+    <tx:annotation-driven />
+
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
         <property name="driverClassName" value="org.h2.Driver" />
@@ -31,8 +70,14 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd http://www.springfr
         <property name="password" value="${database.password}" />
     </bean>
 
+    <!--<bean id="builder" class="org.springframework.orm.hibernate4.LocalSessionFactoryBuilder">-->
+    <!--<constructor-arg>-->
+    <!--<-->
+    <!--</constructor-arg>-->
+    <!--</bean>-->
+
     <bean id="sessionFactory"
-          class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="annotatedPackages" value="zinchenko.domain"/>
         <property name="dataSource" ref="dataSource" />
         <property name="packagesToScan" value="zinchenko.domain"/>
@@ -41,9 +86,10 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd http://www.springfr
                 <!--<prop key="hibernate.current_session_context_class">thread</prop>-->
                 <prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
                 <!--<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>-->
-                <prop key="hibernate.hbm2ddl.auto">create</prop>
+                <prop key="hibernate.hbm2ddl.auto">create-drop</prop>
                 <prop key="hibernate.jdbc.batch_size">20</prop>
-                <!--<prop key=""-->
+                <prop key="show_sql">true</prop>
+                <prop key="format_sql">true</prop>
             </props>
         </property>
     </bean>

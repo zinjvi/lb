@@ -10,7 +10,7 @@
     </appender>
 
     <logger name="zinchenko">
-        <level value="DEBUG" />
+        <level value="ERROR" />
         <appender-ref ref="STDOUT" />
     </logger>
 

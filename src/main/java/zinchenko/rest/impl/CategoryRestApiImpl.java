@@ -5,7 +5,6 @@ import zinchenko.domain.Category;
 import zinchenko.rest.CategoryRestApi;
 import zinchenko.service.CategoryService;
 
-import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
@@ -26,24 +25,21 @@ public class CategoryRestApiImpl implements CategoryRestApi {
     }
 
     @Override
-    public Long save(Category category) {
+    public Response save(Category category) {
         Long id = categoryService.save(category);
-        // TODO
-        return id;
+        return Response.status(Response.Status.CREATED).entity(id).build();
     }
 
     @Override
-    public Long update(Category category) {
+    public Category update(Category category) {
         categoryService.update(category);
-        //TODO
-        return category.getId();
+        return category;
     }
 
     @Override
-    public Long delete(Long id) {
+    public Response delete(Long id) {
         categoryService.delete(id);
-        //TODO |
-        return id;
+        return Response.status(Response.Status.NO_CONTENT).build();
     }
 
     public CategoryService getCategoryService() {

@@ -30,19 +30,19 @@ public class GroupRestApiImpl implements GroupRestApi {
     @Override
     public Response save(Group group) {
         groupService.save(group);
-        return Response.status(Response.Status.OK).build();
+        return Response.status(Response.Status.CREATED).build();
     }
 
     @Override
-    public Response update(Group group) {
+    public Group update(Group group) {
         groupService.update(group);
-        return Response.status(Response.Status.OK).build();
+        return group;
     }
 
     @Override
     public Response delete(Long id) {
         groupService.delete(id);
-        return Response.status(Response.Status.OK).build();
+        return Response.status(Response.Status.NO_CONTENT).build();
     }
 
     public GroupService getGroupService() {

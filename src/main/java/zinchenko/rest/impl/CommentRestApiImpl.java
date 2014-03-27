@@ -5,7 +5,6 @@ import zinchenko.domain.Comment;
 import zinchenko.rest.CommentRestApi;
 import zinchenko.service.CommentService;
 
-import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
@@ -24,16 +23,19 @@ public class CommentRestApiImpl implements CommentRestApi {
     }
 
     @Override
-    public Long save(Comment comment) {
-        Long id = commentService.save(comment);
-        return id;
+    public Response save(Comment comment) {
+        commentService.save(comment);
+        return Response.status(Response.Status.CREATED).build();
     }
 
     @Override
-    public Long delete(Long id) {
-        commentService.delete(id);
+    public Response delete(Long id) {
         //TODO |
-        return id;//Response.status(Response.Status.OK).build();
+//        if(true){
+//        throw new RuntimeException("err");
+//        }
+        //commentService.delete(id);
+        return Response.status(Response.Status.NO_CONTENT).build();
     }
 
 }

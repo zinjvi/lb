@@ -1,6 +1,23 @@
-define(['backbone'],
-    function (Backbone) {
+define(['backbone', 'common/views/ModalWinView'],
+    function (Backbone, ModalWinView) {
         var BaseModel = Backbone.Model.extend({
+            initialize: function(){
+                console.log('created BaseModel');
+                this.on('error', function(model, resp, options){
+                    console.log(model);
+                    console.log(resp);
+                    console.log(options);
+                    if(resp.status == 500) new ModalWinView({
+                        content: "Server error!",
+                        buttons: [
+                            {
+                                'label': 'OK',
+                                'classes': 'btn-primary close-modal'
+                            }
+                        ]
+                    });
+                });
+            },
             url: function(){
                 if(this.get('id')) return this.baseUrl + '/' + this.get('id');
                 return this.baseUrl;
