@@ -23,17 +23,17 @@ public class CommentRestApiImpl implements CommentRestApi {
     }
 
     @Override
-    public Response save(Comment comment) {
+    public Comment save(Comment comment) {
         commentService.save(comment);
-        return Response.status(Response.Status.CREATED).build();
+        return comment;
     }
 
     @Override
     public Response delete(Long id) {
         //TODO |
-//        if(true){
-//        throw new RuntimeException("err");
-//        }
+        if(true){
+        throw new RuntimeException("err");
+        }
         //commentService.delete(id);
         return Response.status(Response.Status.NO_CONTENT).build();
     }

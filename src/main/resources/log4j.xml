@@ -19,9 +19,9 @@
         <appender-ref ref="STDOUT" />
     </logger>
 
-    <!--<root>-->
-        <!--<priority value="ERROR"/>-->
-        <!--<appender-ref ref="STDOUT"/>-->
-    <!--</root>-->
+    <root>
+        <priority value="ERROR"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
 
 </log4j:configuration>

@@ -2,6 +2,7 @@ package zinchenko.domain;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonManagedReference;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -50,6 +51,7 @@ public class Article implements Serializable {
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comments;
 

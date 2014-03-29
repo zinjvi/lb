@@ -1,21 +1,9 @@
-define(['backbone', 'common/views/ModalWinView'],
-    function (Backbone, ModalWinView) {
+define(['backbone'],
+    function (Backbone) {
         var BaseModel = Backbone.Model.extend({
             initialize: function(){
-                console.log('created BaseModel');
                 this.on('error', function(model, resp, options){
-                    console.log(model);
-                    console.log(resp);
-                    console.log(options);
-                    if(resp.status == 500) new ModalWinView({
-                        content: "Server error!",
-                        buttons: [
-                            {
-                                'label': 'OK',
-                                'classes': 'btn-primary close-modal'
-                            }
-                        ]
-                    });
+                    this.eventManager.trigger('server:error', resp);
                 });
             },
             url: function(){
@@ -36,7 +24,6 @@ define(['backbone', 'common/views/ModalWinView'],
                 return Backbone.Model.prototype.save.call(this, null, options, null);
             },
             toJSON: function(options){
-//                return _.clone(this.attributes);
                 var json = {};
                 for(var field in this.attributes){
                     var current = this.attributes[field];
@@ -50,5 +37,8 @@ define(['backbone', 'common/views/ModalWinView'],
                 return json;
             }
         });
+//        BaseModel.prototype.on('error', function(model, resp, options){
+//            this.eventManager.trigger('server:error', resp);
+//        });
         return BaseModel;
     });

@@ -25,17 +25,20 @@ define(['backbone', 'dust', 'dust.helper', 'underscore'],
 
         //TODO | need create function with DOM element argument. So we can render to some DOM element
         render: function () {
+            this.beforeRender();
             this.$el.html(this.renderTemplate());
             this.afterRender();
             return this;
         },
         renderTo: function (element) {
+            this.beforeRender();
             this.$el.html(this.renderTemplate());
             this.afterRender();
             this.$el.appendTo(element);
         },
         eventManager: _.extend({}, Backbone.Events),
         afterRender: function(){},
+        beforeRender: function(){},
         renderTemplate: function () {
             //TODO need optimization
             this.template;

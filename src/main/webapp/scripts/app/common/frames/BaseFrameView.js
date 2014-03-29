@@ -7,9 +7,9 @@ define(['backbone', 'common/views/BaseView'],
                     $('<div/>').attr('id', 'frame-panel')
                         .appendTo('body');
                 }
-                $('#frame-panel').html('');
-                this.$el.html(this.renderTemplate());
-                this.$el.appendTo('#frame-panel');
+                this.$framePanel = $('#frame-panel');
+                this.$framePanel.html('');
+                BaseView.prototype.renderTo.call(this, this.$framePanel);
                 this.$content = this.$el.find('.content-block');
             },
             setContent: function(view){

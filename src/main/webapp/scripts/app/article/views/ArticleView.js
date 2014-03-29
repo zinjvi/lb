@@ -1,4 +1,5 @@
-define(['underscore', 'article/singlePageConfig',
+define(['underscore', 'log',
+    'article/singlePageConfig',
     'common/views/BaseView',
     'article/views/CommentView',
     'dust',
@@ -7,13 +8,13 @@ define(['underscore', 'article/singlePageConfig',
     'article/models/CommentModel',
     'article/collections/CommentCollection'
     /*, 'jquery', 'jquery.formparams'*/],
-    function(_, singlePageConfig, BaseView, CommentView, dust,
+    function(_, log, singlePageConfig, BaseView, CommentView, dust,
              templateSources, ArticleModel, CommentModel, CommentCollection/*, $*/) {
 
         var addExistComments = function(comments, view){
             _.each(comments, function(comment){
-                view.comments.add(new CommentModel(comment));
-            }, this);
+                this.comments.add(new CommentModel(comment));
+            }, view);
         }
 
         var ArticleView = BaseView.extend({
@@ -28,15 +29,15 @@ define(['underscore', 'article/singlePageConfig',
             model: new ArticleModel(),
             comments: new CommentCollection(),
             initialize: function(options){
-                this.model.set('id', options.articleId);
-                this.model.fetchById();
-                this.model.set('articleImagePath', singlePageConfig.system.articleImagePath);
+                this.articleId = options.articleId;
+
                 this.comments.on('add', this.addCommentToUI, this);
             },
-//            render: function(){
-//                this.$el.html(this.renderTemplate());
-//                return this;
-//            },
+            beforeRender: function(){
+                this.model.set('id', this.articleId);
+                this.model.fetchById();
+                this.model.set('articleImagePath', singlePageConfig.system.articleImagePath);
+            },
             afterRender: function(){
                 this.$addCommentForm = this.$el.find('.add-comment-section form');
                 this.$comments = this.$el.find('.comments');
@@ -50,15 +51,11 @@ define(['underscore', 'article/singlePageConfig',
                 var comment = new CommentModel(this.$addCommentForm.formParams());
                 comment.save({
                     success: function(model, response){
-                        console.log('s');
-                        model.set('id', response);
                         self.comments.add(model);
-                    },
-                    error: function(){
-                        console.log('e');
-                        //TODO
+                        log.debug('Comment "'+model.get('content')+'" added.');
                     }
                 });
+                this.$addCommentForm.find('[name=content]').val('');
             }
         });
         return ArticleView;

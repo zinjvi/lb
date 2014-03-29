@@ -1,5 +1,6 @@
 package zinchenko.domain;
 
+import org.codehaus.jackson.annotate.JsonBackReference;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -25,7 +26,8 @@ public class Comment implements Serializable {
     private String content;
 
     //TODO | Is there need this field?
-    @JsonIgnore
+//    @JsonIgnore
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "article_id")
     private Article article;

@@ -1,7 +1,7 @@
 define(['underscore', 'backbone',
     'common/views/BaseView', 'article/routerConfig',
     'adminka/routerConfig'],
-    function(_, Backbone, BaseView,articleRouters,
+    function(_, Backbone, BaseView, articleRouters,
              arminkaRoutes){
 
         var addExternalRoutes = function (router) {
@@ -27,38 +27,11 @@ define(['underscore', 'backbone',
                 this.frame.setContent(view);
             },
             routes: {
-//                '': 'index',
-//                'articlesList/:categoryId': 'articlesList',
-//                'article/:articleId': 'article'
+
             },
             initialize: function () {
-//                this.frame.render();
                 addExternalRoutes(this);
-            }//,
-//            index: function () {
-//                var Frame = MainFrameView;
-//                console.log("index");
-//                this.setView(new IndexView(), Frame);
-//            },
-//            articlesList: function (categoryId) {
-//                var Frame = MainFrameView;
-//                console.log("articles list");
-//                this.setView(new ArticlesListView({
-//                    categoryId: categoryId
-//                }), Frame);
-//            },
-//            article: function (articleId) {
-//                var Frame = MainFrameView;
-//                var View = ArticleView;
-//                console.log("article");
-//                this.setView(new ArticleView({
-//                    articleId: articleId
-//                }), Frame);
-////                this.frame.setContent(new ArticleView({
-////                    articleId: articleId
-////                }))
-//                scrollTo(0, 340);
-//            }
+            }
         });
         return AppRouter;
     });

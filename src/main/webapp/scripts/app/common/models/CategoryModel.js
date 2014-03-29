@@ -15,6 +15,9 @@ define(['underscore',
 //            var attributes = _.omit(attrs, 'group');
 //            if(attrs.group) attributes.group = new GroupModel(attrs.group);
             return attrs;//attributes;
+        },
+        initialize: function(){
+            BaseModel.prototype.initialize.call(this);
         }
     });
     return CategoryModel;

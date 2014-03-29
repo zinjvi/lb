@@ -1,10 +1,13 @@
 define(['backbone'],
     function (Backbone) {
-        var self = {};
 
         var BaseCollection = Backbone.Collection.extend({
+            initialize: function(){
+                this.on('error', function(model, resp, options){
+                    this.eventManager.trigger('server:error', resp);
+                });
+            },
             parse: function (response, options) {
-                console.log("BaseCollection.parse()");
                 var list = [];
                 _.each(response, function (response) {
                     var hash = this.model.prototype.parse(response);
@@ -25,5 +28,8 @@ define(['backbone'],
                 return json;
             }
         });
+//        BaseCollection.prototype.on('error', function(model, resp, options){
+//            this.eventManager.trigger('server:error', resp);
+//        });
         return BaseCollection;
     });

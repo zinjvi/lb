@@ -1,9 +1,11 @@
 require(['underscore', 'backbone'], function(_, Backbone){
 
-    console.log('eventManager');
-    console.log(eventManager);
+    var eventManager = _.extend({}, Backbone.Events);
 
-    var eventManager = {'f': 'v'};
+    eventManager.on('server:error', function(resp){
+
+
+    });
 
     return eventManager;
 });

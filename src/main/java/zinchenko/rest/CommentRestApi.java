@@ -26,7 +26,7 @@ public interface CommentRestApi {
     List<Comment> getByArticleId(@PathParam("articleId")Long articleId);
 
     @POST
-    Long save(Comment comment);
+    Comment save(Comment comment);
 
     @DELETE
     @Path("/{id}")

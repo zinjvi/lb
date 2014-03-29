@@ -15,18 +15,15 @@ define(['backbone', 'common/frames/BaseFrameView',
             groups: new GroupCollection(),
             model: {},
             $content: {},
-            initialize: function () {
+            beforeRender: function(){
                 //TODO | {async: false}
                 this.groups.fetch({async: false});
                 this.model = new Backbone.Model({
                     groups: this.groups.toJSON()
-//                aromoShow: function(chunk, context, bodies,
-//                                    params){
-//                    if(params.groupId == 3){
-//                        return chunk.render;
-//                    }
-//                }
                 });
+            },
+            initialize: function () {
+
             },
             onClickMenu: function (event) {
                 var $openSubcategory = this.$el
