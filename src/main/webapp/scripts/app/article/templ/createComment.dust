@@ -1,0 +1,12 @@
+<form>
+    {?saving}
+    <div class="waiting">
+        Saving...
+    </div>
+    {/saving}
+    <input type="hidden" name="article[id]" value="{articleId}">
+    <textarea type="text" placeholder="Ваш комментарий..." name="content">
+        {content}
+    </textarea>
+    <button class="_addComment" type="button">Добавить</button>
+</form>

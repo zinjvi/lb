@@ -42,6 +42,7 @@
         <property name="annotatedPackages" value="zinchenko.domain"/>
         <property name="dataSource" ref="dataSource" />
         <property name="packagesToScan" value="zinchenko.domain"/>
+        <property name="configLocation" value="/"/>
         <property name="hibernateProperties">
             <props>
                 <!--<prop key="hibernate.current_session_context_class">thread</prop>-->

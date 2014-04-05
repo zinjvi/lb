@@ -2,9 +2,9 @@ define(['backbone', 'dust', 'dust.helper', 'underscore'],
     function (Backbone, dust, dustHelper, _) {
 
     /**
-         define(['common/views/BaseView',
-         'text!/template.dust'],
-         function(BaseView, templateSources){
+         define(['log', 'common/views/BaseView',
+         'text!template.dust'],
+         function(log, BaseView, templateSources){
 
                 var SomeView = BaseView.extend({
                     template:{
@@ -16,7 +16,13 @@ define(['backbone', 'dust', 'dust.helper', 'underscore'],
                     },
                     initialize: function(){
 
-                    }
+                    },
+                    beforeRender: function(){
+
+                    },
+                    afterRender: function(){
+
+                    },
                 });
                 return SomeView;
             });
